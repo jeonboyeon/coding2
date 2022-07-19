@@ -151,36 +151,3 @@
             <h2>시멘틱 마크업 (Semantic markup)</h2>
             <p>semantic 의 사전적인 뜻은 '의미론적인' 정도로 해석<br>
             마크업을 할 때 의미에 부합하는 태그를 사용라는 뜻</p> <br><br>
-            <h2>예시</h2>
-            <p class="box">
-                &ltDOTYPE html&gt; <br>
-                &lthtml lang="ko"&gt; <br>
-                &lthead&gt; <br>
-                　　&ltmeta charset="UFT-8"&gt; <br>
-                　　&lttitle&gt;시멘틱 마크업&lt/title&gt; <br>
-                &lt/head&gt; <br>
-                &ltbody&gt; <br>
-                　　반응형 웹 <br>
-                &lt/body&gt; <br>
-                &lthtml&gt; <br>
-            </p>
-            <p>'반응형웹'이 HTML 문서에서 제목 그대로 사용된다고 가정할 경우 위 처럼 마크업을 하면, 스크린 리더(음성낭독프로그램)에서는 그저<br>
-            '반응형웹'이라고만 읽어주기 때문에 그 것이 제목인지를 알 수가 없다.<br><br><br>
-            <b>이 부분을 제목을 의미하는 태그로 바꾸어 마크업 해보도록 하자</b><br></p>
-            <p class="box">
-                &ltDOTYPE html&gt; <br>
-                &lthtml lang="ko"&gt; <br>
-                &lthead&gt; <br>
-                　　&ltmeta charset="UFT-8"&gt; <br>
-                　　&lttitle&gt;시멘틱 마크업&lt/title&gt; <br>
-                &lt/head&gt; <br>
-                &ltbody&gt; <br>
-                　　&lth1&gt;반응형 웹&lt/h1&gt; <br>
-                &lt/body&gt; <br>
-                &lthtml&gt; <br>
-            </p>
-            <p>위에서 &lth1&gt;태그는 문서의 첫 제목을 알려주는 태그이다. <br>
-            이 부분을 <b>'반응형웹' 헤딩 일</b> 이라고 잃어준다면 이 부분이 제목이라는 것을 알 수 있게된다.</p>
-            <div class="note">실제 마크업을 할 때는 작업자마다 콘텐츠의 의미를 해석하는 차이가 조금 있을 수도 있지만,
-            가급적 시멘틱하게 마크업을 하려고 노력한는 것이 중요하다.<div>
-        </article>
