@@ -121,17 +121,17 @@ document.write(z);
                 <h3>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</h3>
                 <p>변수는 데이터를 저장하는 저장소이고, 데이터를 변경 또는 추가를 할 수 있다.</p>
                 <div class="script">
-    <pre><code class="language-js">let x = 100;
-    let y = 200;
-    let z = javascript;
+<pre><code class="language-js">let x = 100;
+let y = 200;
+let z = javascript;
 
-    x += 300;   // x에 300을 추가
-    y += 400;   // y에 400을 추가
-    z += "jquery"   // z에 문자열 jquery를 추가
+x += 300;   // x에 300을 추가
+y += 400;   // y에 400을 추가
+z += "jquery"   // z에 문자열 jquery를 추가
 
-    document.write(x);   
-    document.write(y);   
-    document.write(z);   
+document.write(x);   
+document.write(y);   
+document.write(z);   
     </code></pre>
                 </div>
                 <div class="result">
@@ -220,7 +220,7 @@ document.write(z);
                 <p>표현 방법 1 </p>
     
                 <div class="script">
-<pre><code class="language-js">const arr = new array();
+<pre><code class="language-js">const arr = new Array();
     arr[0] = 100;
     arr[1] = 200;
     arr[2] = "javascript";
@@ -265,7 +265,7 @@ document.write(arr[2]);
                 <p>표현 방법 3 </p>
 
             <div class="script">
-<pre><code class="language-js">onst arr = [];
+<pre><code class="language-js">const arr = [];
 arr[0] = 100;
 arr[1] = 200;
 arr[2] = "javascript";
@@ -340,9 +340,9 @@ obj.a = 100;
 obj.b = 200;
 obj.c = "javascript";
 
-document.write(obj[0]);
-document.write(obj[1]);
-document.write(obj[2]);
+document.write(obj.a);
+document.write(obj.b);
+document.write(obj.c);
 </code></pre>
                 </div>
                     <div class="result">
@@ -437,6 +437,7 @@ d: "javascript"
 }
 
 document.write(obj.a);
+document.write(obj.b);
 document.write(obj.b[0]);
 document.write(obj.b[1]);
 document.write(obj.c.x);
