@@ -202,13 +202,23 @@ for(let i = 0; i &ltarr.length; i++){
                 <div class="result">
                     <details>
                         <summary>결과보기</summary>
+                        100 <br>
+                        200 <br>
+                        300 <br>
+                        400 <br>
+                        500 <br>
+                        600 <br>
+                        700 <br>
+                        800 <br>
+                        900
+                        
                         <div class="sample06_result">
                         </div>
                     </details>
                 </div>
             </div>
             <!-- //sample06 and -->
-            <!-- //sample06 -->
+            <!-- //sample07 -->
             <div id="sample07" class="sample">
                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
                 <p>for()문은 '()'안에 초기값, 조건값, 증가값을 모두 넣을 수 있는 반복문이다.</p>
@@ -237,6 +247,23 @@ for(let i = 0; i &ltarr.length; i++){
                     <details>
                         <summary>결과보기</summary>
                         <div class="sample07_result">
+                            100200300400500 <br>
+                            100200300400500 <br>
+                            100 <br>
+                            0 <br>
+                            100,200,300,400,500 <br>
+                            200 <br>
+                            1 <br>
+                            100,200,300,400,500 <br>
+                            300 <br>
+                            2 <br>
+                            100,200,300,400,500 <br>
+                            400 <br>
+                            3 <br>
+                            100,200,300,400,500 <br>
+                            500 <br>
+                            4 <br>
+                            100,200,300,400,500
                         </div>
                     </details>
                 </div>
@@ -346,8 +373,6 @@ for(let i = 0; i &ltarr.length; i++){
             //for(let i = 0; i <arr.length; i++){
                 //document.write(arr[i]);
             //};
-            
-            document.querySelector(".sample06_result").innerHTML = arr;
         }
 
                     //for (초기값, 조건식, 증감식) 위 도큐맨트 방법을 간단하게 출력하는 방식
@@ -360,28 +385,26 @@ for(let i = 0; i &ltarr.length; i++){
             const num = [100, 200, 300, 400, 500];
             
             //for문을 이용해서 출력
-            for(let i=0; i<num.length; i++){
-                document.write(num[i]); 
+            //for(let i=0; i<num.length; i++){
+                //document.write(num[i]); 
          }
 
          document.write("<br><br>");
          
             //forEach()를 이용해서 출력 : forEach_함수
-            num.forEach(function(element){
-                document.write(element); 
-            });
+            //num.forEach(function(element){
+                //document.write(element); 
+            //});
 
         document.write("<br><br>");
          
             //forEach() 3가지 인자(parameter)값
-            num.forEach(function(element, index, array){
-                document.write(element,"<br>");
-                document.write(index,"<br>");
-                document.write(array,"<br>"); // 중간에 쉼표가 나온다.
-            });
-
-            document.querySelector(".sample07_result").innerHTML = num  ;
-        } // 아직 안배워서 위에 직접 적기
+            //num.forEach(function(element, index, array){
+                //document.write(element,"<br>");
+                //document.write(index,"<br>");
+                //document.write(array,"<br>"); // 중간에 쉼표가 나온다.
+            //});
+        //} // 아직 안배워서 위에 직접 적기
 
         
 
