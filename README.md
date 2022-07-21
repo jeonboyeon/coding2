@@ -12,4 +12,4 @@ https://jeonboyeon.github.io/coding2/javascript/javascript01.html
 https://jeonboyeon.github.io/coding2/javascript/javascript02.html   
 ### 자바스크립트 메인페이지
 https://jeonboyeon.github.io/coding2/html/index.html   
-https://jeonboyeon.github.io/coding2/html/arphabet.html   
+https://jeonboyeon.github.io/coding2/html/alphabet.html   
