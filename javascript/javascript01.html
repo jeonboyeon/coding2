@@ -71,7 +71,7 @@
                 <div class="script">
 <pre><code class="language-js">var x = 100;    // x에 100을 저장함
 var y = 200;    // y에 200을 저장함
-var z = javascript;    // z에 문자열 javascript를 저장함
+var z = "javascript";    // z에 문자열 javascript를 저장함
 
 document.write(x);   
 document.write(y);   
@@ -96,7 +96,7 @@ document.write(z);
                 <div class="script">
 <pre><code class="language-js">let x = 100;
 let y = 200;
-let z = javascript;
+let z = "javascript";
 
 x = 300;    // x를 300으로 변경
 y = 400;    // y를 400으로 변경
@@ -123,7 +123,7 @@ document.write(z);
                 <div class="script">
 <pre><code class="language-js">let x = 100;
 let y = 200;
-let z = javascript;
+let z = "javascript";
 
 x += 300;   // x에 300을 추가
 y += 400;   // y에 400을 추가
@@ -183,7 +183,7 @@ document.write(z1);
                                 함수 밖 <br>
                                 100 <br>
                                 300 <br>
-                                undifined <br>
+                                javascript
                         </div>
                     </details>
                 </div>
@@ -460,7 +460,7 @@ document.write(obj.d);
                 <p>표현 방법 7</p>
     
                 <div class="script">
-<pre><code class="language-js">onst a = 100; // 변수
+<pre><code class="language-js">const a = 100; // 변수
 const b = 200;
 const c = "javascript";
 const obj = {a, b, c} // {}는 객체
@@ -608,17 +608,17 @@ document.write(obj.d);
                  x = 200;
                  y = 300;
 
-                //document.write("함수 안");
-                //document.write(x);
-                //document.write(y);
-                //document.write(z); 
+                document.write("함수 안");
+                document.write(x);
+                document.write(y);
+                document.write(z); 
             }
             func();
 
-            //document.write("함수 밖");
-            //document.write(x);
-            //document.write(y);
-            //document.write(z);
+            document.write("함수 밖");
+            document.write(x);
+            document.write(y);
+            document.write(z);
         }
 
         //5번 문제 답
