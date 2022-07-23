@@ -6,75 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 유형01 : grid</title>
     <!-- 반응형은 width 값을 px이 아닌 %로 작업을 해줘야 한다.(wrap 제외) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #FFF3E0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:    /* 테이블과 같은 방법으로 구조 설정 */
+                "header header"
+                "nav nav"
+                "aside section"
+                "footer footer";
+            grid-template-columns: 30% 70%; /* columns로 길이를 지정 해주면
+                                                태그에 각각 들어가 있는 width 값은 뻬도 된다. */
+            grid-template-rows: 100px 100px 780px 100px; /* rows로 길이를 지정 해주면
+                                                         태그에 각각 들어가 있는 height 값은 뻬도 된다. */
+        }
+        #header {
+            background-color: #FFE0B2;
+            grid-area: header; /* grid-template-areas 구조에서 적용한 이름을 
+                               각각 다시 지정해준다. */
+        }
+        #nav {
+            background-color: #FFCC80;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #FFB74D;
+            grid-area: aside;
+        }
+        #section {
+            background-color: #FFA726;
+            grid-area: section;
+        }
+        #footer {
+            background-color: #FF9800;
+            grid-area: footer;
+        }
+    
+        /* 미디어 쿼리 */
+        @media (max-width:1300px){ /* 0부터 1300 까지의 반응형 스타일 지정 */
+            #wrap {
+                width: 96%;
+            }
+         }
+        @media (max-width:768px){
+            #wrap {
+                width: 100%;
+            }
+         }
+         @media (max-width:480px){
+            #wrap {
+            grid-template-areas:
+                "header"
+                "nav"
+                "aside"
+                "section"
+                "footer";
+            grid-template-columns: 100%;
+            grid-template-rows: 100px 100px 300px 480px 100px;
+         }
+        }
+    </style>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        background-color: #FFF3E0;
-    }
-    #wrap {
-        width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-areas:    /* 테이블과 같은 방법으로 구조 설정 */
-            "header header"
-            "nav nav"
-            "aside section"
-            "footer footer";
-        grid-template-columns: 30% 70%; /* columns로 길이를 지정 해주면
-                                            태그에 각각 들어가 있는 width 값은 뻬도 된다. */
-        grid-template-rows: 100px 100px 780px 100px; /* rows로 길이를 지정 해주면
-                                                     태그에 각각 들어가 있는 height 값은 뻬도 된다. */
-    }
-    #header {
-        background-color: #FFE0B2;
-        grid-area: header; /* grid-template-areas 구조에서 적용한 이름을 
-                           각각 다시 지정해준다. */
-    }
-    #nav {
-        background-color: #FFCC80;
-        grid-area: nav;
-    }
-    #aside {
-        background-color: #FFB74D;
-        grid-area: aside;
-    }
-    #section {
-        background-color: #FFA726;
-        grid-area: section;
-    }
-    #footer {
-        background-color: #FF9800;
-        grid-area: footer;
-    }
-
-    /* 미디어 쿼리 */
-    @media (max-width:1300px){ /* 0부터 1300 까지의 반응형 스타일 지정 */
-        #wrap {
-            width: 96%;
-        }
-     }
-    @media (max-width:768px){
-        #wrap {
-            width: 100%;
-        }
-     }
-     @media (max-width:480px){
-        #wrap {
-        grid-template-areas:
-            "header"
-            "nav"
-            "aside"
-            "section"
-            "footer";
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 100px 300px 480px 100px;
-     }
-    }
-</style>
 <!-- flex 방식으로 레이아웃을 작업할 땐 기본 태그를 div가 아닌 시멘틱 태그로 바꾸어줘야한다. -->
 <body>
     <div id="wrap"> <!-- 전체를 감싸는 wrap은 태그가 따로 없기에 div로 작업한다. -->
