@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 유형01 : float 반응형</title>
+    <!-- 반응형은 width 값을 px이 아닌 %로 작업을 해줘야 한다.(wrap 제외) -->
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #FFF3E0;
+    }
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #header {
+        width: 100%;
+        height: 100px;
+        background-color: #FFE0B2;
+    }
+    #nav {
+        width: 100%;
+        height: 100px;
+        background-color: #FFCC80;
+    }
+    #aside {
+        width: 30%;
+        height: 780px;
+        background-color: #FFB74D;
+        float: left;
+    }
+    #section {
+        width: 70%;
+        height: 780px;
+        background-color: #FFA726;
+        float: left;
+    }
+    #footer {
+        width: 100%;
+        height: 100px;
+        background-color: #FF9800;
+        clear: both;
+    }
+
+    /* 미디어 쿼리 */
+    @media (max-width:1300px){ /* 0부터 1300 까지의 반응형 스타일 지정 */
+        #wrap {
+        width: 96%;
+        }
+     } /* 화면 크기가 1200px 이 되었을 때 wrap을 100% 로 바꾼다. (스크롤바가 사라진다.)
+    대신 딱 1200이 되었을 때 잠깐 스크롤 바가 생기는 현상이 생기기 때문에 맥스 크기를 1300으로 지정
+    96% 는 양쪽 여백을 살짝 주기위해 4%를 남겨둔 것. */
+    @media (max-width:768px){
+        #wrap {
+        width: 100%; /* 여백을 아예 없애준다. */
+        }
+     }
+     @media (max-width:480px){
+        /* 480px 에서도 width 100% 를 주지만
+        위 780px에서 주었기 때문에 따로 또 width 100% 를 줄 필요가 없다. */
+        #aside {
+            width: 100%; /* 480px 에서는 사이드와 섹션이 위아래 수직구조로 바뀌어야한다.
+                         그러기위해 기존 30%, 70%를 둘 다  width 100%로 바꿔준다.
+                        바꾸게 되면 화면 크기 480px 에서는 섹션이 사이드 아래로 자리잡게 된다. */
+            height: 300px;
+        }
+        #section {
+            width: 100%;
+            height: 480px;
+        }
+     }
+</style>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="section"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
