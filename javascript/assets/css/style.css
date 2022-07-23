@@ -125,7 +125,7 @@ body {
 }
 .document i::before {
     content: '';
-    background-color: #0242f144;
+    background-color: #ffb7003b;
     width: 100%;
     height: 10px;
     position: absolute;
@@ -133,14 +133,13 @@ body {
     bottom: 0;
     border-radius: 20px;
 }
+/* 형광펜 효과 and */
+
 .document hr {
     border: 0;
     border-top: 1px dashed #dcdcdc;
     margin-top: 45px;
 }
-
-/* 형광펜 효과 and */
-
 .document .t_tit {
     font-size: 30px;
     line-height: 1.6;
@@ -166,7 +165,8 @@ body {
     color: #666;
     margin-bottom: 10px !important;
     padding: 15px 20px !important;
-    border-left: 4px solid #0243f1;
+    /* border-left: 4px solid #0243f1; */
+    border-left: 4px solid #f1a102; 
     background-color: #f9f9f9;
 }
 .document .t_box {
