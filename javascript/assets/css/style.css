@@ -139,6 +139,7 @@ body {
     border: 0;
     border-top: 1px dashed #dcdcdc;
     margin-top: 45px;
+    margin-bottom: 45px;
 }
 .document .t_tit {
     font-size: 30px;
