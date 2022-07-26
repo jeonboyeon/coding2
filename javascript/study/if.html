@@ -40,21 +40,22 @@
     <!-- //header -->
     <main id="main">
         <div class="document">
-          <!-- 주 타이틀 -->
-          <h2 class="t_tit">조건문</h2>
-          <p class="t_desc">
-            조건문은 조건식이 참과 거짓인지에 따라 코드를 제어한다.
-          </p>
+            <!-- 주 타이틀 -->
+            <h2 class="t_tit">조건문</h2>
+            <p class="t_desc">
+                조건문은 조건식이 참과 거짓인지에 따라 코드를 제어한다.
+            </p>
 
-          <h3 class="t_tit2">if 문</h3>
-          <p class="t_desc">
-            조건이 참일 경우에만 코드를 실행합니다. 
-          </p>
-          <p class="t_desc2">
-            if (조건식){ <br>
+            <h3 class="t_tit2">if 문</h3>
+            <p class="t_desc">
+                조건이 참일 경우에만 코드를 실행합니다. 
+            </p>
+            <p class="t_desc2">
+              if (조건식){ <br>
                 &nbsp;&nbsp;실행문; <br>
-            }
-          </p>
+              }
+            </p>
+            <div class="t_code">
 <pre><code class="language-js">var age = 10;
   var admissionFee = "";
   if (age < 13) {
@@ -63,27 +64,28 @@
 
   console.log(admissionFee);
 </code></pre>
+            </div>
+            <div class="t_result">
+                <details>
+                    <summary>결과확인</summary>
+                    <div class="result09">
+                        2000원
+                    </div>
+                </details>
+            </div>
 
-        <div class="t_result">
-            <details>
-                <summary>결과확인</summary>
-                <div class="result09">
-                    2000원
-                </div>
-            </details>
-        </div>
-
-        <h3 class="t_tit2">중첩 if 문</h3>
-        <p class="t_desc">
-            if문 안에 또 다른 if문을 중첩해서 넣는다. 
-        </p>
-        <p class="t_desc2">
-            if (조건식1){ <br>
-            &nbsp;&nbsp;if (조건식2){ <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;실행문; <br>
-            &nbsp;&nbsp;    } <br>
-            }
-          </p>
+            <h3 class="t_tit2">중첩 if 문</h3>
+            <p class="t_desc">
+                if문 안에 또 다른 if문을 중첩해서 넣는다. 
+            </p>
+            <p class="t_desc2">
+                if (조건식1){ <br>
+                &nbsp;&nbsp;if (조건식2){ <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문; <br>
+                &nbsp;&nbsp;    } <br>
+                }
+            </p>
+            <div class="t_code">
 <pre><code class="language-js">var html = Number(prompt('html 점수입력',''));
 var css = Number(prompt('css 점수입력',''));
 var javascript = Number(prompt('javascript 점수입력',''));
@@ -105,8 +107,8 @@ if (avg &gt;= 60) {
 
 document.write(comment);
 </code></pre>
-
-        <div class="t_result">
+            </div>
+            <div class="t_result">
             <details>
                 <summary>결과확인</summary>
                 <div class="result09">
@@ -114,12 +116,13 @@ document.write(comment);
                     평균 95점 합격
                 </div>
             </details>
-        </div>
+            </div>
 
-          <h3 class="t_tit2">swich 문</h3>
-          <p class="t_desc">
+            <h3 class="t_tit2">swich 문</h3>
+            <p class="t_desc">
             swich의 값과 case의 값들을 하나씩 비교하여 일치하는 case만 실행시킨다.
-          </p>
+            </p>
+            <div class="t_code">
 <pre><code class="language-js">swich (값) {
     case 값1 :
     실행문;
@@ -129,7 +132,7 @@ document.write(comment);
     실행문;
 }
 </code></pre>
-          
+            </div>
         </div>
     </main>
     <!-- //main and -->
