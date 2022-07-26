@@ -43,23 +43,25 @@
             <!-- 주 타이틀 -->
             <h2 class="t_tit">조건문</h2>
             <p class="t_desc">
-                조건문은 조건식이 참과 거짓인지에 따라 코드를 제어한다.
+                조건문은 조건식이 <i>참인 경우 참의 결과를 실행</i>하고, <br>
+                <i>거짓인 경우 거짓 조건의 결과를 나타내는 함수</i>이다.
             </p>
 
-            <h3 class="t_tit2">if 문</h3>
-            <p class="t_desc">
-                조건이 참일 경우에만 코드를 실행합니다. 
-            </p>
+            <h3 class="t_tit2">첫번 째 : if 문</h3>
             <p class="t_desc2">
-              if (조건식){ <br>
-                &nbsp;&nbsp;실행문; <br>
-              }
+                if 안에 조건식이 참인 경우 해당하는 참의 결과를 실행한다. <br>
+                조건문에 해당하지 않고 거짓이면 esle 안에 있는 코드 블록이 실행됩니다.
+            </p>
+            <p class="t_box">
+                if ( 조건식 ){ <br>   
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문 ; <br>
+                }
             </p>
             <div class="t_code">
-<pre><code class="language-js">var age = 10;
-  var admissionFee = "";
-  if (age < 13) {
-      admissionFee = "2000원";
+<pre><code class="language-js">var age = 10;                  //   age(나이) 는 10 이다.
+  var admissionFee = " ";  //   (입장료)결과 실행 칸
+  if (age < 13) {               //   age = 10 이다. 13보다 적으니 참
+      admissionFee = "2000원";      //  << 참일 경우 여기의 값을 실행한다.
   }
 
   console.log(admissionFee);
@@ -74,22 +76,23 @@
                 </details>
             </div>
 
-            <h3 class="t_tit2">중첩 if 문</h3>
-            <p class="t_desc">
-                if문 안에 또 다른 if문을 중첩해서 넣는다. 
-            </p>
+            <h3 class="t_tit2">두번 째 : 중첩 if 문</h3>
             <p class="t_desc2">
+                if문 안에 또 다른 if문을 중첩해서 넣는 형식이다. <br>
+                <i>중첩 개수에는 제한이 없지만 else 사용 시 {} 사용, 들여쓰기에 주의</i> 해야 한다.
+            </p>
+            <p class="t_box">
                 if (조건식1){ <br>
-                &nbsp;&nbsp;if (조건식2){ <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;실행문; <br>
-                &nbsp;&nbsp;    } <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if (조건식2){ <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;실행문; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;} <br>
                 }
             </p>
             <div class="t_code">
-<pre><code class="language-js">var html = Number(prompt('html 점수입력',''));
-var css = Number(prompt('css 점수입력',''));
-var javascript = Number(prompt('javascript 점수입력',''));
-var avg = (html + scc + javascript) / 3;
+<pre><code class="language-js">var html = Number(prompt('html 점수입력',''));   //  html 점수입력을 할 수 있는 프롬프트 실행
+var css = Number(prompt('css 점수입력',''));   //  css 점수입력을 할 수 있는 프롬프트 실행
+var javascript = Number(prompt('javascript 점수입력',''));  //  javascript 점수입력을 할 수 있는 프롬프트 실행
+var avg = (html + css + javascript) / 3;    //  평균 = html + css + javascript /(나누기) 3
 var comment;
 if (avg &gt;= 60) {
     if (html &lt; 40) {
@@ -97,7 +100,7 @@ if (avg &gt;= 60) {
     } else if (css &lt; 40) {
         comment = 'css' + '40점 미만 불합격';
     } else if (javascript &lt; 40) {
-        comment = 'JAVASCRIPT' + '40점 미만 불합격';
+        comment = 'javascript' + '40점 미만 불합격';
     } else {
         comment = '평균' + avg + '점 합격';
     }
@@ -112,26 +115,11 @@ document.write(comment);
             <details>
                 <summary>결과확인</summary>
                 <div class="result09">
-                    평균 90점 합격 <br>
-                    평균 95점 합격
+                    html, css, javascript 모두 더한 점수에서 3을 나눴을 때 <br>
+                    평균 60 점 이상이면 합격 <br>
+                    평균 60 점 미만이면 불합격
                 </div>
             </details>
-            </div>
-
-            <h3 class="t_tit2">swich 문</h3>
-            <p class="t_desc">
-            swich의 값과 case의 값들을 하나씩 비교하여 일치하는 case만 실행시킨다.
-            </p>
-            <div class="t_code">
-<pre><code class="language-js">swich (값) {
-    case 값1 :
-    실행문;
-    case 값2 :
-    실행문;
-    case 값3 :
-    실행문;
-}
-</code></pre>
             </div>
         </div>
     </main>
