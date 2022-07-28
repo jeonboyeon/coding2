@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            height: 100px;
+            background-color: #E0F2F1;
+        }
+        #header .header {
+            width: 1200px;
+            height: 100px;
+            background-color: #B2DFDB;
+        }
+        #section {
+            height: 880px;
+            background-color: #26A69A;
+        }
+        #section .section1 {
+            width: 300px;
+            height: 880px;
+            float: left;
+            background-color: #4DB6AC;
+        }
+        #section .section2 {
+            width: 300px;
+            height: 300px;
+            float: left;
+            background-color: #68EEE2;
+        }
+        #section .section3 {
+            width: 300px;
+            height: 300px;
+            float: left;
+            background-color: #5CDDD1;
+        }
+        #section .section4 {
+            width: 300px;
+            height: 300px;
+            float: left;
+            background-color: #68EEE2;
+        }
+        #section .mid {
+            width: 900px;
+            height: 300px;
+            float: left;
+        }
+        #section .section5 {
+            width: 900px;
+            height: 300px;
+            float: left;
+            background-color: #009688;
+        }
+        #section .section6 {
+            width: 450px;
+            height: 300px;
+            float: left;
+            background-color: #39D1C3;
+        }
+        #section .section7 {
+            width: 450px;
+            height: 300px;
+            float: left;
+            background-color: #68D3C9;
+        }
+
+        #section .bom {
+            width: 900px;
+            height: 300px;
+            float: left;
+            overflow: hidden;
+        }
+        #footer {
+            height: 100px;
+            background-color: #00897B;
+        }
+        #footer .footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #00796B;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        #container .top {
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header"></div>
+        </div>
+        <div id="section">
+            <div class="container">
+                <div class="section1"></div>
+                <div class="top">
+                    <div class="section2"></div>
+                    <div class="section3"></div>
+                    <div class="section4"></div>
+                </div>
+                <div class="mid">
+                    <div class="section5"></div>
+                </div>
+                <div class="bom">
+                    <div class="section6"></div>
+                    <div class="section7"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer"></div>
+            </div>
+        </div>
+</body>
+<script>
+    //배열
+    let name = ["헤더", "사이드바", "이미지 갤러리1", "이미지갤러리2", "이미지갤러리3", "메인","공지사항1","공지사항2",
+        "푸터"];
+
+        // document.querySelector(".header").innerHTML = name[0];
+        // document.querySelector(".section1").innerHTML = name[1];
+        // document.querySelector(".section2").innerHTML = name[2];
+        // document.querySelector(".section3").innerHTML = name[3];
+        // document.querySelector(".section4").innerHTML = name[4];
+        // document.querySelector(".section5").innerHTML = name[5];
+        // document.querySelector(".section6").innerHTML = name[6];
+        // document.querySelector(".section7").innerHTML = name[7];
+        // document.querySelector(".footer").innerHTML = name[8];
+
+    //객체
+    const obj = {a:"헤더", b:"사이드바", c:"이미지 갤러리1", d:"이미지갤러리2" , f:"이미지갤러리3" , g:"메인" , h:"공지사항1"
+        , i:"공지사항2" , j:"푸터"};
+
+        document.querySelector(".header").innerHTML = obj.a;
+        document.querySelector(".section1").innerHTML = obj.b;
+        document.querySelector(".section2").innerHTML = obj.c;
+        document.querySelector(".section3").innerHTML = obj.d;
+        document.querySelector(".section4").innerHTML = obj.f;
+        document.querySelector(".section5").innerHTML = obj.g;
+        document.querySelector(".section6").innerHTML = obj.h;
+        document.querySelector(".section7").innerHTML = obj.i;
+        document.querySelector(".footer").innerHTML = obj.j;
+        
+</script>
+</html>
