@@ -34,6 +34,8 @@
                 <li><a href="study/for.html">반복문</a></li>
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
+                <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/variable.html">지역변수 / 전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -364,6 +366,36 @@ arr.map(function(el){
                 </div>
             </div>
             <!-- //sample010 and -->
+             <!-- //sample010 -->
+             <div id="sample010" class="sample">
+                <h3>10. 배열 : 데이터 불러오기 : map()</h3>
+                <p>callbackFunction을 실행한 결과를 가지고 새로운 배열을 만들 때 사용</p>
+                <div class="script">
+<pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
+
+//forEach를 이용해서 값을 출력
+//arr.forEach(function(el){
+//    document.write(el);
+//    console.log(el)
+//}); //데이터를 불러올 때 값으로 불러온다. | el, in, array 값 3가지 모두 불러 올 수 있다.
+
+arr.map(function(el){
+    document.write(element);
+    document.write(index);
+    document.write(array);
+}); //데이터를 불러올 때 배열로 불러온다. | 일단 forEach 랑 map 은 같다고 이해한다. el, in, array 값 3가지 모두 불러 올 수 있다.
+</code></pre> 
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample010_result">
+                            100200300400500
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample010 and -->
         </div>
     </main>
     <!-- //main and -->
@@ -449,6 +481,39 @@ arr.map(function(el){
             //    document.write(array);
             //}); //데이터를 불러올 때 배열로 불러온다. | 일단 forEach 랑 map 은 같다고 이해한다. el, in, array 값 3가지 모두 불러 올 수 있다.
         }
+
+        //11. 배열 데이터 불러오기 : 펼침 연산자
+        {
+            const arr = [1, 2, 3, 4, 5, 6 ,7 ,8 ,9];
+
+            // //for 문을 이용해서 하나씩 출력
+            // for (let i=1; i<=1; i++){
+            //     document.write(arr);
+            // }
+
+            //for 문을 이용해서 하나씩 출력
+            //  arr.forEach(function(el){
+            //          document.write(el);
+            //  });
+
+            //map
+            // arr.map(function(el){
+            //     document.write(el);
+            // });
+
+            //for in
+            // for ( let i in arr ) {
+            //     // document.write(arr);
+            //     document.write(arr[i]);
+            // }
+
+            //for of
+            for (let i of arr) {
+                document.write(i);
+            }
+        }
+
+
     </script>
 </body>
 </html>

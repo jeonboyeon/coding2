@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 데이터 불러오기</title>
+    <title>자바스크립트 : 데이터 제어하기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
@@ -34,6 +34,8 @@
                 <li><a href="study/for.html">반복문</a></li>
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
+                <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/variable.html">지역변수 / 전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -399,21 +401,10 @@
                 <p>break문은 반복문을 강제로 종료할 때 사용</p>
                 <div class="script">
 <pre><code class="language-js">{
-    const num = 100;
-
-    switch(num){
-        case 100 :
-            document.write("실행되었습니다(num==100).");
+    for ( let i=1; i<=20; i++ ){
+        document.write(i);
+        if ( i == 10 ){
             break;
-        case 100 :
-            document.write("실행되었습니다(num==120).");
-            break;
-    
-        case 100 :
-            document.write("실행되었습니다(num==130).");
-            break;
-            default :
-            document.write("실행되었습니다(num==값이 없음)."); //마지막은 break 가 필요 없다.
         }
     }
 }
@@ -422,8 +413,8 @@
                 <div class="result">
                     <details>
                         <summary>결과보기</summary>
-                        <div class="sample010_result">
-                            실행되었습니다(num==100).
+                        <div class="sample11_result">
+                            12345678910
                         </div>
                     </details>
                 </div>
@@ -434,11 +425,13 @@
                 <h3>continue문</h3>
                 <p>반복문을 다시 시작하기 위해 사용</p>
                 <div class="script">
-<pre><code class="language-js">for( a = 1; a <= 10; a++ ){
-    if( a == 7 ){
-    continue;
+<pre><code class="language-js">{
+    for ( let i=1; i<=20; i++ ){
+        if ( i == 10 ){
+            continue;
+        }
+        document.write(i); // 10을 출력하지 않고 다음으로 넘어간다.
     }
-    document.write(a, "<br>");
 }
 </code></pre> 
                 </div>
@@ -446,20 +439,14 @@
                     <details>
                         <summary>결과보기</summary>
                         <div class="sample010_result">
-                            1 <br>
-                            2 <br>
-                            3 <br>
-                            4 <br>
-                            5 <br>
-                            6 <br>
-                            8 <br>
-                            9 <br>
-                            10
+                            12345678911121314151617181920
                         </div>
                     </details>
                 </div>
             </div>
-            <!-- //sample010 and -->
+            <!-- //sample12 and -->
+
+
         </div>
     </main>
     <!-- //main and -->
@@ -486,12 +473,12 @@
         // }
 
         //02 번 문제. if문 생략
-        {
-            const num = 100;
-            //{} 괄호 생략
-            //if(num) document.write("실행되었습니다(true).");
-            //else document.write("실행되었습니다(false).");
-        }
+        // {
+        //     const num = 100;
+        //     //if(num) document.write("실행되었습니다(true).");
+        //     //else document.write("실행되었습니다(false).");
+        // }           //{} 괄호 생략
+ 
 
         //03 번 문제. 다중 if문
         // {
@@ -540,7 +527,7 @@
         // }
 
         //06 번 문제. swich문 (거의 안쓴다.)
-        {
+        // {
             // const num = 100;
 
             // switch(num){
@@ -557,52 +544,71 @@
             //         default :
             //         document.write("실행되었습니다(num==값이 없음)."); //마지막은 break 가 필요 없다.
             // }
-        }
+        // }
 
-        //07 번 문제. while문 (반복문)
+        // //07 번 문제. while문 (반복문)
+        // {
+        //     let num = 1; //초기값
+
+        //     while( num <= 5 ){
+        //         //document.write("실행되었습니다.");
+        //         num++;
+        //     }
+
+        //     // for(let i=1; i<=5; i++){
+        //     //     document.write("실행되었습니다.")
+        //     // }
+        // }
+
+        // //08 번 문제. do while문 (반복문)
+        // {
+        //     let num = 1;
+
+        //     do { //바로 실행문을 적는다. (조건이 맞든 안맞든 무조건 한번 실행이 된다.)
+        //         //document.write("실행되었습니다2.");
+        //         num++;
+        //     } while (num <= 5);
+        // }
+
+        // //09 번 문제. for문
+        // {   //1부터 100까지 출력
+        //     for( let i=1; i<100; i++ ){
+        //         //document.write(i+".실행되었습니다.");
+
+        //         // let num = [1, 2, 3, ,4 ,5 ,6];
+        //         // for( let i=0; i<num.length; i++){
+        //         //     document.write(num[i] + ". 실행되었습니다.")
+        //         // }
+        //     }
+        // }
+
+        // //10 번 문제. 중첩 for문
+        // {   //두번 반복
+        //     for( let i=1; i<2; i++){
+        //         //document.write(i + "실행");
+        //         for(let j=1; j<=5; j++){
+        //             //document.write(j + "실행");
+        //             //i 를 한 번 실행할 때 j를 다섯 번 반복 시켜준다.
+        //         }
+        //     }
+        // }
+        //11 번 문제. brake문
         {
-            let num = 1; //초기값
-
-            while( num <= 5 ){
-                //document.write("실행되었습니다.");
-                num++;
-            }
-
-            // for(let i=1; i<=5; i++){
-            //     document.write("실행되었습니다.")
-            // }
-        }
-
-        //08 번 문제. do while문 (반복문)
-        {
-            let num = 1;
-
-            do { //바로 실행문을 적는다. (조건이 맞든 안맞든 무조건 한번 실행이 된다.)
-                //document.write("실행되었습니다2.");
-                num++;
-            } while (num <= 5);
-        }
-
-        //09 번 문제. for문
-        {   //1부터 100까지 출력
-            for( let i=1; i<100; i++ ){
-                //document.write(i+".실행되었습니다.");
-
-                // let num = [1, 2, 3, ,4 ,5 ,6];
-                // for( let i=0; i<num.length; i++){
-                //     document.write(num[i] + ". 실행되었습니다.")
-                // }
-            }
-        }
-
-        //10 번 문제. 중첩 for문
-        {   //두번 반복
-            for( let i=1; i<2; i++){
-                //document.write(i + "실행");
-                for(let j=1; j<=5; j++){
-                    //document.write(j + "실행");
-                    //i 를 한 번 실행할 때 j를 다섯 번 반복 시켜준다.
+            for ( let i=1; i<=20; i++ ){
+                document.write(i);
+                if ( i == 10 ){
+                    break;
                 }
+            }
+        }
+
+        // 12 번 문제. continue 문
+        {
+            for ( let i=1; i<=20; i++ ){
+                if ( i == 10 ){
+                    continue;
+                }
+                document.write(i); // 10을 출력하지 않고 다음으로 넘어간다.
             }
         }
     </script>
