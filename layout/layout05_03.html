@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 유형 05 : flex</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #header .header {
+            width: 1200px;
+            height: 100px;
+            background-color: #D5CCC9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #nav .nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #9D8980;
+        }
+        #main {
+            height: 780px;
+            background-color: #886F65;
+        }
+        .contants {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #main .cont1 {
+            width: 100%;
+            height: 100px;
+            background-color: #74574A;
+        }
+        #main .cont2 {
+            width: 100%;
+            height: 200px;
+            background-color: #684D43;
+        }
+        #main .cont3 {
+            width: 50%;
+            height: 480px;
+            background-color: #594139;
+        }
+        #main .cont4 {
+            width: 50%;
+            height: 480px;
+            background-color: #4A352F;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        #footer .footer {
+            width: 100%;
+            height: 100px;
+            background-color: #3E2723;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        @media (max-width:1220px) {
+
+        }
+        @media (max-width: 768px) {
+
+        }
+        @media (max-width: 480px) {
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header"></div>
+            </header>
+        </div>
+        <nav id="nav">
+            <div class="container">
+                <div class="nav"></div>
+            </nav>
+        </div>
+        <main id="main">
+            <section class="contants container">
+                <article class="cont1"></article>
+                <article class="cont2"></article>
+                <article class="cont3"></article>
+                <article class="cont4"></article>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <div class="footer"></div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
