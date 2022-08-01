@@ -21,7 +21,6 @@
         }
 
         #header .header {
-            width: 100%;
             background-color: #D5CCC9;
         }
 
@@ -31,7 +30,6 @@
         }
 
         #nav .nav {
-            width: 100%;
             background-color: #9D8980;
         }
 
@@ -42,11 +40,11 @@
 
         .contants {
             display: grid;
-            grid-template-areas:
-                "cont1 cont1"
-                "cont2 cont2"
-                "cont3 cont4";
-            grid-template-columns: 50%px 50%px;
+            grid-template-areas: 
+            "cont1 cont1"
+            "cont2 cont2"
+            "cont3 cont4";
+            grid-template-columns: 600px 600px;
             grid-template-rows: 100px 200px 480px;
         }
 
@@ -76,7 +74,6 @@
         }
 
         #footer .footer {
-            width: 100%;
             background-color: #3E2723;
         }
 
@@ -84,51 +81,15 @@
             width: 1200px;
             height: inherit;
             margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0,0,0,0.3);
         }
 
-        @media (max-width: 1220px) {
-            .container {
-                width: 96%;
-            }
-            .contants {
-                display: grid;
-                grid-template-areas:
-                    "cont1 cont2 cont2"
-                    "cont1 cont3 cont4";
-                grid-template-columns: 30% 35% 35%;
-                grid-template-rows: 390px 390px;
-            }
-        }
+        @media (max-width: 1220px) {}
 
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-            }
-            .contants {
-                display: grid;
-                grid-template-areas:
-                    "cont1 cont2"
-                    "cont1 cont3"
-                    "cont1 cont4";
-                grid-template-columns: 40% 60%;
-                grid-template-rows: 260px 260px 260px;
-            }
-        }
+        @media (max-width: 768px) {}
 
 
-        @media (max-width: 480px) {
-            .contants {
-                display: grid;
-                grid-template-areas:
-                    "cont1"
-                    "cont2"
-                    "cont3"
-                    "cont4";
-                grid-template-columns: 100%;
-                grid-template-rows: px 150px 210px 210px 210px;
-            }
-        }
+        @media (max-width: 480px) {}
     </style>
 </head>
 
