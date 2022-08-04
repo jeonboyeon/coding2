@@ -112,6 +112,12 @@ body {
     color: #FFF;
     border-radius: 50px;
 }
+#header .header_nav .effect {
+    margin-top: 10px;
+}
+#header .header_nav .effect li a {
+    border-radius: 40px;
+}
 
 /*  티스토리용 문서  */
 .document {
