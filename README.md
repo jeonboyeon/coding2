@@ -11,7 +11,7 @@ https://jeonboyeon.github.io/coding2/javascript/index.html
 https://jeonboyeon.github.io/coding2/javascript/javascript01.html   
 https://jeonboyeon.github.io/coding2/javascript/javascript02.html   
 
-###퀴즈 이펙트
+### 퀴즈 이펙트
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect01.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect02.html  
 
