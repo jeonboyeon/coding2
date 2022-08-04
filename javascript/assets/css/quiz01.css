@@ -60,6 +60,9 @@ body {
     font-style: normal;
     color: #fff;
 }
+#header h1 a {
+    color: rgb(255, 149, 0);
+}
 
 @media (max-width:600px) {
     #header h1 em {
