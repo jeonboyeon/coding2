@@ -114,10 +114,11 @@ body {
 
 .quiz__wrap {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 150px;
+    flex-wrap: wrap;
 }
 
 .quiz {
@@ -126,7 +127,7 @@ body {
     background-color: #fff;
     border: 8px ridge #cacaca;
     margin: 10px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
 }
 
 .quiz__type {
