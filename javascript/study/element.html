@@ -47,7 +47,7 @@
     <main id="main">
         <div class="document">
             <!-- 주 타이틀 -->
-            <h2 class="t_tit">요소 선택 메서드</h2>
+            <h2 class="t_tit">요소 선택 | <i class="t_tit">메서드와 설명</i></h2>
             <table class="t_table">
                 <thead class="ce">
                     <tr>
@@ -56,12 +56,84 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <
+                    <tr>
+                        <td>getElementByld ()</td>
+                        <td>document.getElementByld ('content')일 경우 HTML 요소 중 id 속성이 'content'인 요소를 선택한다.</td>
+                    </tr>
+                    <tr>
+                        <td>getElementByClassName ()</td>
+                        <td>getElementByClassName ('menu')일 경우 HTML 요소 중 class명이 'menu'인 요소들을 선택한다.</td>
+                    </tr>
+                    <tr>
+                        <td>getElementByTagName ()</td>
+                        <td>getElementByTagName ('ul')일 경우 HTML 요소 중 태그명이 'ul'인 요소들을 선택한다.</td>
+                    </tr>
+                    <tr>
+                        <td>getElementByName ()</td>
+                        <td>getElementByName ('txt')일 경우 HTML 요소 중 name명이 'txt'인 요소들을 선택한다.</td>
+                    </tr>
+                    <tr>
+                        <td>querySelector ()</td>
+                        <td>요소의 선택 방법이 css선택 방법과 같다. <br>
+                        <i>선택된 요소 중 첫 번째 요소만 선택</i>한다. <br>
+                        document.querySelector ('.lnb') <br>
+                        document.querySelector (div) <br>
+                        document.querySelector (#gnb li)</td>
+                    </tr>
+                    <tr>
+                        <td>querySelectorAll ()</td>
+                        <td>querySelector ()는 선택된 요소 중 첫 번째 요소만 선택하는 반면 <br>
+                            querySelectorAll ()는 모든 요소를 선택한다.</td>
+                    </tr>
                 </tbody>
             </table>
+            <br><br>
+            <h2 class="t_tit2">[ 예제 ]</h2>
+            <div class="t_code">
+<pre><code class="language-js">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;요소를 직접 선택하는 메서드&lt;/title&gt;
+    &lt;script&gt;
+        window.onload = function() {
+            var list1 = document.querySelector ("#box1 > ul > li");
+            var list2 = document.querySelectorAll ("#box2 > ul > li");
+            console.log(list1);
+            console.log(list2);
+            // list1.style.background = "#ff6600";
+            // list2[0].style.background = "#ccc";
+            // list2.item(1).style.background = "#ddd";
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="box1"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;내용1&lt;/li&gt;
+            &lt;li&gt;내용2&lt;/li&gt;
+            &lt;li&gt;내용3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id="box2"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;내용4&lt;/li&gt;
+        &lt;li&gt;내용5&lt;/li&gt;
+        &lt;li&gt;내용6&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
 
-                <hr />
-                <!-- 문단을 나누는 줄 -->
+            <p class="t_box">
+                var list1 = document.querySelector ("#box1 > ul > li") : box1 자식인 ul 자식인 li 의 첫 번째 요소만 선택 <br>
+                내용1 <br>
+                var list1 = document.querySelectorAll ("#box2 > ul > li") : box1 자식인 ul 자식인 li 의 모든 요소 선택 <br>
+                내용4, 내용5, 내용6
+            </p>
         </div>
     </main>
     <!-- //main and -->
