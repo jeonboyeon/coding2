@@ -121,15 +121,9 @@ quizResult.textContent = quizInfo[0].ansewerEx;
     quizResult.textContent = quizInfo[0].ansewerEx;
 
     //보기 출력
-    // for (i=0; i&lt;4; i++){
-    //     quizChoice[i].textContent = quizInfo[0].ansewerChoice[i];
-    // }
-
-    quizInfo.forEach(function (el, i) {
-        quizChoice[0].textContent = quizInfo[i].ansewerChoice[0];
-        quizChoice[1].textContent = quizInfo[i].ansewerChoice[1];
-        quizChoice[2].textContent = quizInfo[i].ansewerChoice[2];
-        quizChoice[3].textContent = quizInfo[i].ansewerChoice[3];
+     for (i=0; i&lt;4; i++){
+         quizChoice[i].textContent = quizInfo[0].ansewerChoice[i];
+     }
     });
 
     //해설 숨기기
