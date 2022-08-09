@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>사이트 | 카드 유형 첫 번째</title>
 
-    <link rel="stylesheet" href="/javascript/assets/css/style.css">
-    <link rel="stylesheet" href="/javascript/assets/css/dracula.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dracula.css" />
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <div class="document">
             <!-- 주 타이틀 -->
             <h2 class="t_tit">
-                사이트 유형 <br> 
+                사이트 유형 <br>
                 <i class="t_tit">카드 유형 첫 번째</i>
             </h2>
 
@@ -40,68 +40,298 @@
 
             <hr>
 
-            <h3 class="t_tit">객체 타입 유형 알아보기</h3>
-            <h4 class="t_tit2">첫번 째 : number</h4>
+            <h3 class="t_tit">실전 | 카드 유형 디자인 만들기</h3>
+            <h4 class="t_tit2">자신이 원하는 디자인을 디자인 툴로 만들어보기</h4>
             <p class="t_desc">
-                정수, 소수점, 지수를 표현할 수 있다.
+                아래는 수업을 받으며 피그마로 만들어본 카드유형 디자인 레이이아웃이다. <br>
+                사이트 제목과 사이트 설명, 카드유형 디자인 3개의 레이아웃으로 잡았다.
             </p>
-            <div class="t_desc2">
-                var num1 = <i>10;</i> <br>
-                var num2 = <i>10.5;</i> <br>
-                var num3 = <i>le+2;</i> <br><br>
-                console.log(numl); // <i>10</i> <br>
-                console.log(num2); // <i>10.5</i> <br>
-                console.log(num3); // <i>100</i> le+2 는 1*10의 2승을 의미
+            <div class="t_iframe">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F6HyvSs7mzSseCG19fNscA0%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D8%253A95"
+                    allowfullscreen></iframe>
             </div>
-            <h4 class="t_tit2">두번 째 : string</h4>
+            <h4 class="t_tit2">section을 이용해 전체 틀 잡기</h4>
             <p class="t_desc">
-                문자를 표현할 때 쓰는 데이터 <br>
-                '' 혹은 "" 으로 표현한다.
+                제목, 설명, 카드 디자인이 들어갈 전체 틀을 만들어준다.
             </p>
-            <div class="t_desc2">
-                var str1 = <i> ' </i>문자<i> ' </i>; <br>
-                var str2 = <i> " </i>문자<i> " </i>; <br><br>
-
-                문자 안에 문자가 들어갈 경우 <br>
-                var str1 = '문자 "문자"'; <br>
-                var str1 = "문자 "문자'";
+            <br>
+            <p class="t_desc2">
+                html 문서
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;section id="cardType" class="card__wrap nexon section"&gt;
+&lt;/section&gt;
+</code></pre>
             </div>
-            <h4 class="t_tit2">세번 째 : blooean</h4>
-            <p class="t_desc">
-                참과 거짓으로 값을 표현하는 데이터
-            </p>
+            <br>
             <p class="t_desc2">
-                var temp1 = (5 > 4); <br>
-                var temp2 = (5 < 4); <br><br>
-
-                    console.log(temp1); // <i>결과 값 : 참</i> <br>
-                    console.log(temp2); // <i>결과 값 : 거짓</i>
+                css 문서
             </p>
-            <h4 class="t_tit2">네번 째 : undefined</h4>
+            <div class="t_code">
+<pre><code class="language-js">/*  fonts   */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+.nexon {
+    /*  개별적으로 폰트 설정해서 클래스로 적용   */
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+}
+</code></pre>
+            </div>
+
+<!-- 나중에 정리 -->
+            <h4 class="t_tit2">일단 코드</h4>
             <p class="t_desc">
-                변수를 선언하고 데이터 값은 지정하지 않았을 때 결과 값으로 나타나는 데이터
+                부 설명
             </p>
+            <br>
             <p class="t_desc2">
-                var temp1 = 10; <br>
-                <i>var temp2;</i> <br><br>
-
-                console.log(temp1); // 결과 값 : 10 <br>
-                console.log(temp2); // <i>결과 값 : undefined</i>
+                html 문서
             </p>
-            <h4 class="t_tit2">다섯번 째 : null</h4>
-            <p class="t_desc">
-                변수를 빈 상태로 초기화 하거나, 데이터는 저장했지만 값이 존재하지 않을 때 null값으로 반환 한다.
-            </p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;!DOCTYPE html>
+    &lt;html lang="ko">
+    
+    &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+        &lt;title>카드 유형 | 첫 번째&lt;/title>
+        &lt;style>
+            /*  fonts   */
+            @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+    
+            .nexon {
+                /*  개별적으로 폰트 설정해서 클래스로 적용   */
+                font-family: 'NexonLv1Gothic';
+                font-weight: 400;
+            }
+    
+            /*   reset   */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+    
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: normal;
+            }
+    
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+    
+            img {
+                width: 100%;
+            }
+    
+            /*   common   */
+            .container {
+                width: 1160px;
+                padding: 0 20px;
+                margin: 0 auto;
+            }
+    
+            .section {
+                padding: 120px 0;
+            }
+    
+            .section>h2 {
+                font-size: 50px;
+                line-height: 1;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .section>p {
+                font-size: 22px;
+                font-weight: 300;
+                color: #666;
+                text-align: center;
+                margin-bottom: 70px;
+            }
+    
+            /*   cardType   */
+            .card__inner {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .card {
+                width: 32%;
+                height: 500px;
+                background-color: #f5f5f5;
+            }
+    
+            .card__body {
+                padding: 24px;
+            }
+    
+            .card__body .tit {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+    
+            .card__body .desc {
+                font-size: 18px;
+                line-height: 1.4;
+                color: #666;
+                margin-bottom: 20px;
+                font-weight: 300;
+            }
+        &lt;/style>
+    &lt;/head>
+    
+    &lt;body>
+        &lt;section id="cardType" class="card__wrap nexon section">
+            &lt;h2>이미지 무료 다운로드 IT.D&lt;/h2>
+            &lt;p>풍경, 일러스트, 배경화면, ico 등 여러 이미지 다운로드가 가능한 사이트에 오신걸 환영합니다.&lt;/p>
+            &lt;div class="card__inner container">
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="/site/cardType/img/card_bg01.jpg" alt="풍경 사진">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">풍경 사진&lt;/h3>
+                        &lt;p class="desc">바다, 하늘, 들판 등 사람들이 찍은 여러가지의 풍경, 느낌이 담겨진 이미지. 서로의 사진을 공유하며 다운로드하고 즐겨볼 수 있다.&lt;/p>
+                        &lt;a class="btn" href="/">이미지 더보기&lt;/a>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="/site/cardType/img/card_bg02.jpg" alt="풍경 사진">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">일러스트 사진&lt;/h3>
+                        &lt;p class="desc">애니메이션 캐릭터, 만화 캐릭터 등 일러스트, 이미지를 담아놨다. 귀엽고 아기자기한 일러스트들을 다운받고 눈으로 즐겨보는 시간&lt;/p>
+                        &lt;a class="btn" href="/">이미지 더보기&lt;/a>
+                    &lt;/div>
+                &lt;/article>
+    
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="/site/cardType/img/card_bg03.jpg" alt="풍경 사진">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="tit">배경화면 사진&lt;/h3>
+                        &lt;p class="desc">직접 그리고 만든 배경화면을 자신의 휴대폰, 컴퓨터, 노트북에 다운을 받아 적용이 가능하다. 아름답고 신비로운 이미지 다운 받기
+                        &lt;/p>
+                        &lt;a class="btn" href="/">이미지 더보기&lt;/a>
+                    &lt;/div>
+                &lt;/article>
+            &lt;/div>
+        &lt;/section>
+    &lt;/body>
+    
+    &lt;/html>
+</code></pre>
+            </div>
+            <br>
             <p class="t_desc2">
-                var obj = 10; <br>
-                obj = null; <br>
-                console.log(obj); // <i>결과 값 : null | 변수를 빈 상태로 만든다.</i> <br><br>
+                css 문서
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">/*  fonts   */
+    @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
 
-                var obj = document.getElementById('gnb'); <br>
-                console.log(obj); // <i>결과 값 : 변수에 데이터 값을 저장했으나, 값이 존재하지않아 null을 저장</i>
+    .nexon {
+        /*  개별적으로 폰트 설정해서 클래스로 적용   */
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+    }
 
-                <hr />
-                <!-- 문단을 나누는 줄 -->
+    /*   reset   */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    /*   common   */
+    .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+        min-width: 1160px;
+    }
+
+    .section {
+        padding: 120px 0;
+    }
+
+    .section>h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section>p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    /*   cardType   */
+    .card__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 32%;
+        height: 500px;
+        background-color: #f5f5f5;
+    }
+
+    .card__header {
+        padding: 26px 26px 20px 26px;
+    }
+
+    .card__body {
+        padding: 24px;
+    }
+
+    .card__body .tit {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card__body .desc {
+        font-size: 18px;
+        line-height: 1.4;
+        color: #666;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+</code></pre>
+            </div>
         </div>
     </main>
     <!-- //main and -->
@@ -109,7 +339,7 @@
         <a href="mailto:wjsqhdus971007@gmail.com">wjsqhdus971007@gmail.com</a>
     </footer>
     <!-- //footer and -->
-    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../js/highlight.min.js"></script>
     <script>
         hljs.highlightAll();
     </script>
