@@ -17,6 +17,10 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect02.html
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect03.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect04.html  
 
+### 사이트
+https://jeonboyeon.github.io/coding2/site/cardindex.html  
+https://jeonboyeon.github.io/coding2/site/index.html  
+
 ### HTML 메인페이지
 https://jeonboyeon.github.io/coding2/html/index.html   
 https://jeonboyeon.github.io/coding2/html/alphabet.html   
