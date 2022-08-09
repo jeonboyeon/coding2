@@ -19,7 +19,7 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect04.html
 
 ### 사이트
 https://jeonboyeon.github.io/coding2/javascript/site/cardindex.html  
-https://jeonboyeon.github.io/coding2/javascript/effect/index.html  
+https://jeonboyeon.github.io/coding2/javascript/site/index.html  
 
 ### HTML 메인페이지
 https://jeonboyeon.github.io/coding2/html/index.html   
