@@ -1,63 +1,51 @@
-/* 여백 초기화*/
+/* 여백 초기화 */
 * {
     margin: 0;
     padding: 0;
 }
-
-/*링크 초기화*/
+/* 링크 초기화 */
 a {
     text-decoration: none;
     color: #222;
 }
-
-/*목록 초기화*/
+/* 목록 초기화 */
 li {
     list-style: none;
 }
-
-/*제목 초기화*/
+/* 제목 초기화 */
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
-
 /* 볼드체 초기화 */
 strong {
     font-weight: normal;
 }
-
-/* 이텔릭체 촉화 */
-
-/* 기울기 초기화 */
+/* 이탈리 초기화 */
 em, i {
     font-style: normal;
 }
-
 /* 테이블 초기화 */
 table {
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
 }
-
-/* --------------- 기본 세팅 --------------- */
+/* 기본셋팅 */
 :root {
-    font-size: 22px; /* 기본값은 16px */
-    --fontTitle : 'OKDdung';
-    --fontSub : 'UtoLittleBear';
-    --fontDocs : 'SCoreDream';
-    --white : #fff;
-    --black : #000;
-    --orange : #e5774f;
-    --orange2 : #eb983a;
-    --red : #c54435;
-    --bgMain: #f4b861;
-    --bgSub : #fef2e0;
-    --brown : #762917;
-
-    
+    font-size: 22px;
+    --fontTitle: "OKDdung";
+    --fontSub: "UtoImageTree";
+    --fontDocs: "SCoreDream";
+    --white: #ffff;
+    --black: #000;
+    --orange: #E5774F;
+    --orange2: #EB943A;
+    --red: #C54435;
+    --bgMain: #F4B861;
+    --bgSub: #FEF2E0;
+    --brown: #762917;
 }
-
-/* ---------- 레이아웃 ---------- */
+/* 레이아웃 */
 body {
     background-color: var(--bgMain);
 }
@@ -66,20 +54,17 @@ body {
 #footer {
     padding: 40px 0;
     text-align: center;
-
 }
 #footer a:hover {
     text-decoration: underline;
 }
-
-/* ---------- container ---------- */
-.container { 
+/* container */
+.container {
     max-width: 1400px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto; /*반응형*/
 }
-
-/* ---------- main__title --------- */
+/* main__title */
 .main__title {
     margin: 200px 20px;
     border: 4px solid var(--brown);
@@ -94,7 +79,7 @@ body {
     font-family: var(--fontTitle);
     font-size: 8vw;
     color: var(--orange);
-    /* -webkit-text-stroke: 2px var(--brown); */
+    white-space: nowrap; /* 줄바꿈 기능 x*/
 }
 .main__title em {
     font-family: var(--fontSub);
@@ -102,30 +87,61 @@ body {
     color: var(--brown);
 }
 .main__title p {
-    margin-top: 50px;
     font-family: var(--fontSub);
     font-size: 30px;
     color: var(--brown);
+    margin-top: 50px;
 }
-
+/* main__desc */
 .main__desc {
     margin: 200px 20px;
     border: 4px solid var(--brown);
     background-color: var(--bgSub);
-    padding: 80px;
+    padding: 120px 80px 80px 80px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.main__desc .deco {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    padding-top: 10px;
+    white-space: nowrap;
+    width: 90%;
+    /* background: #000; */
+}
+.main__desc .deco span {
+    width: 30px;
+    height: 30px;
+    border: 10px solid var(--brown);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: var(--bgMain);
+    margin: 0 1%;
+    position: relative;
+}
+.main__desc .deco span::after {
+    content: '';
+    width: 10px;
+    height: 13px;
+    background-color: var(--brown);
+    position: absolute;
+    left: 0;
+    top: -20px;
 }
 .main__desc .title {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 2rem;
 }
 .main__desc .title h2 {
-    width: 35%;
+    display: inline-block;
     border: 4px solid var(--brown);
-    font-size: 2rem; /* 44px */
+    font-size: 2rem; /*1rem=22px로 맞춰놓음*/
     padding: 0.7rem 1rem 0.5rem 80px;
     font-family: var(--fontDocs);
-    font-weight: 800;
+    font-weight: 900;
     color: var(--brown);
     position: relative;
     box-sizing: border-box;
@@ -134,20 +150,38 @@ body {
     content: '';
     width: 50px;
     height: 100%;
-    background: var(--red);
+    background-color: var(--red);
+    position: absolute;
     left: 0;
     top: 0;
-    position: absolute;
     border-right: 4px solid var(--brown);
-    
 }
 .main__desc .title p {
-    width: 60%;
     font-family: var(--fontSub);
-    font-size: 1.2rem;
-    color: var(--brown);
+    font-size: 1.3rem;
     line-height: 1.3;
-    
+    color: var(--brown);
+}
+.main__desc .subTitle {
+}
+.main__desc .subTitle ul {
+    overflow: hidden;
+}
+.main__desc .subTitle li {
+    float: left;
+    margin-right: -4px; /*margin만 -값을 쓸 수 있음 */
+    margin-bottom: -4px;
+}
+.main__desc .subTitle li a {
+    font-size: 0.8rem;
+    font-family: var(--fontDocs);
+    border: 4px solid var(--brown);
+    padding: 0.3em 0.6em; /*em은 부모요소 크기의 배수*/
+    display: inline-block;
+}
+.main__desc .subTitle li.active a {
+    background-color: var(--brown);
+    color: var(--white);
 }
 .main__desc .table {
     border: 3px solid var(--brown);
@@ -164,10 +198,18 @@ body {
     padding: 10px;
     text-align: center;
 }
-.main__desc .table tr td:nth-child(3) {
+.main__desc .table tr td:nth-child(3){
     text-align: left;
 }
 .main__desc .table tr td span {
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 4px;
 }
+.main__desc .table.rowTable tr td:nth-child(2),
+.main__desc .table.rowTable tr td:nth-child(3) {
+    text-align: center;
+}
+.main__desc .table.rowTable .left {
+    text-align: left !important;
+}
+

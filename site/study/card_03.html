@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사이트 | 카드 유형 첫 번째</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dracula.css" />
+</head>
+
+<body>
+    <!-- //header -->
+    <main id="main">
+        <div class="document">
+            <!-- 주 타이틀 -->
+            <h2 class="t_tit">
+                사이트 유형 <br>
+                <i class="t_tit">카드 유형 세 번째</i>
+            </h2>
+
+            <!-- 주 타이틀 설명 -->
+            <p class="t_desc">
+                <!-- 자바스크립트를 다루기 위해서는 기초적인 특징과 기본 문법이 있습니다.
+          가장 기본이기 때문에 이 부분을 숙지하고 자바스크립트를
+          <i>공부</i>하세요! -->
+                오늘은 카드 유형 세 번째를 만들어보자!
+            </p>
+
+            <hr />
+
+            <h3 class="t_tit">실전 | 카드 유형 디자인 만들기</h3>
+            <p class="t_desc">
+                오늘도 아래 보이는 디자인은 수업을 받으며 피그마로 만들어본 카드유형 디자인 레이이아웃이다. <br>
+                사이트 제목을 가리고, 박스 안에 3개의 카드를 넣은 디자인이다.
+            </p>
+            <div class="t_iframe">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F6HyvSs7mzSseCG19fNscA0%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fpage-id%3D185%253A313%26node-id%3D189%253A620%26viewport%3D422%252C-691%252C0.36%26scaling%3Dscale-down" allowfullscreen></iframe>
+            </div>
+            <h4 class="t_tit2">section을 이용해 전체 틀 잡기</h4>
+            <p class="t_desc">
+                제목, 카드 디자인, 카드 안에 요소들이 들어갈 전체 틀을 만들어준다.
+            </p>
+            <br>
+            <p class="t_desc2">
+                html 문서
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;section id="cardType03" class="card__wrap score section"&gt;
+&lt;/section&gt;
+</code></pre>
+            </div>
+            <br>
+            <p class="t_desc2">
+                css 문서
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">/* fonts */
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+.score {
+    font-family: "SCoreDream";
+    font-weight: 300;
+}
+</code></pre>
+            </div>
+
+<!-- 나중에 정리 -->
+            <h4 class="t_tit2">아티클로 카드 박스와 안에 들어갈 요소들을 만들어준다.</h4>
+            <p class="t_desc">
+                부 설명
+            </p>
+            <br>
+            <p class="t_desc2">
+                html 문서 (설명은 주석으로 달아놓겠습니다 🐷)
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">&lt;h2 class="blind">너구리 세상&lt;/h2> <!-- 제목 -->
+    &lt;div class="card__inner container">
+        &lt;article class="card">
+            &lt;figure class="card__header">
+                &lt;img src="cardType/img/card_bg03_01.jpg" alt="너구리 사진"> <!-- 귀여운 너구리 사진 -->
+                &lt;figcaption>Raccoons&lt;/figcaption> <!--  -->
+            &lt;/figure>
+            &lt;div class="card__contants">
+                &lt;h3>킁킁! 맛있는 냄새! 어디서 흘러 들어오는 걸까&lt;/h3>
+                &lt;p>어디선가 흘러오는 이 맛있는 냄새.. 고기인가 과일인가 솜사탕인가 무엇인가 일단 너무 배가 고파 얼른 먹고싶다. 으에에 으에에 배고파아아아아아아아&lt;/p>
+            &lt;/div>
+            &lt;div class="card__footer">
+                &lt;h4>라쿤장인 그라쿤 &lt;em>18 Resources&lt;/em>&lt;/h4>
+               &lt;span> &lt;img src="cardType/img/card_bg03_icon.png" alt="너구리 프로필 사진">&lt;/span>
+            &lt;/div>
+        &lt;/article>
+</code></pre>
+            </div>
+            <br>
+            <p class="t_desc2">
+                css 문서
+            </p>
+            <div class="t_code">
+<pre><code class="language-js">/*  fonts   */
+    @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+    .nexon {
+        /*  개별적으로 폰트 설정해서 클래스로 적용   */
+        font-family: 'NexonLv1Gothic';
+        font-weight: 400;
+    }
+
+    /*   reset   */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    /*   common   */
+    .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+        min-width: 1160px;
+    }
+
+    .section {
+        padding: 120px 0;
+    }
+
+    .section>h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section>p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    /*   cardType   */
+    .card__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 32%;
+        height: 500px;
+        background-color: #f5f5f5;
+    }
+
+    .card__header {
+        padding: 26px 26px 20px 26px;
+    }
+
+    .card__body {
+        padding: 24px;
+    }
+
+    .card__body .tit {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .card__body .desc {
+        font-size: 18px;
+        line-height: 1.4;
+        color: #666;
+        margin-bottom: 20px;
+        font-weight: 300;
+    }
+</code></pre>
+            </div>
+        </div>
+    </main>
+    <!-- //main and -->
+    <footer id="footer">
+        <a href="mailto:wjsqhdus971007@gmail.com">wjsqhdus971007@gmail.com</a>
+    </footer>
+    <!-- //footer and -->
+    <script src="../js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
