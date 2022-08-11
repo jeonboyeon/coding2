@@ -18,8 +18,9 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect03.html
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect04.html  
 
 ### 사이트
-https://jeonboyeon.github.io/coding2/site/card_index.html  
-https://jeonboyeon.github.io/coding2/site/index.html  
+https://jeonboyeon.github.io/coding2/site/cardType01.html  
+https://jeonboyeon.github.io/coding2/site/cardType02.html  
+https://jeonboyeon.github.io/coding2/site/cardType03.html  
 
 ### HTML 메인페이지
 https://jeonboyeon.github.io/coding2/html/index.html   
