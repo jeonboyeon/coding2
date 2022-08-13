@@ -238,7 +238,8 @@ body {
 .document .t_link a {
     display: block;
     width: 200px;
-    background-color: #F5F5F5;
+    color: #a34316;
+    background-color: #ffd779;
     margin: 40px auto;
     padding: 10px;
     border-radius: 5px;
@@ -246,7 +247,9 @@ body {
     transition: all 0.3s;
 }
 .document .t_link a:hover {
-    background: #D6D6D6;
+    color: #fff;
+    background: #ff5100;
+    border-radius: 20px;
 }
 @media (max-width: 800px){
     body {
