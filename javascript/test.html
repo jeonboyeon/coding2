@@ -1,73 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        //1번 기본
-        {
-            function func(){
-                document.write("실행01");
-            }
-            func();
-        }
-        //2번 익명
-        {
-            const func = function(){
-                document.write("실행02");
-            }
-            func();
-        }
+        var str1 = "var num1 = 10";
+        var str2 = "var num2 = 20";
 
-        //3 매개변수 함수
-        {
-            function func(str){
-                document.write(str);
-            }
-            func("실행03");
-        }
+        eval(str1);
+        eval(str2);
 
-        //4 리턴
-        {
-            function func(){
-                const str = "실행04";
-                return str;
-            }
-            document.write(func());
-        }
-
-        // 화살표
-        {
-        func = () => document.write("실행05");
-
-        func();
-        }
-
-        {
-            const func = () => document.write("실행06");
-
-            func();
-        }
-
-        {
-            func = str => document.write(str);
-
-            func("실행07");
-        }
-
-        func = () => {
-            const str = "실행08";
-            return str;
-        }
-
-        document.write(func());
-
-        
-
+        console.log(num1 + num2);   
     </script>
 </body>
+
 </html>
