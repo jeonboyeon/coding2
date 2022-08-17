@@ -35,3 +35,4 @@ https://jeonboyeon.github.io/coding2/css/index.html
 ### 개인 공부 페이지
 https://jeonboyeon.github.io/coding2/javascript/study/html_layoutEx.html    
 https://jeonboyeon.github.io/coding2/layout/layout_study.html    
+https://jeonboyeon.github.io/coding2/javascript/searchEffect01_javascript.html    
