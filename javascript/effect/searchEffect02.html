@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchEffect 첫 번째 | CSS 속성 검색</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/search.css">
+
+    <!-- 폰트 -->
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/tmoney/TmoneyRoundWind.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="searchEffect01.html">1</a></li>
+                        <li class="active"><a href="searchEffect02.html">2</a></li>
+                        <li><a href="searchEffect03.html">3</a></li>
+                        <li><a href="searchEffect04.html">4</a></li>
+                        <li><a href="searchEffect05.html">5</a></li>
+                        <li><a href="searchEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header -->
+
+    <main id="main">
+        <div class="search__wrap">
+            <span>
+                indexOf( ) 를 이용하여 CSS 속성 검색하기
+            </span>
+            <h1>
+                CSS 태그 검색하기
+            </h1>
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input id="search" type="text" placeholder="CSS 속성 or 키워드를 입력해주세요 ✏️" />
+            </div>
+            <div class="search__info">
+                <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 키워드 별로 검색해보세요. 📋</div>
+                <div> 전체 속성 갯수 : <span class="num">0</span></div>
+            </div>
+            <div class="search__list">
+                <div class="css">
+                    <ul>
+                        <li data-name="align-content" data-type="플렉스"><strong>abbr</strong> : 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
+                        <li data-name="align-items" data-type="플렉스"><strong>align-items</strong> : 줄임말이나 머리글자를 표현하는데 사용합니다.</li>
+                        <li data-name="align-self" data-type="플렉스"><strong>align-self</strong> : align-self</li>
+                        <li data-name="all" data-type="기타"><strong>all</strong> : all</li>
+                        <li data-name="animation" data-type="애니메이션"><strong>animation</strong> : 애니메이션과 관련된 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="animation-delay" " data-type="애니메이션"><strong>animation-delay</strong> : 애니메이션 지연 시간을 설정합니다</li>
+                        <li data-name="animation-direction" " data-type="애니메이션"><strong>animation-direction</strong> : 애니메이션 움직임 방향을 설정합니다.
+                        </li>
+                        <li data-name="animation-duration" " data-type="애니메이션"><strong>animation-duration</strong> : 애니메이션 움직임 시간을 설정합니다.
+                        </li>
+                        <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : 애니메이션이 끝난 후의 상태를
+                            설정합니다.</li>
+                        <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : 애니메이션이 끝난
+                            후의 상태를 설정합니다.</li>
+                        <li data-name="animation-name"><strong>animation-name</strong> : 애니메이션 keyframe 이름을 설정합니다.</li>
+                        <li data-name="animation-play-state"><strong>animation-play-state</strong> : 애니메이션 진행상태를 설정합니다.
+                        </li>
+                        <li data-name="animation-timeline"><strong>animation-timeline</strong> : 애니메이션과 타임라인을 설정합니다.
+                        </li>
+                        <li data-name="animation-timing-function"><strong>animation-timing-function</strong> : 애니메이션
+                            움직임의 속도를 설정합니다.</li>
+                        <li data-name="appearance"><strong>appearance</strong> : appearance</li>
+                        <li data-name="aspect-ratio"><strong>aspect-ratio</strong> : aspect-ratio</li>
+                        <li data-name="backdrop-filter" data-type="효과"><strong>backdrop-filter</strong> : backdrop-filter</li>
+                        <li data-name="backface-visibility"><strong>backface-visibility</strong> : backface-visibility
+                        </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : 백그라운드 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="background-attachment" data-type="백그라운드"><strong>background-attachment</strong> : 배경이미지 고정 여부를
+                            설정합니다.</li>
+                        <li data-name="background-blend-mode" data-type="백그라운드"><strong>background-blend-mode</strong> : 배경을 혼합했을 때, 그래픽
+                            효과를 설정합니다.</li>
+                        <li data-name="background-clip" data-type="백그라운드"><strong>background-clip</strong> : 백그라운드 이미지의 위치 기준점을 설정합니다.
+                        </li>
+                        <li data-name="background-color" data-type="백그라운드"><strong>background-color</strong> : 백그라운드 색을 설정합니다.</li>
+                        <li data-name="background-image" data-type="백그라운드"><strong>background-image</strong> : 백그라운드이미지 속성을 설정합니다.</li>
+                        <li data-name="background-origin" data-type="백그라운드"><strong>background-origin</strong> : 백그라운드 이미지 위치 기준점을 설정하기 위한
+                            속성입니다.</li>
+                        <li data-name="background-position" data-type="백그라운드"><strong>background-position</strong> : 백그라운드 이미지의 위치 영역을
+                            설정합니다.</li>
+                        <li data-name="background-position-x"><strong>background-position-x</strong> : 백그라운드 이미지의 위치 영역
+                            x축을 설정합니다.</li>
+                        <li data-name="background-position-y"><strong>background-position-y</strong> : 백그라운드 이미지의 위치 영역
+                            y축을 설정합니다.</li>
+                        <li data-name="background-repeat"><strong>background-repeat</strong> : 백그라운드 이미지 반복 여부를 설정합니다.
+                        </li>
+                        <li data-name="background-size"><strong>background-size</strong> : 백그라운드 이미지 사이즈를 설정합니다.</li>
+                        <li data-name="block-size"><strong>block-size</strong> : block-size</li>
+                        <li data-name="border"><strong>border</strong> : 테두리 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-block-color"><strong>border-block-color</strong> : border-block-color</li>
+                        <li data-name="border-block-end-style"><strong>border-block-end-style</strong> :
+                            border-block-end-style</li>
+                        <li data-name="border-block-end"><strong>border-block-end</strong> : border-block-end</li>
+                        <li data-name="border-block-end-style"><strong>border-block-end-style</strong> :
+                            border-block-end-style</li>
+                        <li data-name="border-block-end-width"><strong>border-block-end-width</strong> :
+                            border-block-end-width</li>
+                        <li data-name="border-bottom"><strong>border-bottom</strong> : 테두리 아래쪽 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-bottom-color"><strong>border-bottom-color</strong> : 테두리 아래쪽 색 속성을 설정합니다.
+                        </li>
+                        <li data-name="border-bottom-left-radius"><strong>border-bottom-left-radius</strong> : 테두리 아래 왼쪽
+                            모서리 굴곡을 설정합니다.</li>
+                        <li data-name="border-bottom-style"><strong>border-bottom-style</strong> : 테두리 아래 스타일 속성을 설정합니다.
+                        </li>
+                        <li data-name="border-bottom-width"><strong>border-bottom-width</strong> : 테두리 아래 두께 속성을 설정합니다.
+                        </li>
+                        <li data-name="border-collapse"><strong>border-collapse</strong> : </li>
+                        <li data-name="border-color"><strong>border-color</strong> : 테두리 색을 설정합니다.</li>
+                        <li data-name="border-end-end-radius"><strong>border-end-end-radius</strong> : </li>
+                        <li data-name="border-end-start-radius"><strong>border-end-start-radius</strong> : </li>
+                        <li data-name="border-image"><strong>border-image</strong> : 테두리 이미지 설정</li>
+                        <li data-name="background-origin"><strong>background-origin</strong> : 백그라운드 이미지 위치 기준점을 설정하기 위한 속성입니다.</li>
+                        <li data-name="background-position"><strong>background-position</strong> : 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+                        <li data-name="background-position-x"><strong>background-position-x</strong> : 백그라운드 이미지의 위치 영역 x축을 설정합니다.</li>
+                        <li data-name="background-position-y"><strong>background-position-y</strong> : 백그라운드 이미지의 위치 영역 y축을 설정합니다.</li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+
+    <footer id="footer">
+        <a href="mailto:jeon.boyeon@kakao.com">jeon.boyeon@kakao.com</a>
+    </footer>
+    <!-- footer -->
+
+    <script>
+        //선택자
+
+        const searchBox = document.querySelector(".search__box input"); // HTML 검색 박스
+        const searchList = document.querySelectorAll(".search__list ul li"); // 태그 목록 리스트
+        const searchInfo = document.querySelector(".search__info .num");    //css 속성 갯수
+
+        //전체 갯수 구하기
+        searchInfo.textContent = searchList.length;
+
+        //searchBox
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value;
+
+            searchList.forEach(el => {
+                const cssName = el.dataset.name; //css 속성 모든 값이 들어가 있다.
+                const cssType = el.dataset.type; //css 속성 모든 값이 들어가 있다.
+                console.log(cssName);
+
+                "all".includes("all"); //true
+
+                if(cssName.includes(searchWord)){
+                    el.classList.add("show");
+                } else {
+                    el.classList.remove("show");
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
