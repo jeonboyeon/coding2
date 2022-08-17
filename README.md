@@ -18,6 +18,8 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect01.html
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect02.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect03.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect04.html  
+https://jeonboyeon.github.io/coding2/javascript/effect/sarchEffect01.html  
+https://jeonboyeon.github.io/coding2/javascript/effect/sarchEffect02.html  
 
 ### 사이트
 https://jeonboyeon.github.io/coding2/site/cardType01.html  
