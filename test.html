@@ -1,96 +1,16 @@
-&lt;body>
-    &lt;header id="header">
-        &lt;nav>
-            &lt;ul>
-                &lt;li class="active">&lt;a href="searchEffect01.html">1&lt;/a>
-                    &lt;ul class="sub">
-                        &lt;li class="active">&lt;a href="searchEffect01.html"> HTML&lt;/a>&lt;/li>
-                        &lt;li>&lt;a href="searchEffect01_css.html"> CSS&lt;/a>&lt;/li>
-                        &lt;li>&lt;a href="searchEffect01_javascript.html"> JAVASCRIPT&lt;/a>&lt;/li>
-                    &lt;/ul>
-                &lt;/li>
-                &lt;li>&lt;a href="searchEffect02.html">2&lt;/a>&lt;/li>
-                &lt;li>&lt;a href="searchEffect03.html">3&lt;/a>&lt;/li>
-                &lt;li>&lt;a href="searchEffect04.html">4&lt;/a>&lt;/li>
-                &lt;li>&lt;a href="searchEffect05.html">5&lt;/a>&lt;/li>
-                &lt;li>&lt;a href="searchEffect06.html">6&lt;/a>&lt;/li>
-            &lt;/ul>
-        &lt;/nav>
-    &lt;/header>
-    &lt;!-- header -->
-
-    &lt;main id="main">
-        &lt;div class="search__wrap">
-            &lt;span>
-                indexOf( ) 를 이용하여 CSS 속성 검색하기
-            &lt;/span>
-            &lt;h1>
-                HTML 태그 검색하기
-            &lt;/h1>
-            &lt;div class="search__box">
-                &lt;label for="search">검색하기&lt;/label>
-                &lt;input id="search" type="text" placeholder="HTML 태그를 입력해주세요 ✏️" />
-            &lt;/div>
-            &lt;div class="search__list">
-                &lt;div class="html">
-                    &lt;ul>
-                        &lt;li data-name="a">&lt;strong>a&lt;/strong> : a 태그는 다른 페이지 이동을 설정한다.&lt;/li>
-                        &lt;li data-name="abbr">&lt;strong>abbr&lt;/strong> : abbr 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.&lt;/li>
-                        &lt;li data-name="acronym">&lt;strong>acronym&lt;/strong> : abbr 머리글자로만 된 단어를 정의할 때 사용 | &lt;abbr>로 바뀌었다.
-                        &lt;/li>
-                        &lt;li data-name="address">&lt;strong>address&lt;/strong> : 연락할 수 있는 정보를 명시할 때 사용&lt;/li>
-                        &lt;li data-name="applet">&lt;strong>applet&lt;/strong> : 문서에 포함되는 애플릿을 정의할 때 사용 | &lt;embed> 혹은
-                            &lt;object>로 바뀌었다.&lt;/li>
-                        &lt;li data-name="area">&lt;strong>area&lt;/strong> : 이미지 맵에서 하이퍼링크가 연결될 영역을 정의&lt;/li>
-                        &lt;li data-name="article">&lt;strong>article&lt;/strong> : 문서나 페이지 또는 사이트와는 완전히 독립적으로 구성할 수 있는 요소를 정의할 때
-                            사용&lt;/li>
-                        &lt;li data-name="aside">&lt;strong>aside&lt;/strong> : 콘텐츠들로부터 분리시킬 수 있는 콘텐츠로 구성된 페이지 영역을 정의할 때 사용&lt;/li>
-                        &lt;li data-name="audio">&lt;strong>audio&lt;/strong> : 태그는 음악이나 오디오 스트림과 같은 사운드를 정의할 때 사용&lt;/li>
-                        &lt;li data-name="b">&lt;strong>b&lt;/strong> : 굵게 표현되는 텍스트를 정의할 때 사용&lt;/li>
-                        &lt;li data-name="base">&lt;strong>base&lt;/strong> : 해당 문서의 모든 상대 주소에 대한 기본 URL과 target 속성값을 정의할 때 사용
-                        &lt;/li>
-                        &lt;li data-name="bdi">&lt;strong>bdi&lt;/strong> : 주위의 텍스트들과는 다른 방향으로 써지는 텍스트 영역을 정의할 때 사용&lt;/li>
-                        &lt;li data-name="bdo">&lt;strong>bdo&lt;/strong> : 자식 요소의 텍스트 방향성을 정의할 때 사용&lt;/li>
-                        &lt;li data-name="bgsound">&lt;strong>bgsound&lt;/strong> : 배경 사운드 요소 | 현제는 &lt;audio>로 대신 사용 한다.&lt;/li>
-                        &lt;li data-name="big">&lt;strong>big&lt;/strong> : 글자 크기가 큰 텍스트를 정의할 때 사용 | 현재는 CSS 로 사용&lt;/li>
-                        &lt;li data-name="blink">&lt;strong>blink&lt;/strong> : 텍스트를 깜박이게 설정 | CSS Animation으로 대신 사용한다.&lt;/li>
-                        &lt;li data-name="blockquote">&lt;strong>blockquote&lt;/strong> : 다른 출처로부터 인용된 블록을 정의할 때 사용&lt;/li>
-                        &lt;li data-name="body">&lt;strong>body&lt;/strong> : 문서의 텍스트, 하이퍼링크, 이미지, 리스트 등과 같은 모든 콘텐츠를 포함하는 영역을 정의할
-                            때 사용&lt;/li>
-                        &lt;li data-name="br">&lt;strong>br&lt;/strong> : 텍스트 내의 줄바꿈을 정의할 때 사용&lt;/li>
-                    &lt;/ul>
-                &lt;/div>
-            &lt;/div>
-        &lt;/div>
-    &lt;/main>
-    &lt;!-- main -->
-
-    &lt;footer id="footer">
-        &lt;a href="mailto:jeon.boyeon@kakao.com">jeon.boyeon@kakao.com&lt;/a>
-    &lt;/footer>
-    &lt;!-- footer -->
-
-    &lt;script>
-        //선택자
-
-        const searchBox = document.querySelector(".search__box input"); // HTML 검색 박스
-        const searchList = document.querySelectorAll(".search__list ul li"); // 태그 목록 리스트
-
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value; // 사용자가 입력한 키워드
-            // console.log(searchWord);
-
-            searchList.forEach(el => {
-                const cssName = el.dataset.name;
-
-                if (cssName.indexOf(searchWord)) {
-                    el.classList.add("hide"); // hide 속성을 추가한다.
-                } else {
-                    // Ex) abbr.indexOf("abbr") 은 0
-                    el.classList.remove("hide"); // hide를 지워 보여준다. (indexOf 값이 0이 되면 0이 되는 값만 hide 속성을 없앤다.)
-                }
-            });
-        });
-    &lt;/script>
-
-&lt;/body>
+&lt;section id="imageType01" class="image__wrap nexon section">
+    &lt;h2>다람쥐 세상 🐿&lt;/h2>
+    &lt;p>귀여운 다람쥐 세상에 오신걸 환영합니다! 나만 없어 다람쥐!&lt;/p>
+    &lt;div class="image__inner container">
+        &lt;article class="image img1">
+            &lt;h3 class="image__title">귀여운 다람쥐&lt;/h3>
+            &lt;p class="image__desc">뭘 해도 참 귀엽고, 예쁘고, 사랑스럽구나~ 귀여운 아기 다람쥐 그 입엔 뭐가 들어가 있는거니~ 나도 조금만 주겠니~&lt;/p>
+            &lt;a class="image__btn" href="/" title="자세히 보기">자세히 보기&lt;/a>
+        &lt;/article>
+        &lt;article class="image img2">
+            &lt;h3 class="image__title">귀여운 다람쥐&lt;/h3>
+            &lt;p class="image__desc">뭘 해도 참 귀엽고, 예쁘고, 사랑스럽구나~ 귀여운 아기 다람쥐 그 입엔 뭐가 들어가 있는거니~ 나도 조금만 주겠니~&lt;/p>
+            &lt;a class="image__btn yellow" href="/" title="자세히 보기">자세히 보기&lt;/a>
+        &lt;/article>
+    &lt;/div>
+&lt;/section>
