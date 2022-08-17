@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  fonts   */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            /*  개별적으로 폰트 설정해서 클래스로 적용   */
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /*   reset   */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        /*   common   */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h1 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /*   cardType   */
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            width: 49%;
+            height: 370px;
+            background-color: #f5f5f5;
+        }
+
+        .container .card__body {
+            display: inline-block;
+        }
+
+        .container .card .card__header {
+            position: relative;
+        }
+
+        .container .card .card__header h3 {
+            padding: 30px;
+            font-size: 30px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            margin-bottom: 116px;
+        }
+        .container .card .card__header p {
+            line-height: 1.5;
+            position: absolute;
+            padding: 30px;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 58px;
+            color: #fff;
+        }
+        .container .card .card__header .btn {
+            margin-left: 30px;
+            text-align: center;
+            line-height: 38px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 38px;
+            background-color: #fff;
+            width: 120px;
+            height: 38px;
+            background-color: #384B39;
+            color: #fff;
+        }
+        .container .card .card__header .btn2 {
+            margin-left: 30px;
+            text-align: center;
+            line-height: 38px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 38px;
+            background-color: #fff;
+            width: 120px;
+            height: 38px;
+            background-color: #4b4438;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="imageType" class="img__wraup nexon section">
+        <h1>
+            ‘ 하늘 바라보기 ‘
+        </h1>
+        <p>
+            푸른 하늘, 연보라 빛 하늘, 감미로운 하늘. 항상 바뀌는 하늘을 보며 잠시라도 휴식을 취하는 건 어떨까요?
+        </p>
+        <div class="card__inner container">
+            <article class="card">
+                <figure class="card__header">
+                    <img src="../cardType/img/imgType01_01.jpg" alt="풍경 사진">
+                    <h3>
+                        귀여운 다람쥐
+                    </h3>
+                    <p>뭘 해도 참 귀엽고, 예쁘고, 사랑스럽구나~ 귀여운 아기 다람쥐 그 입엔 뭐가 들어가 있는거니~ 나도 조금만 주겠니~</p>
+                    <a class="btn" href="/">
+                        이미지 더보기
+                    </a>
+                </figure>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="../cardType/img/imgType01_02.jpg" alt="풍경 사진">
+                    <h3>
+                        귀여운 다람쥐
+                    </h3>
+                    <p>뭘 해도 참 귀엽고, 예쁘고, 사랑스럽구나~ 귀여운 아기 다람쥐 그 입엔 뭐가 들어가 있는거니~ 나도 조금만 주겠니~</p>
+                    <a class="btn2" href="/">
+                        이미지 더보기
+                    </a>
+                </figure>
+                <div class="card__body">
+                </div>
+            </article>
+        </div>
+
+    </section>
+</body>
+
+</html>
