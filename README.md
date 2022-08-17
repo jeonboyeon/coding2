@@ -23,6 +23,7 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect04.html
 https://jeonboyeon.github.io/coding2/site/cardType01.html  
 https://jeonboyeon.github.io/coding2/site/cardType02.html  
 https://jeonboyeon.github.io/coding2/site/cardType03.html  
+https://jeonboyeon.github.io/coding2/site/image.html  
 
 ### HTML 메인페이지
 https://jeonboyeon.github.io/coding2/html/index.html   
