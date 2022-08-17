@@ -59,19 +59,42 @@
         <div class="main_menu">
             <ul>
                 <li><a href="#sample01">01. 문자열 : 문자열 결합 / 템플릿 문자열</a></li>
-                <li><a href="#sample02">02. 문자열 : </a></li>
-                <li><a href="#sample03">03. 문자열 : </a></li>
-                <li><a href="#sample04">04. 문자열 : </a></li>
-                <li><a href="#sample05">05. 문자열 : </a></li>
-                <li><a href="#sample06">06. 문자열 : </a></li>
-                <li><a href="#sample07">07. 문자열 : </a></li>
-                <li><a href="#sample08">08. 문자열 : </a></li>
-                <li><a href="#sample09">09. 문자열 : </a></li>
-                <li><a href="#sample10">10. 문자열 : </a></li>
+
+                <li><a href="#sample02">02. 문자열 메서드 : 문자열 변경 : toUppertcase() : 문자열을 대문자로 변경 : 반환(문자열)</a></li>
+                <li><a href="#sample02">02. 문자열 메서드 : 문자열 변경 : toLowerCase() : 문자열을 소문자로 변경 : 반환(문자열) </a></li>
+
+                <li><a href="#sample03">03. 문자열 메서드 : 문자열 변경 : trim() : 문자열 앞뒤 공백 제거 : 반환(문자열)⭐️</a></li>
+                <li><a href="#sample03">03. 문자열 메서드 : 문자열 변경 : trimStart() : 문자열 앞 공백 제거 : 반환(문자열) </a></li>
+                <li><a href="#sample03">03. 문자열 메서드 : 문자열 변경 : trimEnd() : 문자열 뒤 공백 제거 : 반환(문자열) </a></li>
+
+                <li><a href="#sample04">04. 문자열 메서드 : 문자열 변경 : slice() : 문자열에서 원하는 값을 추출 : 반환(문자열) ⭐️⭐️</a></li>
+                <li><a href="#sample04">04. 문자열 메서드 : 문자열 변경 : substring() : 문자열에서 원하는 값을 추출 : 반환(문자열) </a></li>
+                <li><a href="#sample04">04. 문자열 메서드 : 문자열 변경 : substr() : 문자열에서 원하는 값을 추출 : 반환(문자열) </a></li>
+
+                <li><a href="#sample5">05. 문자열 메서드 : 문자열 변경 : split() : 문자열에서 원하는 값을 추출 : 반환(배열) ⭐️⭐️</a></li>
+
+                <li><a href="#sample11">04. 문자열 메서드 : 문자열 변경 : replace() : 문자열 변경(교체) : 반환(문자열) ⭐️</a></li>
+                <li><a href="#sample12">04. 문자열 메서드 : 문자열 변경 : replaceAll() : 문자열 변경(교체) : 반환(문자열) </a></li>
+                <li><a href="#sample13">04. 문자열 메서드 : 문자열 변경 : concat() : 문자열 결합 : 반환(문자열) </a></li>
+                <li><a href="#sample14">04. 문자열 메서드 : 문자열 변경 : repeat() : 문자열 반복 : 반환(문자열) </a></li>
+                <li><a href="#sample15">04. 문자열 메서드 : 문자열 변경 : padStart() : 문자열 추가 : 반환(문자열) </a></li>
+                <li><a href="#sample16">04. 문자열 메서드 : 문자열 변경 : padEnd() : 문자열 추가 : 반환(문자열) </a></li>
+
+                <li><a href="#sample10">10. 문자열 메서드 : 문자열 검색 : indexOf() :문자열 특정 문자의 위치를 찾는다 : 반환(숫자) ⭐️</a></li>
+                <li><a href="#sample18">06. 문자열 메서드 : 문자열 검색 : lastIndexOf() : 문자열 특정 문자의 위치를 찾는다(뒤에서 부터) : 반환(숫자)</a>
+                </li>
+                <li><a href="#sample19">07. 문자열 메서드 : 문자열 검색 : search() : 문자열을 검색(정규식) : 반환(숫자) ⭐️</a></li>
+                <li><a href="#sample20">08. 문자열 메서드 : 문자열 검색 : match() : 문자열을 검색(정규식) : 반환(배열)</a></li>
+                <li><a href="#sample21">09. 문자열 메서드 : 문자열 검색 : includes() : 문자열 포함 여부 검색 : 반환(불린 참/거짓) ⭐️</a></li>
+                <li><a href="#sample22">09. 문자열 메서드 : 문자열 검색 : charAt() : 지정한 인덱스의 문자 추출 : 반환(문자열)</a></li>
+                <li><a href="#sample23">09. 문자열 메서드 : 문자열 검색 : charCodAt() : 지정한 인덱스의 문자 추출 : 반환(숫자)</a></li>
+                <li><a href="#sample24">10. 문자열 메서드 : 문자열 검색 : startWith() : 문자열 앞 포함 여부 검색 : 반환(불린 참/거짓)</a></li>
+                <li><a href="#sample25">10. 문자열 메서드 : 문자열 검색 : endsWith() : 문자열 뒤 포함 여부 검색 : 반환(불린 참/거짓)</a></li>
             </ul>
         </div>
         <!-- //main_menu -->
         <div class="main_sample">
+            <!-- sample01 -->
             <div id="sample01" class="sample">
                 <h3>01. 문자열 : 문자열 결합 / 템플릿 문자열</h3>
                 <p>템플릿이란 내장된 표현식을 허용하는 문자열 리터럴이다. </p>
@@ -120,7 +143,7 @@
                     </table>
                 </div>
                 <div class="script">
-<pre><code class="language-js">// 01번 문제
+                    <pre><code class="language-js">// 01번 문제
 const str1 = "자바스크립트";
 const str2 = "제이쿼리";
 document.querySelector(".sample01_N1").innerHTML = "1";
@@ -159,9 +182,11 @@ document.querySelector(".sample01_P4").innerHTML = `나는${text1}(modern) ${tex
                 </div>
             </div>
             <!-- sample01 -->
+
+            <!-- sample02 -->
             <div id="sample02" class="sample">
-                <h3>02. 문자열 : 문자열 결합 / 템플릿 문자열</h3>
-                <p>문자열 결합은 ~~~ </p>
+                <h3>02. 문자열 메서드 : 문자열 변경 : toLowerCase() : 문자열을 소문자로 변경 : 반환(문자열)</h3>
+                <p>문자열을 대문자로 변경하고, toLowerCase()는 소문자로 변경해준다. </p>
                 <div class="table">
                     <table>
                         <colgroup>
@@ -191,33 +216,261 @@ document.querySelector(".sample01_P4").innerHTML = `나는${text1}(modern) ${tex
                                 <td class="sample02_M2"></td>
                                 <td class="sample02_P2"></td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="script">
+                    <pre><code class="language-js">const str1 = "javascript";
+const currentStr1 = str1.toUpperCase();
+const str2 = "JAVASCRIPT";
+const currentStr2 = str2.toLowerCase();
+
+document.querySelector(".sample02_N1").innerHTML = "1";
+document.querySelector(".sample02_Q1").innerHTML = "javascript";
+document.querySelector(".sample02_M1").innerHTML = "toUpperCase()";
+document.querySelector(".sample02_P1").innerHTML = currentStr1;
+
+document.querySelector(".sample02_N2").innerHTML = "2";
+document.querySelector(".sample02_Q2").innerHTML = "JAVASCRIPT";
+document.querySelector(".sample02_M2").innerHTML = "toLowerCase()";
+document.querySelector(".sample02_P2").innerHTML = currentStr2;
+</code></pre>
+                </div>
+            </div>
+            <!-- sample02 -->
+
+            <!-- sample03 -->
+            <div id="sample03" class="sample">
+                <h3>03. trim() / trimStart() / trimEnd()</h3>
+                <p>문자열 공백을 제거해준다. </p>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col style="width: 32%">
+                            <col style="width: 22%">
+                            <col style="width: 42%">
+                        </colgroup>
+                        <thead>
                             <tr>
-                                <td class="sample02_N3"></td>
-                                <td class="sample02_Q3"></td>
-                                <td class="sample02_M3"></td>
-                                <td class="sample02_P3"></td>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample03_N1"></td>
+                                <td class="sample03_Q1"></td>
+                                <td class="sample03_M1"></td>
+                                <td class="sample03_P1"></td>
                             </tr>
                             <tr>
-                                <td class="sample02_N4"></td>
-                                <td class="sample02_Q4"></td>
-                                <td class="sample02_M4"></td>
-                                <td class="sample02_P4"></td>
+                                <td class="sample03_N2"></td>
+                                <td class="sample03_Q2"></td>
+                                <td class="sample03_M2"></td>
+                                <td class="sample03_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample03_N3"></td>
+                                <td class="sample03_Q3"></td>
+                                <td class="sample03_M3"></td>
+                                <td class="sample03_P3"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="script">
-                    <pre><code class="language-js">ddd
+                    <pre><code class="language-js">//01
+const str1 = "   javascript    ";
+const currentStr1 = str1.trim();
+
+document.querySelector(".sample03_N1").innerHTML = "1";
+document.querySelector(".sample03_Q1").innerHTML = "   javascript    ";
+document.querySelector(".sample03_M1").innerHTML = "trim()";
+document.querySelector(".sample03_P1").innerHTML = currentStr1;
+
+//02
+const str2 = "   javascript    ";
+const currentStr2 = str2.trimStart();
+
+document.querySelector(".sample03_N2").innerHTML = "2";
+document.querySelector(".sample03_Q2").innerHTML = str2;
+document.querySelector(".sample03_M2").innerHTML = "trimStart()";
+document.querySelector(".sample03_P2").innerHTML = currentStr2;
+
+//03
+const str3 = "   javascript    ";
+const currentStr3 = str3.trimEnd();
+
+document.querySelector(".sample03_N3").innerHTML = "3";
+document.querySelector(".sample03_Q3").innerHTML = str3;
+document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
+document.querySelector(".sample03_P3").innerHTML = currentStr3;
 </code></pre>
                 </div>
             </div>
-            <!-- sample02 -->
+            <!-- sample03 -->
+
+            <!-- sample04 -->
+            <div id="sample04" class="sample">
+                <h3>03. slice() / substring() / substr()</h3>
+                <p>문자열에서 원하는 값을 추출하고 문자열로 반환한다.</p>
+                <div class="box">
+                    slice(시작 위치)<br>
+                    💡 시작 위치의 값은 끝나는 위치의 값보다 작아야 한다! <br>
+                    slice(시작 위치, 끝나는 위치) <br>
+                    substring()은 시작값이 끝나는 값보다 클 경우 두 값을 바꿔서 처리한다. (오류 방지를 위해) <br>
+                    substr(시작 위치, 길이)
+                </div>
+                <div class="script">
+                    <pre><code class="language-js">const str1 = "javascript reference";
+const currentStr1 = str1.slice(0); // javascript reference
+const currentStr2 = str1.slice(1); // avascript reference
+const currentStr3 = str1.slice(2); // vascript reference
+const currentStr4 = str1.slice(0, 1); // j
+const currentStr5 = str1.slice(0, 2); // ja
+const currentStr6 = str1.slice(0, 3); // jav
+const currentStr7 = str1.slice(1, 1); // 아무것도 나오지 않는다.
+const currentStr8 = str1.slice(1, 2); // a
+const currentStr9 = str1.slice(1, 3); // av
+const currentStr10 = str1.slice(1, 4); // avs
+const currentStr11 = str1.slice(-1); // e
+const currentStr12 = str1.slice(-2); // ce
+const currentStr13 = str1.slice(-3); // nce
+const currentStr14 = str1.slice(-2, -1); // c (뒤에서 부터 시작한다.)
+const currentStr15 = str1.slice(-3, -2); // nc
+const currentStr16 = str1.slice(-3, -3); // 아무것도 나오지 않는다.
+            
+const currentStr17 = str1.slice(1, 4); // ava
+const currentStr18 = str1.slice(4, 1); // 아무것도 나오지 않는다.
+            
+const currentStr19 = str1.substring(4, 1); // ava (()의 숫자 위치를 제대로 작동하게 자동으로 바꿔준다.)
+const currentStr20 = str1.substring(1, 4); // ava
+            
+const currentStr21 = str1.substr(0); // javascript reference
+const currentStr22 = str1.substr(1); // avascript reference
+const currentStr23 = str1.substr(2); // vascript reference
+const currentStr24 = str1.substr(0, 1); // j
+const currentStr25 = str1.substr(0, 2); // ja
+const currentStr26 = str1.substr(0, 3); // jav
+const currentStr27 = str1.substr(1, 2); // av
+const currentStr28 = str1.substr(1, 3); // ava
+const currentStr29 = str1.substr(1, 4); // avas
+const currentStr30 = str1.substr(-1); // e
+const currentStr31 = str1.substr(-2); // ce
+const currentStr32 = str1.substr(-3); // nce
+const currentStr33 = str1.substr(-1, 1); // e
+const currentStr34 = str1.substr(-2, 2); // ce
+const currentStr35 = str1.substr(-3, 3); // nce
+</code></pre>
+                </div>
+            </div>
+            <!-- sample04 -->
+
+            <!-- sample05 -->
+            <div id="sample05" class="sample">
+                <h3>05. 문자열 메서드 : 문자열 변경 : split() : 문자열에서 원하는 값을 추출 : 반환(배열) ⭐️⭐️</h3>
+                <p>문자열에서 원하는 값을 추출하여 배열로 반환한다.</p>
+                <div class="box">
+                    "문자열".split(구분자); <br>
+                    "문자열".split(정규식 표현); <br>
+                    "문자열".split(구분자, 제한(갯수));
+                </div>
+                <div class="script">
+                    <pre><code class="language-js">const str1 = "javascript reference";
+const currentStr1 = str1.split(''); // (20) ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', ' ', 'r', 'e', 'f', 'e', 'r', 'e', 'n', 'c', 'e']
+const currentStr2 = str1.split(' '); // (2) ['javascript', 'reference'] 한칸을 띄어서 출력하게 되면 단어로 출력한다.
+const currentStr3 = str1.split('', 1); // ['j']
+const currentStr4 = str1.split('', 2); // (2) ['j', 'a']
+const currentStr5 = str1.split('',  1); // ['j']
+const currentStr6 = str1.split('',  2); // (2) ['j', 'a']
+const currentStr7 = str1.split('j'); // (2) ['', 'avascript reference'] j만 빠지고 출력이 된다. (j 칸은 빈 칸)
+const currentStr8 = str1.split('a'); // (3) ['j', 'v', 'script reference'] a만 빠지고 나머지는 문자로 출력
+const currentStr9 = str1.split('e'); // (5) ['javascript r', 'f', 'r', 'nc', ''] e만 빠지고 나머지는 문자로 출력
+            
+const str2 = "java/script/refer/ence";
+const currentStr10 = str2.split('');
+            
+const str3 = "java&script&refer!ence";
+const currentStr11 = str3.split('!'); // (2) ['java&script&refer', 'ence']
+const currentStr12 = str3.split('&'); // (3) ['java', 'script', 'refer!ence']
+const currentStr13 = str3.split(/&|\!/); // (4) ['java', 'script', 'refer', 'ence']
+            
+const str4 = "javascript reference";
+const currentStr14 = str4.split('').join("*"); // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e (배열이 사라지고 문자열로 출력한다.)
+const currentStr15 = str4.split('').reverse().join(); // e,c,n,e,r,e,f,e,r, ,t,p,i,r,c,s,a,v,a,j (배열이 사라지고 문자열로 출력한다.{반대로 출력})
+const currentStr16 = str4.split('').reverse().join('/'); // e/c/n/e/r/e/f/e/r/ /t/p/i/r/c/s/a/v/a/j (배열이 사라지고 /를 넣어 문자열로 출력한다.{반대로 출력})
+</code></pre>
+                </div>
+            </div>
+            <!-- sample05 -->
+            <!-- sample10 -->
+            <div id="sample10" class="sample">
+                <h3>10. 문자열 메서드 : 문자열 검색 : indexOf() :문자열 특정 문자의 위치를 찾는다 : 반환(숫자) ⭐️</h3>
+                <p>문자열 특정 문자의 위치를 찾고 숫자로 반환한다.</p>
+                <div class="box">
+                    "문자열" .indexOf(검색값) <br>
+                    "문자열" .indexOf(검색값, 위치값)
+                </div>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col style="width: 32%">
+                            <col style="width: 22%">
+                            <col style="width: 42%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample010_N1"></td>
+                                <td class="sample010_Q1"></td>
+                                <td class="sample010_M1"></td>
+                                <td class="sample010_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample010_N2"></td>
+                                <td class="sample010_Q2"></td>
+                                <td class="sample010_M2"></td>
+                                <td class="sample010_P2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="script">
+                    <pre><code class="language-js">const str1 = "javascript reference";
+const currentStr1 = str1.indexOf("javascript"); // 0
+const currentStr2 = str1.indexOf("reference"); // 11
+const currentStr3 = str1.indexOf("j"); // 0
+const currentStr4 = str1.indexOf("a"); // 1 중복 될 때는 가장 처음에 있는것을 서치한다.
+const currentStr5 = str1.indexOf("v"); // 2
+const currentStr6 = str1.indexOf("jquery"); // -1 데이터가 없을 때는 -1 이 나온다.
+const currentStr7 = str1.indexOf("b"); // -1 데이터가 없을 때는 -1 이 나온다.
+const currentStr8 = str1.indexOf("javascript", 0); // 0
+const currentStr9 = str1.indexOf("javascript", 1); // -1
+const currentStr10 = str1.indexOf("reference", 0); // 11
+const currentStr11 = str1.indexOf("reference", 1); // 11
+const currentStr12 = str1.indexOf("reference", 11); // 11
+const currentStr13 = str1.indexOf("reference", 12); // -1
+</code></pre>
+                </div>
+            </div>
+            <!-- sample10 -->
         </div>
         <!-- main sample -->
     </main>
     <!-- //main -->
     <footer id="footer">
-        <a href="mailto:kimm9964@naver.com">kimm9964@naver.com</a>
+        <a href="mailto:limdaedok@naver.com">limdaedok@naver.com</a>
     </footer>
     <!-- //footer -->
     <script>
@@ -245,7 +498,7 @@ document.querySelector(".sample01_P4").innerHTML = `나는${text1}(modern) ${tex
             document.querySelector(".sample01_N3").innerHTML = "3";
             document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심";
             document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
-            document.querySelector(".sample01_P3").innerHTML = "나는 " + text1 + "(modern) " + text2 + "(javascript) "+ text3 + "을 배우고 싶다.";
+            document.querySelector(".sample01_P3").innerHTML = "나는 " + text1 + "(modern) " + text2 + "(javascript) " + text3 + "을 배우고 싶다.";
 
             // console.log("나는" + text1 + text2 + text3 + "을 배우고 싶다.");
 
@@ -256,10 +509,159 @@ document.querySelector(".sample01_P4").innerHTML = `나는${text1}(modern) ${tex
 
 
         }
+
+        //02. 문자열 메서드 : 문자열 변경 : toUppertcase() : 문자열을 대문자로 변경 : 반환(문자열)
+        {
+            const str1 = "javascript";
+            const currentStr1 = str1.toUpperCase();
+            const str2 = "JAVASCRIPT";
+            const currentStr2 = str2.toLowerCase();
+
+            document.querySelector(".sample02_N1").innerHTML = "1";
+            document.querySelector(".sample02_Q1").innerHTML = "javascript";
+            document.querySelector(".sample02_M1").innerHTML = "toUpperCase()";
+            document.querySelector(".sample02_P1").innerHTML = currentStr1;
+
+            document.querySelector(".sample02_N2").innerHTML = "2";
+            document.querySelector(".sample02_Q2").innerHTML = "JAVASCRIPT";
+            document.querySelector(".sample02_M2").innerHTML = "toLowerCase()";
+            document.querySelector(".sample02_P2").innerHTML = currentStr2;
+        }
+
+        //03
+        {
+            //01
+            const str1 = "   javascript    ";
+            const currentStr1 = str1.trim();
+
+            document.querySelector(".sample03_N1").innerHTML = "1";
+            document.querySelector(".sample03_Q1").innerHTML = "   javascript    ";
+            document.querySelector(".sample03_M1").innerHTML = "trim()";
+            document.querySelector(".sample03_P1").innerHTML = currentStr1;
+
+            //02
+            const str2 = "   javascript    ";
+            const currentStr2 = str2.trimStart();
+
+            document.querySelector(".sample03_N2").innerHTML = "2";
+            document.querySelector(".sample03_Q2").innerHTML = str2;
+            document.querySelector(".sample03_M2").innerHTML = "trimStart()";
+            document.querySelector(".sample03_P2").innerHTML = currentStr2;
+
+            //03
+            const str3 = "   javascript    ";
+            const currentStr3 = str3.trimEnd();
+
+            document.querySelector(".sample03_N3").innerHTML = "3";
+            document.querySelector(".sample03_Q3").innerHTML = str3;
+            document.querySelector(".sample03_M3").innerHTML = "trimEnd()";
+            document.querySelector(".sample03_P3").innerHTML = currentStr3;
+        }
+
+        //04
+        {
+            //slice(시작 위치)
+            //slice(시작 위치, 끝나는 위치)
+            //substr(시작 위치, 길이)
+
+            const str1 = "javascript reference";
+            const currentStr1 = str1.slice(0); // javascript reference
+            const currentStr2 = str1.slice(1); // avascript reference
+            const currentStr3 = str1.slice(2); // vascript reference
+            const currentStr4 = str1.slice(0, 1); // j
+            const currentStr5 = str1.slice(0, 2); // ja
+            const currentStr6 = str1.slice(0, 3); // jav
+            const currentStr7 = str1.slice(1, 1); // 아무것도 나오지 않는다.
+            const currentStr8 = str1.slice(1, 2); // a
+            const currentStr9 = str1.slice(1, 3); // av
+            const currentStr10 = str1.slice(1, 4); // avs
+            const currentStr11 = str1.slice(-1); // e
+            const currentStr12 = str1.slice(-2); // ce
+            const currentStr13 = str1.slice(-3); // nce
+            const currentStr14 = str1.slice(-2, -1); // c (뒤에서 부터 시작한다.)
+            const currentStr15 = str1.slice(-3, -2); // nc
+            const currentStr16 = str1.slice(-3, -3); // 아무것도 나오지 않는다.
+
+            const currentStr17 = str1.slice(1, 4); // ava
+            const currentStr18 = str1.slice(4, 1); // 아무것도 나오지 않는다.
+
+            const currentStr19 = str1.substring(4, 1); // ava (()의 숫자 위치를 제대로 작동하게 자동으로 바꿔준다.)
+            const currentStr20 = str1.substring(1, 4); // ava
+
+            const currentStr21 = str1.substr(0); // javascript reference
+            const currentStr22 = str1.substr(1); // avascript reference
+            const currentStr23 = str1.substr(2); // vascript reference
+            const currentStr24 = str1.substr(0, 1); // j
+            const currentStr25 = str1.substr(0, 2); // ja
+            const currentStr26 = str1.substr(0, 3); // jav
+            const currentStr27 = str1.substr(1, 2); // av
+            const currentStr28 = str1.substr(1, 3); // ava
+            const currentStr29 = str1.substr(1, 4); // avas
+            const currentStr30 = str1.substr(-1); // e
+            const currentStr31 = str1.substr(-2); // ce
+            const currentStr32 = str1.substr(-3); // nce
+            const currentStr33 = str1.substr(-1, 1); // e
+            const currentStr34 = str1.substr(-2, 2); // ce
+            const currentStr35 = str1.substr(-3, 3); // nce
+
+            console.log(currentStr1);
+        }
+
+        //05
+        {
+            // "문자열".split(구분자);
+            // "문자열".split(정규식 표현);
+            // "문자열".split(구분자, 제한(갯수));
+
+            const str1 = "javascript reference";
+            const currentStr1 = str1.split(''); // (20) ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't', ' ', 'r', 'e', 'f', 'e', 'r', 'e', 'n', 'c', 'e']
+            const currentStr2 = str1.split(' '); // (2) ['javascript', 'reference'] 한칸을 띄어서 출력하게 되면 단어로 출력한다.
+            const currentStr3 = str1.split('', 1); // ['j']
+            const currentStr4 = str1.split('', 2); // (2) ['j', 'a']
+            const currentStr5 = str1.split('', 1); // ['j']
+            const currentStr6 = str1.split('', 2); // (2) ['j', 'a']
+            const currentStr7 = str1.split('j'); // (2) ['', 'avascript reference'] j만 빠지고 출력이 된다. (j 칸은 빈 칸)
+            const currentStr8 = str1.split('a'); // (3) ['j', 'v', 'script reference'] a만 빠지고 나머지는 문자로 출력
+            const currentStr9 = str1.split('e'); // (5) ['javascript r', 'f', 'r', 'nc', ''] e만 빠지고 나머지는 문자로 출력
+
+            const str2 = "java/script/refer/ence";
+            const currentStr10 = str2.split('');
+
+            const str3 = "java&script&refer!ence";
+            const currentStr11 = str3.split('!'); // (2) ['java&script&refer', 'ence']
+            const currentStr12 = str3.split('&'); // (3) ['java', 'script', 'refer!ence']
+            const currentStr13 = str3.split(/&|\!/); // (4) ['java', 'script', 'refer', 'ence']
+
+            const str4 = "javascript reference";
+            const currentStr14 = str4.split('').join("*"); // j,a,v,a,s,c,r,i,p,t, ,r,e,f,e,r,e,n,c,e (배열이 사라지고 문자열로 출력한다.)
+            const currentStr15 = str4.split('').reverse().join(); // e,c,n,e,r,e,f,e,r, ,t,p,i,r,c,s,a,v,a,j (배열이 사라지고 문자열로 출력한다.{반대로 출력})
+            const currentStr16 = str4.split('').reverse().join('/'); // e/c/n/e/r/e/f/e/r/ /t/p/i/r/c/s/a/v/a/j (배열이 사라지고 /를 넣어 문자열로 출력한다.{반대로 출력})
+        }
+
+        //10
+        {
+            const str1 = "javascript reference";
+            const currentStr1 = str1.indexOf("javascript"); // 0
+            const currentStr2 = str1.indexOf("reference"); // 11
+            const currentStr3 = str1.indexOf("j"); // 0
+            const currentStr4 = str1.indexOf("a"); // 1 중복 될 때는 가장 처음에 있는것을 서치한다.
+            const currentStr5 = str1.indexOf("v"); // 2
+            const currentStr6 = str1.indexOf("jquery"); // -1 데이터가 없을 때는 -1 이 나온다.
+            const currentStr7 = str1.indexOf("b"); // -1 데이터가 없을 때는 -1 이 나온다.
+            const currentStr8 = str1.indexOf("javascript", 0); // 0
+            const currentStr9 = str1.indexOf("javascript", 1); // -1
+            const currentStr10 = str1.indexOf("reference", 0); // 11
+            const currentStr11 = str1.indexOf("reference", 1); // 11
+            const currentStr12 = str1.indexOf("reference", 11); // 11
+            const currentStr13 = str1.indexOf("reference", 12); // -1
+
+            console.log(currentStr13);
+        }
     </script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
         hljs.highlightAll();
     </script>
 </body>
+
 </html>
