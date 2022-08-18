@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #tt-body-page .main__add {
+            display: none;
+        }
+
+        .main__add {
+            position: relative;
+            background: #F5F5F5;
+            height: 350px;
+            margin-top: 100px;
+            margin-bottom: 120px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 100px 0;
+        }
+
+        .main__add::before {
+            content: '';
+            width: 1000px;
+            height: 100%;
+            background-color: #F5F5F5;
+            position: absolute;
+            left: -1000px;
+            top: 0;
+            z-index: 1;
+        }
+
+        .main__add::after {
+            content: '';
+            width: 1000px;
+            height: 100%;
+            background-color: #F5F5F5;
+            position: absolute;
+            right: -1000px;
+            top: 0;
+            z-index: 1;
+        }
+
+        .main__add .card {
+            width: 32%;
+            height: 200px;
+            background: #ccc;
+        }
+
+        /* 개인적으로 추가 */
+
+        /* fonts */
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        .gmarket {
+            font-family: "GmarketSans";
+            font-weight: 500;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* imageType */
+
+        .image__wrap {
+            margin-left: 100px;
+            padding: 80px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image {
+            width: 32%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image__box {}
+
+        .image__box img {
+            border-radius: 50%;
+            vertical-align: top;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .image__desc {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 23px 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            background-color: rgba(0, 0, 0, 0.1);
+            bottom: -100px;
+            transition: all 0.3s ease-in;
+        }
+
+        .image:hover .image__box img {
+            transform: scale(1.03);
+
+        }
+
+        .image:hover .image__desc {
+            bottom: 0;
+        }
+
+
+        .img1 .image__desc {
+            background: rgba(145, 109, 65, 0.5)
+        }
+
+        .img2 .image__desc {
+            background: rgba(207, 164, 164, 0.5)
+        }
+
+        .img3 .image__desc {
+            background: rgba(111, 202, 208, 0.5)
+        }
+
+        .img1 .image__desc h3 {
+            color: rgba(36, 88, 108, 1)
+        }
+
+        .img2 .image__desc h3 {
+            color: #AE6763
+        }
+
+        .img3 .image__desc h3 {
+            color: #3C6C8B
+        }
+
+        .img1 .image__desc .more {
+            color: #3A6474
+        }
+
+        .img2 .image__desc .more {
+            color: #BB7D79
+        }
+
+        .img3 .image__desc .more {
+            color: #5884A3
+        }
+
+
+        .image__desc h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .image__desc .more {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main__add">
+        <section id="imageType02" class="image__wrap gmarket section">
+            <div class="image__inner container">
+                <article class="image img1">
+                    <figure class="image__box">
+                        <img src="../cardType/img/Frame 19.jpg" alt="">
+                    </figure>
+                    <div class="image__desc">
+                        <h3>JAVASCRIPT</h3>
+                        <a href="/" class="more" title="자세히보기">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image img2">
+                    <figure class="image__box">
+                        <img src="../cardType/img/Frame 20.jpg" alt="">
+                    </figure>
+                    <div class="image__desc">
+                        <h3>CSS</h3>
+                        <a href="/" class="more" title="자세히보기">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image img3">
+                    <figure class="image__box">
+                        <img src="../cardType/img/Frame 21.jpg" alt="">
+                    </figure>
+                    <div class="image__desc">
+                        <h3>HTML</h3>
+                        <a href="/" class="more" title="자세히보기">자세히보기</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
