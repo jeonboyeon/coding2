@@ -27,6 +27,7 @@ https://jeonboyeon.github.io/coding2/site/cardType02.html
 https://jeonboyeon.github.io/coding2/site/cardType03.html  
 https://jeonboyeon.github.io/coding2/site/imageType/image.html  
 https://jeonboyeon.github.io/coding2/site/imageType/imageType02.html  
+https://jeonboyeon.github.io/coding2/site/imageType/imageType03.html  
 
 ### HTML 메인페이지
 https://jeonboyeon.github.io/coding2/html/index.html   
