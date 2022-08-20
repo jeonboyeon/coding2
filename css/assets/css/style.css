@@ -77,7 +77,7 @@ body {
 }
 .main__title h1 {
     font-family: var(--fontTitle);
-    font-size: 8vw;
+    font-size: 6.5vw;
     color: var(--orange);
     white-space: nowrap; /* 줄바꿈 기능 x*/
 }
