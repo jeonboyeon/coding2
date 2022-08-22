@@ -39,19 +39,6 @@
                 <li><a href="parallaxEffect01.html">페럴랙스 효과</a></li>
                 <li><a href="gameEffect01.html">게임 효과</a></li>
             </ul>
-            <ul class="study">
-                <li><a href="basic.html">기본 규칙</a></li>
-                <li><a href="operator.html">연산자</a></li>
-                <li><a href="for.html">반복문</a></li>
-                <li><a href="if.html">조건문</a></li>
-                <li><a href="type.html">데이터 타입</a></li>
-                <li><a href="function.html">함수</a></li>
-                <li><a href="variable.html">지역변수 / 전역변수</a></li>
-                <li><a href="element.html">요소 선택</a></li>
-                <li><a href="quiz.html">웹디자인기능사 시험 퀴즈</a></li>
-                <li><a href="web.html">웹 표준</a></li>
-
-            </ul>
         </nav>
     </header>
     <!-- //header -->
@@ -242,7 +229,7 @@ const text4 = arrNum.join('-');
                     </table>
                 </div>
                 <div class="script">
-<pre><code class="language-js">// 01
+                    <pre><code class="language-js">// 01
 const arrNum = [100,200,300,400,500];
 const arrPush = arrNum.push(600);
 
@@ -281,21 +268,21 @@ document.querySelector(".sample03_A2").innerHTML = arrNum2;  // 100,200,300,400
         {
             const arrNum = [100, 200, 300, 400, 500];
 
-            for (let i=0; i<arrNum.length; i++) {
+            for (let i = 0; i < arrNum.length; i++) {
                 console.log(arrNum[i]);
             }
 
-            arrNum.forEach (function(el, i){
+            arrNum.forEach(function (el, i) {
                 console.log(arrNum[i]);
             });
 
-            for ( let i of arrNum) {
+            for (let i of arrNum) {
                 console.log(i);
             }
 
-            for ( let i in arrNum) {
-                 console.log(arrNum[i]);
-             }
+            for (let i in arrNum) {
+                console.log(arrNum[i]);
+            }
 
             arrNum.map(function (el) { });
 
@@ -352,7 +339,7 @@ document.querySelector(".sample03_A2").innerHTML = arrNum2;  // 100,200,300,400
         }
 
         {
-            const arrNum = [100,200,300,400,500];
+            const arrNum = [100, 200, 300, 400, 500];
             const arrPush = arrNum.push(600);
 
             document.querySelector(".sample03_N1").innerHTML = "1";
@@ -361,7 +348,7 @@ document.querySelector(".sample03_A2").innerHTML = arrNum2;  // 100,200,300,400
             document.querySelector(".sample03_P1").innerHTML = arrPush; // 6 갯수 출력
             document.querySelector(".sample03_A1").innerHTML = arrNum;  // 100,200,300,400,500,600 600을 추가해서 출력
 
-            const arrNum2 = [100,200,300,400,500];
+            const arrNum2 = [100, 200, 300, 400, 500];
             const arrPush2 = arrNum2.pop();
 
             document.querySelector(".sample03_N2").innerHTML = "2";

@@ -20,8 +20,8 @@
         <nav>
             <ul>
                 <li><a href="searchEffect01.html">1</a></li>
-                <li class="active"><a href="searchEffect02.html">2</a></li>
-                <li><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li class="active"><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
@@ -33,17 +33,44 @@
     <main id="main">
         <div class="search__wrap">
             <span>
-                indexOf( ) 를 이용하여 CSS 속성 검색하기
+                charAt()을 이용하여 검색하기
             </span>
             <h1>
-                CSS 태그 검색하기
+                CSS 속성 첫 글자 검색하기
             </h1>
-            <div class="search__box">
+            <!-- <div class="search__box">
                 <label for="search">검색하기</label>
                 <input id="search" type="text" placeholder="CSS 속성 or 키워드를 입력해주세요 ✏️" />
-            </div>
+            </div> -->
             <div class="search__info">
-                <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 키워드 별로 검색해보세요. 📋</div>
+                <div class="keyword">
+                    <span>a</span>
+                    <span>b</span>
+                    <span>c</span>
+                    <span>d</span>
+                    <span>e</span>
+                    <span>f</span>
+                    <span>g</span>
+                    <span>h</span>
+                    <span>i</span>
+                    <span>j</span>
+                    <span>k</span>
+                    <span>l</span>
+                    <span>m</span>
+                    <span>n</span>
+                    <span>o</span>
+                    <span>p</span>
+                    <span>q</span>
+                    <span>r</span>
+                    <span>s</span>
+                    <span>t</span>
+                    <span>u</span>
+                    <span>v</span>
+                    <span>w</span>
+                    <span>x</span>
+                    <span>y</span>
+                    <span>z</span>
+                </div>
                 <div> 전체 속성 갯수 : <span class="num">0</span></div>
             </div>
             <div class="search__list">
@@ -446,31 +473,36 @@
     <script>
         //선택자
 
-        const searchBox = document.querySelector(".search__box input"); // HTML 검색 박스
+        const searchKeyword = document.querySelectorAll(".search__info .keyword span"); // 알파벳
         const searchList = document.querySelectorAll(".search__list ul li"); // 태그 목록 리스트
         const searchInfo = document.querySelector(".search__info .num");    //css 속성 갯수
 
         //전체 갯수 구하기
         searchInfo.textContent = searchList.length;
 
-        //searchBox
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;
+        
+        
+        
 
-            searchList.forEach(el => {
-                const cssType = el.dataset.type; //css 속성 모든 값이 들어가 있다.
-                const cssName = el.querySelector("strong").innerText; //css 속성 모든 값이 들어가 있다.
-                console.log(cssName);
-                console.log(cssType);
+        searchKeyword.forEach(el => {
+            el.addEventListener("click", () => {
+                const searchWord = el.innerText;
 
-                if (cssName.includes(searchWord)) {
-                    el.classList.remove("hide");
-                } else {
-                    el.classList.add("hide");
-                }
+                console.log(searchWord);
+
+                searchList.forEach(el => {
+                    const cssName = el.querySelector("strong").innerText;
+                    console.log(cssName);
+
+                    //알파벳 첫글자 == css 속성의 첫글자
+                    if (searchWord.charAt(0) === cssName.charAt(0)) {
+                        el.classList.remove("hide");
+                    } else {
+                        el.classList.add("hide");
+                    }
+                });
             });
         });
-
     </script>
 
 </body>
