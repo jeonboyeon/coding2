@@ -797,38 +797,38 @@ document.write(obj.d);
         }
 
 
-        //17번 문제 답 : 객체 속에 함수
-        // {
-        //     const obj = {
-        //         a : 100,
-        //         b : [200, 300],
-        //         c : {x : 400, y : 500},
-        //         d : "javascript",
-        //         e : function(){
-        //             document.write("자바스크립트가 실행되었습니다.");
-        //         },
-        //         f : function(){
-        //             document.write(obj.d + "가 실행되었습니다.")
-        //         },
-        //         g : function(){
-        //             document.write(this.d + "가 실행되었습니다.");
-        //         }
-        //     }
+        // 17번 문제 답 : 객체 속에 함수
+        {
+            const obj = {
+                a : 100,
+                b : [200, 300],
+                c : {x : 400, y : 500},
+                d : "javascript",
+                e : function(){
+                    document.write("자바스크립트가 실행되었습니다.");
+                },
+                f : function(){
+                    document.write(obj.d + "가 실행되었습니다.")
+                },
+                g : function(){
+                    document.write(this.d + "가 실행되었습니다.");
+                }
+            }
 
-            //document.write(obj.a);
-            //document.write(obj.b[0]);
-            //document.write(obj.b[1]);
-            //document.write(obj.b);
-            //document.write(obj.c.x);
-            //document.write(obj.c.y);
-            //document.write(obj.c); //객체를 선택해 달라고 나온다.
-            //document.write(obj.d);
-            //(obj.e()); // 객체에서 함수를 실행 시킬 땐 document를 작성하지 않는다.
-            //(obj.f());
-            //(obj.g());
+            document.write(obj.a);
+            document.write(obj.b[0]);
+            document.write(obj.b[1]);
+            document.write(obj.b);
+            document.write(obj.c.x);
+            document.write(obj.c.y);
+            document.write(obj.c); //객체를 선택해 달라고 나온다.
+            document.write(obj.d);
+            (obj.e()); // 객체에서 함수를 실행 시킬 땐 document를 작성하지 않는다.
+            (obj.f());
+            (obj.g());
 
-            //document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" +
-            //obj.c.x + "<br>" + obj.c.y + "<br>" + obj.c + "<br>" + obj.d + "<br>" //함수 출력 못하는 중 :(
+            // document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" +
+            // obj.c.x + "<br>" + obj.c.y + "<br>" + obj.c + "<br>" + obj.d + "<br>" //함수 출력 못하는 중 :(
         }
     </script>
 
