@@ -255,3 +255,10 @@ body {
 .main_desc .table.rowTable .left {
     text-align: left !important;
 }
+
+.main_desc .subTitle > li {
+    display: none;
+}
+.main_desc .subTitle li.active  {
+    display: block;
+}
