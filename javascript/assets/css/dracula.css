@@ -1,3 +1,7 @@
+pre {
+    height: 100%;
+}
+
 pre code.hljs {
     display: block;
     overflow-x: auto;
@@ -6,6 +10,7 @@ pre code.hljs {
     line-height: 1.6;
     margin-bottom: 20px;
     border-radius: 5px;
+    height: 100%;
 }
 code.hljs {
     padding: 3px 5px
@@ -20,7 +25,7 @@ code.hljs {
     color: #E9E9F4
 }
 .hljs-comment {
-    color: #626483
+    color: #717171
 }
 .hljs-tag {
     color: #62D6E8
@@ -39,7 +44,7 @@ code.hljs {
 .hljs-selector-tag,
 .hljs-template-variable,
 .hljs-variable {
-    color: #EA51B2
+    color: #be4592
 }
 .hljs-attr,
 .hljs-link,
@@ -47,7 +52,7 @@ code.hljs {
 .hljs-number,
 .hljs-symbol,
 .hljs-variable.constant_ {
-    color: #B45BCF
+    color: #a144df
 }
 .hljs-class .hljs-title,
 .hljs-title,
@@ -62,7 +67,7 @@ code.hljs {
 .hljs-code,
 .hljs-string,
 .hljs-title.class_.inherited__ {
-    color: #EBFF87
+    color: #ffce5c
 }
 .hljs-built_in,
 .hljs-doctag,
