@@ -206,6 +206,7 @@ a {
 }
 
 .modal__cont {
+    z-index: 6;
     display: flex;
     font-size: 15px;
     width: 100%;
