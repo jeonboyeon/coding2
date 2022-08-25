@@ -13,7 +13,7 @@ https://jeonboyeon.github.io/coding2/javascript/javascript02.html
 https://jeonboyeon.github.io/coding2/javascript/javascript03.html   
 https://jeonboyeon.github.io/coding2/javascript/javascript04.html   
 
-### 퀴즈 이펙트
+### 이펙트
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect01.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect02.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect03.html  
@@ -22,6 +22,7 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect05.html
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect06.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/searchEffect01.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/searchEffect02.html  
+https://jeonboyeon.github.io/coding2/javascript/effect/sliderEffect01.html  
 
 ### 사이트
 https://jeonboyeon.github.io/coding2/site/cardType01.html  
