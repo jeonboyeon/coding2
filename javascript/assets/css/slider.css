@@ -439,3 +439,50 @@ input[type="checkbox"] {
         display: none;
     }
 }
+
+@media (max-width: 480px) {
+    .header {
+        width: 100%;
+    }
+    .modal__box {
+        width: 96%;
+    }
+    .modal__box .title {
+        padding: 5px;
+    }
+    .modal__box .title .dot {
+        display: none;
+    }
+    .modal__box .title .tabs {
+        margin-left: 0;
+    }
+    .modal__box .title .tabs>div .close {
+        display: none;
+    }
+
+    .modal__box .title .tabs>div {
+        font-size: 12px;
+    }
+
+    .modal__box .title .puls {
+        display: none;
+    }
+
+    pre code.hljs {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .intro_menu {
+        width: 90%;
+        padding: 14px;
+    }
+
+    .intro_menu li {
+        font-size: 16px;
+    }
+    .intro_menu ul li a {
+        font-size: 16px;
+    }
+}

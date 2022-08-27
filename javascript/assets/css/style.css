@@ -1,17 +1,17 @@
 /* 웹폰트 */
-@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 /* 여백 초기화 */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'NexonLv1Gothic';
+    font-family: 'GmarketSans';
     font-size: 16px;
     line-height: 1.6;
 }
 /* a 태그 링크 초기화 */
 a {
     text-decoration: none;
-    color: #222;
+    color: #444;
 }
 /* 목록 초기화 */
 li {
@@ -26,12 +26,19 @@ body {
     padding: 40px;
 }
 #header {
+    text-align: center;
     border-bottom: 1px dashed #DCDCDC;
     padding-bottom: 40px;
 }
 #main {
     padding: 40px 0;
     border-bottom: 1px dashed #DCDCDC;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
 }
 #footer {
     padding: 40px 0;
@@ -44,6 +51,8 @@ body {
 /* li : block 요소
     a : inline 요소 */
 #header h1 a{
+    text-transform: uppercase;
+    color: rgb(102, 146, 206);
     font-size: 60px;
     font-weight: 700;
 }
@@ -51,11 +60,12 @@ body {
     display: inline;
 }
 .header_nav ul li.active a {
-    background-color: #000;
+    background-color: rgb(102, 146, 206);
     color: #fff;
 }
 .header_nav ul li a {
-    border: 1px solid #222;
+    border-radius: 5px;
+    border: 1px solid rgb(102, 146, 206);
     padding: 8px 25px;
     display: inline-block;
     margin-bottom: 7px;
@@ -67,7 +77,7 @@ body {
     margin-top: 10px;
 }
 .header_nav ul li a:hover {
-    background-color: #000;
+    background-color: rgb(137, 175, 228);
     color: #fff;
 }
 .header_nav .study {
@@ -85,6 +95,36 @@ body {
     border-top: 1px dashed #DCDCDC;
     padding-top: 40px;
 }
+
+/* intro */
+.intro_menu {
+    text-align: center;
+    width: 30vw;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 187, 214, 0.4);
+    padding: 2.5vw;
+    border-radius: 1vw;
+    color: rgb(174, 37, 110);
+}
+
+.intro_menu.white {
+    background: rgba(255,255,255,0.1);
+}
+
+.intro_menu ul li {
+    margin-bottom: 10px;
+}
+.intro_menu ul li a {
+    margin-left: 10px;
+    padding: 5px;
+    color: rgb(235, 102, 173);
+    border-radius: 5px;
+}
 .main_sample h3 {
    font-size: 18px;
    margin-bottom: 5px;
@@ -94,7 +134,12 @@ body {
     color: #666;
 }
 .main_sample .result {
+    color: #444;
+    background-color: rgb(211, 221, 247);
+    margin-top: 10px;
     margin-bottom: 80px;
+    padding: 15px;
+    border-radius: 5px;
 }
 /* sample */
 .sample {
