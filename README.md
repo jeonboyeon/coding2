@@ -23,6 +23,7 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect06.html
 https://jeonboyeon.github.io/coding2/javascript/effect/searchEffect01.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/searchEffect02.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/sliderEffect01.html  
+https://jeonboyeon.github.io/coding2/javascript/effect/sliderEffect02.html  
 
 ### 사이트
 https://jeonboyeon.github.io/coding2/site/cardType01.html  
