@@ -81,7 +81,7 @@ body::after {
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 img {
@@ -92,6 +92,19 @@ img {
 a {
     color: #fff;
     text-decoration: none;
+}
+
+/* layout */
+#header {
+    z-index: 2000;
+}
+#main {
+    position: relative;
+    z-index: 1000;
+}
+#footer {
+    position: relative;
+    z-index: 3000;
 }
 
 /* header */
@@ -206,7 +219,7 @@ a {
 }
 
 .modal__cont {
-    z-index: 6;
+    /* z-index: 6; */
     display: flex;
     font-size: 15px;
     width: 100%;
@@ -473,7 +486,7 @@ input[type="checkbox"] {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .intro_menu {
         width: 90%;
         padding: 14px;
