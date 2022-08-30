@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            @import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
+
+            .nexon {
+                font-family: "NexonLv1Gothic";
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: normal;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            .section {
+                padding: 120px 0;
+                width: 1200px;
+                margin: 0 auto;
+            }
+
+            .section .text__header {
+                text-align: center;
+            }
+
+            .section .text__header p {
+                font-size: 20px;
+                margin-bottom: 70px;
+                color: #666;
+            }
+            .section .text__header h1 {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .text {
+                background-color: #f5f5f5;
+                margin-bottom: 20px;
+                padding: 20px;
+                width: 28%;
+                border-radius: 20px;
+            }
+
+            .text:hover {
+                background-color: #f5f5f5;
+            }
+
+            .text .text__img {
+                width: 60px;
+                height: 60px;
+                margin-right: 20px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+
+            .text .text__desc h2 {
+                margin-bottom: 20px;
+            }
+
+            .text .text__desc p {
+                font-weight: 300;
+                margin-bottom: 20px;
+                line-height: 1.4;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #dcdcdc;
+            }
+
+            .text .text__desc a {
+                font-weight: 300;
+                text-decoration: underline;
+            }
+
+            .text__info {
+                display: flex;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #dcdcdc;
+            }
+            .info__box {
+                display: flex;
+                align-items: baseline;
+                flex-wrap: wrap;
+            }
+
+            .info__box h2 {
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+
+            .info__box p {
+                color: #666;
+                font-weight: 300;
+            }
+            .text__link {
+                text-align: center;
+            }
+            .text__link a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                border-radius: 50px;
+                background-color: #8A98A5;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="section" class="nexon text__wrap section">
+            <header class="text__header">
+                <h1>레이아웃 유형</h1>
+                <p>각 유형의 특징을 알아보고, 골고루 사용해보자.</p>
+            </header>
+            <div class="container">
+                <article class="text">
+                    <div class="text__desc">
+                        <p>
+                            이걸 7줄을 써야한다고? 그래 그럼 한 번 써보자. 일단 최근 jquery 진짜 너무 어려운 것 같다. 아직 선택자만 본 거지만 내
+                            머리로는 정말 외울 수 없는 갯수가 펼쳐져 있다. 아 배가 부르다. 떡갈비, 갈비만두 너무 맛있는 거 아닌가? 무말랭이도 좀
+                            맛있는 듯. 김치찌개는 세상 최고 음식입니다.
+                        </p>
+                    </div>
+                    <div class="text__info">
+                        <figure class="text__img">
+                            <img src="../assets/img/textType_svg01_05.svg" alt="" />
+                        </figure>
+                        <div class="info__box">
+                            <h2>묵그몽</h2>
+                            <p>묵학교 1반</p>
+                            <figure>
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="text__link">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </article>
+                <article class="text">
+                    <div class="text__desc">
+                        <p>
+                            이걸 7줄을 써야한다고? 그래 그럼 한 번 써보자. 일단 최근 jquery 진짜 너무 어려운 것 같다. 아직 선택자만 본 거지만 내
+                            머리로는 정말 외울 수 없는 갯수가 펼쳐져 있다. 아 배가 부르다. 떡갈비, 갈비만두 너무 맛있는 거 아닌가? 무말랭이도 좀
+                            맛있는 듯. 김치찌개는 세상 최고 음식입니다.
+                        </p>
+                    </div>
+                    <div class="text__info">
+                        <figure class="text__img">
+                            <img src="../assets/img/textType_svg01_01.svg" alt="" />
+                        </figure>
+                        <div class="info__box">
+                            <h2>찌그몬</h2>
+                            <p>찌학교 5반</p>
+                            <figure>
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Iconex/Filled/Star.svg" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="text__link">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </article>
+                <article class="text">
+                    <div class="text__desc">
+                        <p>
+                            이걸 7줄을 써야한다고? 그래 그럼 한 번 써보자. 일단 최근 jquery 진짜 너무 어려운 것 같다. 아직 선택자만 본 거지만 내
+                            머리로는 정말 외울 수 없는 갯수가 펼쳐져 있다. 아 배가 부르다. 떡갈비, 갈비만두 너무 맛있는 거 아닌가? 무말랭이도 좀
+                            맛있는 듯. 김치찌개는 세상 최고 음식입니다.
+                        </p>
+                    </div>
+                    <div class="text__info">
+                        <figure class="text__img">
+                            <img src="../assets/img/textType_svg01_03.svg" alt="" />
+                        </figure>
+                        <div class="info__box">
+                            <h2>빠그몹</h2>
+                            <p>빠학교 2반</p>
+                            <figure>
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                                <img src="/assets/img/Iconex/Filled/Star.svg" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="text__link">
+                        <a href="#">자세히 보기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </body>
+</html>

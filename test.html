@@ -1,19 +1,51 @@
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script>
-    &lt;script>
-        // const slider = $(".slider"); // 이미지
-
-        let currentIndex = 0;
-
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % $(".slider").length;
-
-            $(".slider__inner").css("position", "relative");
-
-            $(".slider__inner").animate(
-                {
-                    left: -800 * currentIndex,
-                },
-                600
-            );
-        }, 2000);
-    &lt;/script>
+&lt;section id="section" class="nexon text__wrap section">
+    &lt;header class="text__header">
+        &lt;p>LAYOUT&lt;/p>
+        &lt;h1>
+            유형별 &lt;br />
+            알아보기
+        &lt;/h1>
+        &lt;p>레이아웃 유형에 어떤 것이 있고 
+            그 것들을 어떻게 사용하는지
+            알아보는 시간을 가져봅시다.&lt;/p>
+    &lt;/header>
+    &lt;div class="container">
+        &lt;article class="text">
+            &lt;figure class="text__img">
+                &lt;img src="../assets/img/textType_svg01_01.svg" alt="" />
+            &lt;/figure>
+            &lt;div class="text__desc">
+                &lt;h2>텍스트 유형&lt;/h2>
+                &lt;p>텍스트 유형. 조금 심심할지도. 조금 멋없을지도.  조금 심플할지도. 조금 단순할지도. 조금 쉬울지도. 조금 힘들지도?&lt;/p>
+            &lt;/div>
+        &lt;/article>
+        &lt;article class="text">
+            &lt;figure class="text__img">
+                &lt;img src="../assets/img/textType_svg01_02.svg" alt="" />
+            &lt;/figure>
+            &lt;div class="text__desc">
+                &lt;h2>텍스트 유형&lt;/h2>
+                &lt;p>텍스트 유형. 조금 심심할지도. 조금 멋없을지도.  조금 심플할지도. 조금 단순할지도. 조금 쉬울지도. 조금 힘들지도?&lt;/p>
+            &lt;/div>
+        &lt;/article>
+        &lt;article class="text">
+            &lt;figure class="text__img">
+                &lt;img src="../assets/img/textType_svg01_03.svg" alt="" />
+            &lt;/figure>
+            &lt;div class="text__desc">
+                &lt;h2>텍스트 유형&lt;/h2>
+                &lt;p>텍스트 유형. 조금 심심할지도. 조금 멋없을지도.  조금 심플할지도. 조금 단순할지도. 조금 쉬울지도. 조금 힘들지도?&lt;/p>
+            &lt;/div>
+        &lt;/article>
+        &lt;article class="text">
+            &lt;figure class="text__img">
+                &lt;img src="../assets/img/textType_svg01_04.svg" alt="" />
+            &lt;/figure>
+            &lt;div class="text__desc">
+                &lt;h2>텍스트 유형&lt;/h2>
+                &lt;p>텍스트 유형. 조금 심심할지도. 조금 멋없을지도.  조금 심플할지도. 조금 단순할지도. 조금 쉬울지도. 조금 힘들지도?&lt;/p>
+            &lt;/div>
+        &lt;/article>
+        
+    &lt;/div>
+&lt;/section>
