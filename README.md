@@ -20,6 +20,7 @@ https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect03.html
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect04.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect05.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/quizEffect06.html  
+https://jeonboyeon.github.io/coding2/javascript/effect/quizEffectEx.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/searchEffect01.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/searchEffect02.html  
 https://jeonboyeon.github.io/coding2/javascript/effect/sliderEffect01.html  
