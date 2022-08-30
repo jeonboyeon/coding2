@@ -1,0 +1,48 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul, li {
+    list-style: none;
+}
+
+/* layout */
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 1200px;
+    height: 100px;
+    overflow: hidden;
+    background-color: #dcdcdc;
+}
+
+#header .logo {
+    float: left;
+    padding: 20px;
+}
+#header .menu {
+    float: right;
+}
+
+#header .menu li {
+    display: inline;
+}
+
+#header .menu li a {
+    display: inline-block;
+    padding: 20px;
+    color: #222328;
+    font-size: 18px;
+}
+#slider {}
+#info {}
+#footer {}
