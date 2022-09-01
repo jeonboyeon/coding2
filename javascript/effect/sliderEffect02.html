@@ -374,52 +374,158 @@ setInterval(() => {
     </script>
 
     <script>
-        const sliderWrap = document.querySelector(".slider__wrap"); // 이미지를 감싸는 영역
-        const sliderWImg = document.querySelector(".slider__img"); // 보여지는 영역
-        const sliderInner = document.querySelector(".slider__inner"); // 움직이는 영역
-        const slider = document.querySelectorAll(".slider"); // 이미지
+        // const sliderWrap = document.querySelector(".slider__wrap"); // 이미지를 감싸는 영역
+        // const sliderImg = document.querySelector(".slider__img"); // 보여지는 영역
+        // const sliderInner = document.querySelector(".slider__inner"); // 움직이는 영역
+        // const slider = document.querySelectorAll(".slider"); // 이미지
 
-        sliderInner.style.transition = "all 0.6s";
+        // sliderInner.style.transition = "all 0.6s";
 
-        // sliderInner.style.transform = "translateX(0px)"; 첫 번째 이미지의 위치 | 800 * 0
-        // sliderInner.style.transform = "translateX(-800px)"; 두 번째 이미지의 위치 | 800 * 1
-        // sliderInner.style.transform = "translateX(-1600px)"; 세 번째 이미지의 위치 | 800 * 2 ... | 800 * 4
+        // let currentIndex = 0; // 현재 이미지
+        // let sliderCount = slider.length; // 슬라이드 이미지 전체 갯수
 
-        let currentIndex = 0; // 현재 이미지
-        let sliderCount = slider.length; // 슬라이드 이미지 전체 갯수
+        // setInterval(() => {
+        //     currentIndex++;
 
-        setInterval(() => {
-            currentIndex++;
+        //     let sliderIndex = currentIndex % sliderCount; // 가장 적절한 방법
 
-            let sliderIndex = currentIndex % sliderCount; // 가장 적절한 방법
+        //     sliderInner.style.transform = "translateX(" + -800 * sliderIndex + "px)";
+        // }, 2000);
 
-            // if(currentIndex < 4) {
-            //     currentIndex++;
-            // } else {
-            //     currentIndex = 0;
-            // }
+        // const sliderWrap = document.querySelector(".slider__wrap");
+        // const sliderImg = document.querySelector(".slider__img");
+        // const sliderInner = document.querySelector(".slider__inner");
+        // const slider = document.querySelector(".slider");
 
-            // currentIndex < 4 ? currentIndex++ : (currentIndex = 0);
+        // sliderInner.style.transition = "all 0.6s";
 
-            sliderInner.style.transform = "translateX(" + -800 * sliderIndex + "px)";
-        }, 2000);
+        // let currentIndex = 0;
+        // let sliderCount = slider.length;
+
+        // setInterval(() => {
+        //     let currentIndex = (currentIndex + 1) % sliderCount;
+
+        //     sliderInner.style.transform = "translateX("+ -800 * currentIndex + "px)";
+
+        // }, 1000);
+
+        // if(currentIndex < 4) {
+        //     currentIndex++;
+        // } else {
+        //     currentIndex = 0;
+        // }
+
+        // currentIndex < 4 ? currentIndex++ : (currentIndex = 0);
     </script>
 
     <!-- javascript -->
-    <!-- <script>
-        const sliderInner = document.querySelector(".slider__inner"); // 움직이는 영역
-        const slider = document.querySelectorAll(".slider"); // 이미지
+    <script>
+        // const sliderInner = document.querySelector(".slider__inner"); // 움직이는 영역
+        // const slider = document.querySelectorAll(".slider"); // 이미지
+
+        // let currentIndex = 0;
+
+        // sliderInner.style.transition = "all 0.6s";
+
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % slider.length;
+
+        //     sliderInner.style.transform = "translateX(" + -800 * currentIndex + "px)";
+        // }, 2000);
+
+        // const sliderInner = document.querySelector(".slider__inner");
+        // const slider = document.querySelectorAll(".slider");
+
+        // sliderInner.style.transition = "all 0.6s";
+
+        // let currentIndex = 0;
+
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % slider.length;
+
+        //     sliderInner.style.transform = "translateX(" + -800 * currentIndex + "px)";
+        // }, 1000);
+
+        // const sliderInner = document.querySelector(".slider__inner");
+        // const slider = document.querySelectorAll(".slider");
+
+        // let currentIndex = 0;
+        // sliderInner.style.transition = "all 0.6s";
+
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % slider.length;
+
+        //     sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
+        // }, 1000);
+
+        // const sliderInner = document.querySelector(".slider__inner");
+        // const slider = document.querySelectorAll(".slider");
+
+        // let currentIndex = 0;
+
+        // sliderInner.style.transition = "all 0.6s";
+
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % slider.length;
+
+        //     sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
+
+
+        // }, 1000);
+
+        // const sliderInner = document.querySelector(".slider__inner");
+        // const slider = document.querySelectorAll(".slider");
+
+        // sliderInner.style.transition = "all 0.6s";
+
+        // let currentIndex = 0;
+
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % slider.length;
+
+        //     sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
+        // }, 1000);
+
+        // const sliderInner = document.querySelector(".slider__inner");
+        // const slider = document.querySelectorAll(".slider");
+
+        // let currentIndex = 0;
+
+        // sliderInner.style.transition = "all 0.6s";
+
+        // setInterval(() => {
+        //     currentIndex = (currentIndex + 1) % slider.length;
+
+        //     sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
+        // }, 1000);
+
+        // const sliderInner = document.querySelector(".slider__inner");
+        // const slider = document.querySelectorAll(".slider");
+
+        // let currentindex = 0;
+
+        // sliderInner.style.transition = "all 0.6s"
+
+        // setInterval(() => {
+        //     currentindex = (currentindex + 1) % slider.length;
+
+        //     sliderInner.style.transform = "translateX("+ -800 * currentindex +"px)";
+        // }, 1000);
+
+        const sliderInner = document.querySelector(".slider__inner");
+        const slider = document.querySelectorAll(".slider");
 
         let currentIndex = 0;
-
-        sliderInner.style.transition = "all 0.6s";
 
         setInterval(() => {
             currentIndex = (currentIndex + 1) % slider.length;
 
-            sliderInner.style.transform = "translateX(" + -800 * currentIndex + "px)";
-        }, 2000);
-    </script> -->
+            sliderInner.style.transition = "all 0.6s"
+            sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)"
+
+        }, 1000);
+        
+    </script>
 
     <!-- GSAP -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
