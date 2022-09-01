@@ -34,7 +34,7 @@
                 position: relative;
                 display: flex;
                 flex-wrap: wrap;
-                width: 4000px;
+                width: 4800px;
                 height: 450px;
             }
 
@@ -74,6 +74,9 @@
 
             .slider:nth-child(5)::before {
                 content: "image 05";
+            }
+            .slider:nth-child(6)::before {
+                content: "image 01";
             }
 
             .slider:nth-child(1) {
@@ -273,7 +276,42 @@
                         </div>
                         <div class="cont">
                             <div class="active">
-                                <pre><code class="language-js">
+                                <pre><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img"); // 보여지는 영역
+const sliderInner = document.querySelector(".slider__inner"); // 움직이는 영역
+const slider = document.querySelectorAll(".slider"); // 각 이미지
+
+let currentIndex = 0; // 현재 보이는 이미지
+let sliderCount = slider.length; // 이미지 갯수
+let sliderWidth = sliderImg.offsetWidth; // 이미지 가로값
+let sliderClone = sliderInner.firstElementChild.cloneNode(true); // 첫 번째 이미지 복사
+
+sliderInner.appendChild(sliderClone); // 첫 번째 이미지를 마지막에 넣어 준 것
+
+function sliderEffect() {
+    currentIndex++;
+
+    sliderInner.style.transition = "all 0.6s";
+
+    sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
+    // sliderInner.style.transform = "translateX(-1600)";
+    // sliderInner.style.transform = "translateX(-2400)";
+    // sliderInner.style.transform = "translateX(-3200)";
+    // sliderInner.style.transform = "translateX(-4000)";
+    // sliderInner.style.transform = "translateX(-4800)";
+
+    // 마지막 사진에 위치 했을 때
+    if(currentIndex == sliderCount){
+       setTimeout(() => {
+        sliderInner.style.transition = "0s";
+        sliderInner.style.transform = "translateX(0px)";
+       },700);
+
+        currentIndex = 0;
+    }
+}
+
+setInterval(sliderEffect, 2000);
 </code></pre>
                             </div>
                             <div>
@@ -281,7 +319,100 @@
 </code></pre>
                             </div>
                             <div>
-                                <pre><code class="language-css">
+                                <pre><code class="language-css">/* slider */
+.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.slider__img {
+    /* 이미지 보이는 영역 */
+    /* position: relative;  JQurey 용 */
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.slider__inner {
+    /* 이미지를 감싸고 있는 부모 요소 : 움직이는 부분 */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 4800px;
+    height: 450px;
+}
+
+.slider {
+    /* 개별적 이미지 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+
+.slider::before {
+    margin: 5px;
+    padding: 7px;
+    border-radius: 5px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background-color: rgba(34, 34, 34, 0.698);
+    color: rgb(199, 199, 199);
+}
+
+.slider:nth-child(1)::before {
+    content: "image 01";
+}
+
+.slider:nth-child(2)::before {
+    content: "image 02";
+}
+
+.slider:nth-child(3)::before {
+    content: "image 03";
+}
+
+.slider:nth-child(4)::before {
+    content: "image 04";
+}
+
+.slider:nth-child(5)::before {
+    content: "image 05";
+}
+.slider:nth-child(6)::before {
+    content: "image 01";
+}
+
+.slider:nth-child(1) {
+    z-index: 5;
+}
+
+.slider:nth-child(2) {
+    z-index: 4;
+}
+
+.slider:nth-child(3) {
+    z-index: 3;
+}
+
+.slider:nth-child(4) {
+    z-index: 2;
+}
+
+.slider:nth-child(5) {
+    z-index: 1;
+}
+
+@media (max-width: 800px) {
+    .slider__img {
+        width: 400px;
+        height: 225px;
+    }
+}
 </code></pre>
                             </div>
                         </div>
@@ -316,6 +447,41 @@
     </script>
 
     <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = document.querySelector(".slider__img"); // 보여지는 영역
+        const sliderInner = document.querySelector(".slider__inner"); // 움직이는 영역
+        const slider = document.querySelectorAll(".slider"); // 각 이미지
 
+        let currentIndex = 0; // 현재 보이는 이미지
+        let sliderCount = slider.length; // 이미지 갯수
+        let sliderWidth = sliderImg.offsetWidth; // 이미지 가로값
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true); // 첫 번째 이미지 복사
+
+        sliderInner.appendChild(sliderClone); // 첫 번째 이미지를 마지막에 넣어 준 것
+
+        function sliderEffect() {
+            currentIndex++;
+
+            sliderInner.style.transition = "all 0.6s";
+
+            sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
+            // sliderInner.style.transform = "translateX(-1600)";
+            // sliderInner.style.transform = "translateX(-2400)";
+            // sliderInner.style.transform = "translateX(-3200)";
+            // sliderInner.style.transform = "translateX(-4000)";
+            // sliderInner.style.transform = "translateX(-4800)";
+
+            // 마지막 사진에 위치 했을 때
+            if(currentIndex == sliderCount){
+               setTimeout(() => {
+                sliderInner.style.transition = "0s";
+                sliderInner.style.transform = "translateX(0px)";
+               },700);
+
+                currentIndex = 0;
+            }
+        }
+
+        setInterval(sliderEffect, 2000);
     </script>
 </html>

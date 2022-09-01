@@ -153,6 +153,15 @@ body {
 .sample .table {
     margin-bottom: 10px;
 }
+
+.sample .table.left tr td {
+    text-align: left;
+}
+
+.sample .table.left tr > td {
+    text-align: center;
+}
+
 .sample .table table {
     width: 100%;
     border: 1px solid #e6e6e6;
@@ -173,6 +182,79 @@ body {
 .sample .table table tr td[class*="_P"]:hover {
     color: #000;
     cursor: help;
+}
+
+.sample .view {
+    border: 1px solid #e6e6e6;
+    padding: 30px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.sample .button {
+    border: 1px solid #E6E6E6;
+    border-top: 0;
+    padding: 20px;
+}
+.sample .button a {
+    border: 1px solid #4390E1;
+    color: #4390E1;
+    border-radius: 40px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.sample .button a:hover {
+    background-color: #4390E1;
+    color: #fff;
+}
+
+.sample .blue {
+    background-color: #a2cbfa;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    margin-top: 0;
+    color: #444;
+}
+
+.sample .sbox {
+    width: 400px;
+    height: 200px;
+    background-color: #a2cbfa;
+    border: 1px solid #4390e1;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+}
+
+.sample .sbox::after {
+    content: '';
+    width: 480px;
+    height: 280px;
+    border: 1px dashed #4390e1;
+    position: absolute;
+    top: -21px;
+    left: -21px;
+}
+
+.sample .sample.sbox::before {
+    content: '';
+    width: 398px;
+    height: 198px;
+    border: 1px dashed #4390e1;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.sample .sResult {
+    padding-top: 10px;
+    text-align: center;
 }
 
 .sample .box {
