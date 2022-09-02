@@ -108,12 +108,12 @@ let x = 100,
                         <p>상수 데이터 불러오기</p>
                         <div class="script">
                             <pre><code class="language-js">const x = 100,
-         y = 200,
-         z = "javascript"; 
+            y = 200,
+            z = "javascript"; 
 
-         document.write(x);
-         document.write(y);
-         document.write(z);
+document.write(x);
+document.write(y);
+document.write(z);
 </code></pre>
                         </div>
                         <div class="result">
@@ -216,7 +216,7 @@ document.write(arr.length) //속성 배열 값을 가져올 수 있다. (배열�
 
 for(let i = 0; i &ltarr.length; i++){
     document.write(arr[i]);
-    };
+};
 </code></pre>
                         </div>
                         <div class="result">
@@ -247,22 +247,22 @@ for(let i = 0; i &ltarr.length; i++){
                         <div class="script">
                             <pre><code class="language-js">const num = [100, 200, 300, 400, 500];
             
-    //for문을 이용해서 출력
-    for(let i=0; i&ltnum.length; i++){
-        document.write(num[i]); 
- }
- 
-    //forEach()를 이용해서 출력 : forEach_함수
-    num.forEach(function(element){
-        document.write(element); 
-    });
- 
-    //forEach() 3가지 인자(parameter)값
-    num.forEach(function(element, index, array){
-        document.write(element);
-        document.write(index);
-        document.write(array); // 중간에 쉼표가 나온다.
-    });
+//for문을 이용해서 출력
+for(let i=0; i&ltnum.length; i++){
+    document.write(num[i]); 
+}
+
+//forEach()를 이용해서 출력 : forEach_함수
+num.forEach(function(element){
+    document.write(element); 
+});
+
+//forEach() 3가지 인자(parameter)값
+num.forEach(function(element, index, array){
+    document.write(element);
+    document.write(index);
+    document.write(array); // 중간에 쉼표가 나온다.
+});
 </code></pre>
                         </div>
                         <div class="result">

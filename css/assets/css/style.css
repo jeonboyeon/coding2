@@ -193,7 +193,9 @@ body {
     color: var(--brown);
 }
 
-.main_desc .subTitle {}
+.main_desc .subTitle01 {
+
+}
 
 .main_desc .subTitle ul {
     overflow: hidden;
