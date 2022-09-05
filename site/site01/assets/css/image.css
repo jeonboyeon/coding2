@@ -1,26 +1,4 @@
-/* common */
-.container {
-    width: 1160px;
-    padding: 0 20px;
-    margin: 0 auto;
-    min-width: 1160px;
-}
-.section {
-    padding: 120px 0;
-}
-.section > h2 {
-    font-size: 50px;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.section > p {
-    font-size: 22px;
-    font-weight: 300;
-    color: #666;
-    text-align: center;
-    margin-bottom: 70px;
-}
+
 /* imageType */
 .image__inner {
     display: flex;

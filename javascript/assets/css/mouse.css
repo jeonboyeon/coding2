@@ -1,9 +1,9 @@
 /* reset */
-@import url('https://webfontworld.github.io/onestore/OneMobileTitle.css');
-@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url("https://webfontworld.github.io/onestore/OneMobileTitle.css");
+@import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
 
 * {
-    font-family: 'GmarketSans';
+    font-family: "GmarketSans";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +13,11 @@ body {
     width: 100%;
     /* 100% 로 하게되면 스크롤바가 안생기게 된다. */
     height: 100vh;
+    overflow: hidden;
+}
 
+li {
+    list-style: none;
 }
 
 /* scroll */
@@ -33,48 +37,88 @@ body {
 }
 
 body.img01 {
-    background: #000 url('../img/sliderEffect01_bg01@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg01@2x-min.jpg") no-repeat center / cover;
     /* 배경 반복 설정이 앞으로 와야한다. */
 }
 
 body.img02 {
-    background: #000 url('../img/sliderEffect01_bg02@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg02@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img03 {
-    background: #000 url('../img/sliderEffect01_bg03@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg03@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img04 {
-    background: #000 url('../img/sliderEffect01_bg04@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg04@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img05 {
-    background: #000 url('../img/sliderEffect01_bg05@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg05@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img06 {
-    background: #000 url('../img/sliderEffect01_bg06@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg06@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img07 {
-    background: #000 url('../img/sliderEffect01_bg07@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg07@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img08 {
-    background: #000 url('../img/sliderEffect01_bg08@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg08@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img09 {
-    background: #000 url('../img/sliderEffect01_bg09@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg09@2x-min.jpg") no-repeat center / cover;
 }
 
 body.img10 {
-    background: #000 url('../img/sliderEffect01_bg10@2x-min.jpg') no-repeat center / cover;
+    background: #000 url("../img/sliderEffect01_bg10@2x-min.jpg") no-repeat center / cover;
+}
+body.img11 {
+    background: #000 url("../img/sliderEffect01_bg11@2x-min.jpg") no-repeat center / cover;
+    /* 배경 반복 설정이 앞으로 와야한다. */
+}
+
+body.img12 {
+    background: #000 url("../img/sliderEffect01_bg12@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img13 {
+    background: #000 url("../img/sliderEffect01_bg13@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img14 {
+    background: #000 url("../img/sliderEffect01_bg14@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img15 {
+    background: #000 url("../img/sliderEffect01_bg15@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img16 {
+    background: #000 url("../img/sliderEffect01_bg16@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img17 {
+    background: #000 url("../img/sliderEffect01_bg17@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img18 {
+    background: #000 url("../img/sliderEffect01_bg18@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img19 {
+    background: #000 url("../img/sliderEffect01_bg19@2x-min.jpg") no-repeat center / cover;
+}
+
+body.img20 {
+    background: #000 url("../img/sliderEffect01_bg20@2x-min.jpg") no-repeat center / cover;
 }
 
 body::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -121,7 +165,7 @@ a {
 
 #header h1 {
     font-weight: 600;
-    font-family: 'OneMobileTitle';
+    font-family: "OneMobileTitle";
     margin-bottom: 20px;
     text-shadow: 2px 2px 2px #222;
 }
@@ -131,7 +175,8 @@ a {
     margin-bottom: 10px;
 }
 
-#header ul {}
+#header ul {
+}
 
 #header li {
     display: inline-block;
@@ -158,7 +203,8 @@ a {
 }
 
 /* footer */
-#footer {}
+#footer {
+}
 
 #footer .source {
     background-color: rgba(51, 51, 51, 0.461);
@@ -172,7 +218,8 @@ a {
 }
 
 /* modal__wrap */
-.modal__wrap {}
+.modal__wrap {
+}
 
 .modal__btn {
     position: absolute;
@@ -269,7 +316,7 @@ a {
 }
 
 .modal__box .title .dot::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 25px;
     top: 0;
@@ -288,7 +335,7 @@ a {
 }
 
 .modal__box .title .dot::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 25px;
     top: 0;
@@ -304,11 +351,11 @@ a {
     margin-left: 40px;
 }
 
-.modal__box .title .tabs>div.active {
+.modal__box .title .tabs > div.active {
     background-color: rgb(80, 80, 80);
 }
 
-.modal__box .title .tabs>div {
+.modal__box .title .tabs > div {
     color: #ccc;
     background-color: hsl(0 0% 20%);
     padding: 0.35rem 0.8rem;
@@ -319,20 +366,21 @@ a {
     cursor: pointer;
 }
 
-.modal__box .title .tabs>div em {
+.modal__box .title .tabs > div em {
     font-style: normal;
 }
 
-.modal__box .title .tabs>div .favicon {
+.modal__box .title .tabs > div .favicon {
     margin-right: 0.4rem;
     margin-top: 0.25rem;
 }
 
-.modal__box .title .tabs>div .close {
+.modal__box .title .tabs > div .close {
     margin-left: 3rem;
 }
 
-.modal__box .title .tabs>div .close svg {}
+.modal__box .title .tabs > div .close svg {
+}
 
 .modal__box .cont {
     background-color: #2c2c2c;
@@ -343,15 +391,14 @@ a {
     overflow-y: auto;
 }
 
-.modal__box .cont>div {
+.modal__box .cont > div {
     display: none;
 }
 
-.modal__box .cont>div.active {
+.modal__box .cont > div.active {
     display: block;
     height: 100%;
 }
-
 
 input[type="checkbox"] {
     display: none;
@@ -368,26 +415,39 @@ input[type="checkbox"] {
     animation: zoomOut 0.4s 0.5s ease forwards;
 }
 
-
 .modal__cont.show .modal__close {
     animation: ClosOut 0.3s 1s ease forwards;
     opacity: 0;
 }
 
 @keyframes forldOut {
-    0% {transform: scaleX(0) scaleY(0.005);}
-    50% {transform: scaleX(1) scaleY(0.005);}
-    100% {transform: scale(1) scaleY(1);}
+    0% {
+        transform: scaleX(0) scaleY(0.005);
+    }
+    50% {
+        transform: scaleX(1) scaleY(0.005);
+    }
+    100% {
+        transform: scale(1) scaleY(1);
+    }
 }
 
 @keyframes zoomOut {
-    0% {transform: scale(0);}
-    100% {transform: scale(1);}
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes ClosOut {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .modal__cont.show.hide {
@@ -405,23 +465,36 @@ input[type="checkbox"] {
     animation: ClosIn 0.3s ease backwards;
 }
 
-
 @keyframes forldIn {
-    0% {transform: scaleX(1) scaleY(1);}
-    50% {transform: scaleX(1) scaleY(0.005);}
-    100% {transform: scale(0) scaleY(0.005);}
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: scaleX(1) scaleY(0.005);
+    }
+    100% {
+        transform: scale(0) scaleY(0.005);
+    }
 }
 
 @keyframes zoomIn {
-    0% {transform: scaleX(1);}
-    100% {transform: scale(0);}
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
 @keyframes ClosIn {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
     .modal__box {
         width: 96%;
     }
@@ -432,7 +505,7 @@ input[type="checkbox"] {
     .modal__box .title .tabs {
         margin-left: 0;
     }
-    .modal__box .title .tabs>div .close {
+    .modal__box .title .tabs > div .close {
         display: none;
     }
 }
@@ -450,7 +523,7 @@ input[type="checkbox"] {
     .modal__box .title .tabs {
         margin-left: 0;
     }
-    .modal__box .title .tabs>div .close {
+    .modal__box .title .tabs > div .close {
         display: none;
     }
 }
@@ -471,11 +544,11 @@ input[type="checkbox"] {
     .modal__box .title .tabs {
         margin-left: 0;
     }
-    .modal__box .title .tabs>div .close {
+    .modal__box .title .tabs > div .close {
         display: none;
     }
 
-    .modal__box .title .tabs>div {
+    .modal__box .title .tabs > div {
         font-size: 12px;
     }
 
