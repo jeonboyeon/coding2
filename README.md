@@ -4,7 +4,7 @@
 https://jeonboyeon.github.io/coding2/index.html   
 
 ### 메인 페이지 2
-jeonboyeon.netlify.app  
+https://jeonboyeon.netlify.app/
 
 ### 자기소개 페이지
 https://jeonboyeon.github.io/coding2/class/index.html   
