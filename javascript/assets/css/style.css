@@ -56,21 +56,24 @@ body {
 /* li : block 요소
     a : inline 요소 */
 #header h1 a {
+    display: inline-block;
     text-transform: uppercase;
-    color: #5885ff;
+    color: #444;
     font-size: 60px;
     font-weight: 700;
+    border-bottom: 2px solid #dcdcdc;
+    margin-bottom: 20px;
 }
 .header_nav ul li {
     display: inline;
 }
 .header_nav ul li.active a {
-    background-color: #5885ff;
+    background-color: #444;
     color: #fff;
 }
 .header_nav ul li a {
     border-radius: 5px;
-    border: 1px solid #5885ff;
+    border: 1px solid #444;
     padding: 8px 25px;
     display: inline-block;
     margin-bottom: 7px;
@@ -83,7 +86,7 @@ body {
     margin-top: 10px;
 }
 .header_nav ul li a:hover {
-    background-color: #5885ff;
+    background-color: #444;
     color: #fff;
 }
 .header_nav .study {
@@ -142,7 +145,7 @@ body {
 .main_sample .result {
     cursor: pointer;
     color: #fff;
-    background-color: #5885ff;
+    background-color: #444;
     margin-top: 10px;
     margin-bottom: 80px;
     padding: 15px;
@@ -198,8 +201,8 @@ body {
     padding: 20px;
 }
 .sample .button a {
-    border: 1px solid #5885ff;
-    color: #5885ff;
+    border: 1px solid #444;
+    color: #444;
     border-radius: 40px;
     padding: 10px 20px;
     display: inline-block;
@@ -207,23 +210,23 @@ body {
 }
 
 .sample .button a:hover {
-    background-color: #5885ff;
+    background-color: #444;
     color: #fff;
 }
 
 .sample .blue {
-    background-color: #a2cbfa;
+    background-color: #444;
     padding: 10px 20px;
     border-radius: 5px 5px 0 0;
     margin-top: 0;
-    color: #444;
+    color: #fff;
 }
 
 .sample .sbox {
     width: 400px;
     height: 200px;
-    background-color: #5885ff;
-    border: 1px solid #5885ff;
+    background-color: #444;
+    border: 1px solid #444;
     padding: 20px;
     position: relative;
     display: flex;
@@ -238,7 +241,7 @@ body {
     content: '';
     width: 480px;
     height: 280px;
-    border: 1px dashed #5885ff;
+    border: 1px dashed #555;
     position: absolute;
     top: -21px;
     left: -21px;
@@ -248,7 +251,7 @@ body {
     content: '';
     width: 398px;
     height: 198px;
-    border: 1px dashed #5885ff;
+    border: 1px dashed #444;
     position: absolute;
     top: 20px;
     left: 20px;
