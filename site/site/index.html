@@ -20,7 +20,7 @@
     </head>
     <body class="A1">
         <header id="header">
-            <div class="header_wrap">
+            <div class="header_wrap content__item">
                 <h1>
                     <a href="#"><em>CO</em>CHODING</a>
                 </h1>
@@ -29,7 +29,7 @@
                 </div>
                 <nav class="header_nav">
                     <ul>
-                        <li class="active"><a href="##header">Header</a></li>
+                        <li><a href="##header">Header</a></li>
                         <li><a href="#sliderType">Slider</a></li>
                         <li><a href="#imageType">Image</a></li>
                         <li><a href="#imageTextType">ImageText</a></li>
@@ -44,7 +44,7 @@
         </header>
         <main id="main" class="main">
             <div class="main_wrap">
-                <section id="sliderType" class="sliderType">
+                <section id="sliderType" class="sliderType content__item">
                     <div class="slider_image">
                         <div class="slider_txt container">
                             <span>STORY</span>
@@ -72,7 +72,7 @@
                     </div>
                 </section>
                 <section id="imageType">
-                    <div class="image_inner container">
+                    <div class="image_inner container content__item">
                         <h2>깔끔함 그리고 단순함</h2>
                         <p>어디 하나 흠 잡을 곳 없이 깔끔한 고딕의 매력으로 빠져보세요.</p>
                         <div class="box_inner">
@@ -97,7 +97,7 @@
                     </div>
                 </section>
                 <section id="imageTextType">
-                    <div class="imageText_inner container">
+                    <div class="imageText_inner container content__item">
                         <article class="imageText_box txt">
                             <h2>선의 종류를 알아보고, 이해해보자</h2>
                             <p>안정된 수평선과 도전을 상징하는 수직선. 서로 반대되는 매력을 각각 느껴봅시다.</p>
@@ -119,7 +119,7 @@
                     </div>
                 </section>
                 <section id="cardType">
-                    <div class="card__inner container">
+                    <div class="card__inner container content__item">
                         <h2>여러 건축물의 형태</h2>
                         <p>직선 & 곡선 & 원형으로 이루어진 건축물의 형태를 알아봅시다.</p>
                         <div class="cardBox_inner">
@@ -158,7 +158,7 @@
                     </div>
                 </section>
                 <section id="bannerType">
-                    <div class="banner_inner">
+                    <div class="banner_inner content__item">
                         <div class="banner_img">
                             <span class="ir">배너 이미지</span>
                             <h2>단순하고 간결한 건축의 아름다움</h2>
@@ -167,7 +167,7 @@
                     </div>
                 </section>
                 <section id="textType">
-                    <div class="textType_inner container">
+                    <div class="textType_inner container content__item">
                         <h2>건축물 둘러보기</h2>
                         <div class="textBox_inner">
                             <article class="text_box">
@@ -223,7 +223,7 @@
                 </section>
                 <section id="footerType">
                     <div class="footerType_inner">
-                        <div class="footerList_inner container">
+                        <div class="footerList_inner container content__item">
                             <div class="list">
                                 <h3>주요기능</h3>
                                 <ul>
@@ -300,16 +300,35 @@
             document.querySelector("#scrollTop__info .scroll span").innerHTML = Math.floor(scrollTop);
         });
 
-        // 메뉴 버튼 클릭 시
+        // 메뉴 버튼 over 시
         const menuBtn = document.querySelector(".menu_ico .ico");
         const menu = document.querySelector(".header_nav");
 
         menuBtn.addEventListener("mouseover", () => {
-            menu.classList.add('on');
+            menu.classList.add("on");
         });
         menu.addEventListener("mouseleave", () => {
-            menu.classList.remove('on');
+            menu.classList.remove("on");
         });
 
+        window.addEventListener("scroll", () => {
+            // 스크롤을 움직일 때 이벤트를 발생시킨다.
+            // let scrollTop = window.pageYOffset;
+            // let scrollTop = window.scrollY;
+            // let scrollTop = document.documentElement.scrollTop;
+
+            // scrollTop = 윈도우 스크롤이 수직으로 얼마나 움직였는지 픽셀 값으로 반환 or 윈도우 스크롤이 수직으로 얼마나 움직였는지 픽셀 값으로 반환 or Y축으로 스크롤한 거리 반환
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            //forEach문
+            document.querySelectorAll(".content__item").forEach((el, i) => {
+                if (scrollTop >= el.offsetTop) {
+                    document.querySelectorAll(".header_nav li").forEach((li) => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".header_nav li:nth-child(" + (i + 1) + ")").classList.add("active");
+                }
+            });
+        });
     </script>
 </html>
