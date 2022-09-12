@@ -1,7 +1,5 @@
 /* 헤더(header) */
 #header {
-    overflow-y: hidden;
-    overflow-x: scroll;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,7 +83,11 @@ button {
 
 /* 메인(mian) - 슬라이더(sliderType) */
 .sliderType {
+    width: 100%;
     position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 .sliderType .slider_image {
     display: flex;
@@ -220,9 +222,9 @@ button {
 
 /* 이미지 타입(imageType) */
 #imageType {
-    margin: 120px auto;
 }
 .image_inner {
+    padding: 120px 0;
 }
 .image_inner > h2 {
     text-align: center;
@@ -550,7 +552,8 @@ button {
     font-size: 18px;
     margin-bottom: 10px;
 }
-.footerList_inner .list ul {}
+.footerList_inner .list ul {
+}
 .footerList_inner .list ul li {
     margin-bottom: 10px;
 }
@@ -564,9 +567,82 @@ button {
     text-align: center;
 }
 
-
+/* 스크롤 값 */
+#scrollTop__info {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+.scroll {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    color: #666;
+}
+.scroll span {
+}
 
 /* 미디어 쿼리 */
+@media (max-width: 1420px) {
+    #header .header_wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .menu_ico {
+        cursor: pointer;
+        position: fixed;
+        right: 20px;
+        top: 30px;
+    }
+    .menu_ico .ico {
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/More-vertical.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .menu_ico .ico a {
+    }
+    #header {
+        overflow-y: unset;
+        overflow-x: unset;
+    }
+    #header h1 {
+        margin-right: 10px;
+    }
+    .header_nav {
+        display: none;
+    }
+    .header_nav.on {
+        display: block;
+    }
+    .header_nav ul {
+        padding: 20px;
+        position: fixed;
+        right: 20px;
+        top: 60px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+    }
+    .header_nav ul li {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .header_nav ul li a {
+    }
+}
+
+#header .header_wrap .header_nav ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+
+    transition: all 0.3s;
+}
 @media (max-width: 1250px) {
     .container {
         width: 96%;
@@ -689,7 +765,7 @@ button {
     .footerList_inner .list h3 {
         font-size: 16px;
     }
-    ..footerList_inner .list ul li a {
+    .footerList_inner .list ul li a {
         font-size: 12px;
     }
 }
