@@ -29,14 +29,12 @@
                 </div>
                 <nav class="header_nav">
                     <ul>
-                        <li><a href="##header">Header</a></li>
                         <li><a href="#sliderType">Slider</a></li>
                         <li><a href="#imageType">Image</a></li>
                         <li><a href="#imageTextType">ImageText</a></li>
                         <li><a href="#cardType">Card</a></li>
                         <li><a href="#bannerType">Banner</a></li>
                         <li><a href="#textType">Text</a></li>
-                        <li><a href="#footer">Footer</a></li>
                     </ul>
                 </nav>
                 <button class="header_login" type="button"><a href="#">Log In</a></button>
@@ -303,12 +301,29 @@
         // 메뉴 버튼 over 시
         const menuBtn = document.querySelector(".menu_ico .ico");
         const menu = document.querySelector(".header_nav");
+        const body = document.querySelector("body");
+        const btnMenuList = menu.querySelectorAll("ul li a");
 
-        menuBtn.addEventListener("mouseover", () => {
-            menu.classList.add("on");
+        menuBtn.addEventListener("click", () => {
+            menu.classList.toggle("on");
+            menuBtn.classList.toggle("on");
+            document.body.classList.toggle("fixed");
         });
-        menu.addEventListener("mouseleave", () => {
-            menu.classList.remove("on");
+
+        btnMenuList.forEach((list) => {
+            list.addEventListener("click", () => {
+                menu.classList.remove("on");
+            });
+        });
+
+        window.addEventListener("resize", () => {
+            let width = window.innerWidth;
+
+            if (width > 1300) {
+                document.body.classList.remove("fixed");
+                menuBtn.classList.remove("on");
+                menu.classList.remove("on");
+            }
         });
 
         window.addEventListener("scroll", () => {
@@ -322,7 +337,7 @@
 
             //forEach문
             document.querySelectorAll(".content__item").forEach((el, i) => {
-                if (scrollTop >= el.offsetTop) {
+                if (scrollTop > el.offsetTop) {
                     document.querySelectorAll(".header_nav li").forEach((li) => {
                         li.classList.remove("active");
                     });
