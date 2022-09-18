@@ -62,6 +62,22 @@
                 background-color: rgba(255, 166, 0, 0.6);
             }
 
+            .mouse__cursor.active2 {
+                transform: scale(0);
+            }
+            .mouse__cursor2.active2 {
+                transform: scale(5);
+                background-color: rgba(0, 221, 255, 0.6);
+            }
+
+            .mouse__cursor.active3 {
+                transform: scale(0);
+            }
+            .mouse__cursor2.active3 {
+                transform: scale(5);
+                background-color: rgba(255, 0, 85, 0.6);
+            }
+
             .mouse__wrap {
                 text-align: center;
                 width: 100%;
@@ -111,11 +127,6 @@
                 font-size: 14px;
                 line-height: 1.6;
                 color: #fff;
-            }
-
-            #header ul li.active2 {
-                transform: scale(5);
-                background-color: rgba(255, 166, 0, 0.6);
             }
         </style>
     </head>
@@ -491,7 +502,7 @@ document.querySelectorAll(".mouse__wrap span").forEach((span) => {
             const cursor = document.querySelector(".mouse__cursor");
             const cursor2 = document.querySelector(".mouse__cursor2");
             const span = document.querySelectorAll(".mouse__wrap span");
-            const menu = document.querySelector("#header ul li");
+            const menu = document.querySelectorAll("#header ul li a");
             const modal = document.querySelector(".modal__btn");
 
             window.addEventListener("mousemove", (e) => {
@@ -521,19 +532,27 @@ document.querySelectorAll(".mouse__wrap span").forEach((span) => {
                 menu.forEach((menu) => {
                     // mouseenter 시 span 효과 설정 (화살표 함수에서는 this가 안먹힌다.)
                     menu.addEventListener("mouseenter", () => {
-                        menu.classList.add("active2");
+                        cursor.classList.add("active2");
+                        cursor2.classList.add("active2");
                     });
                     menu.addEventListener("mouseleave", () => {
-                        menu.classList.remove("active2");
+                        cursor.classList.remove("active2");
+                        cursor2.classList.remove("active2");
                     });
                 });
-            });
 
-            
-          
+                    modal.addEventListener("mouseenter", () => {
+                        cursor.classList.add("active3");
+                        cursor2.classList.add("active3");
+                    });
+                    modal.addEventListener("mouseleave", () => {
+                        cursor.classList.remove("active3");
+                        cursor2.classList.remove("active3");
+                    });
+                });
+
             modal.classList.remove("active2");
 
-     
             modal.classList.add("active2");
         </script>
     </body>
