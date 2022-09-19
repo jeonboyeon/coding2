@@ -1,0 +1,34 @@
+#header {
+    width: 100%;
+    background-color: #F6F8FD;
+    padding: 20px 0;
+}
+.header__inner {
+    text-align: center;
+}
+.header__inner h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.header__inner nav {}
+.header__inner nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.header__inner nav ul li {
+    display: inline-block;
+}
+.header__inner nav ul li a {
+    padding: 5px 0;
+}
+.header__inner nav ul li a:hover {
+    border-bottom: 1px solid #000;
+}
+
+
+.slider__inner {}
+.slider__inner .slider {}
+.slider__inner .slider .desc {}
