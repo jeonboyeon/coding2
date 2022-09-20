@@ -23,6 +23,10 @@
                 background-color: rgba(0, 0, 0, 0.4);
                 padding: 20px 30px;
                 border-radius: 50px;
+                transition: top 0.4s ease;
+            }
+            #parallax__nav.show {
+                top: 20px;
             }
             #parallax__nav li {
                 display: inline;
@@ -89,7 +93,7 @@
             }
             .content__item__img {
                 position: absolute;
-                background: url('../assets/img/pallacx_bg08.jpg');
+                background: url(../assets/img/effect_bg19@2x.jpg);
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
@@ -100,8 +104,6 @@
                 filter: saturate(0%);
                 transition: all 1s;
             }
-
-            /* section image */
             .content__item:nth-child(1) .content__item__img {
                 background-image: url("../assets/img/pallacx_bg01.jpg");
             }
@@ -129,7 +131,6 @@
             .content__item:nth-child(9) .content__item__img {
                 background-image: url("../assets/img/pallacx_bg09.jpg");
             }
-
             .content__item__desc {
                 font-size: 4vw;
                 line-height: 1.4;
@@ -140,20 +141,6 @@
             .content__item:nth-child(even) .content__item__desc {
                 margin-left: auto;
                 margin-right: -4vw;
-            }
-            #parallax__info {
-                position: fixed;
-                left: 20px;
-                bottom: 20px;
-                z-index: 2000;
-                background-color: rgba(0, 0, 0, 0.4);
-                color: #fff;
-                padding: 20px;
-                border-radius: 10px;
-            }
-            #parallax__info li,
-            .scroll {
-                line-height: 1.4;
             }
             @media (max-width: 800px) {
                 #parallax__cont {
@@ -182,125 +169,51 @@
                 #parallax__nav li.active a {
                     border-radius: 5px;
                 }
-                #parallax__info {
-                    left: 10px;
-                    bottom: 10px;
-                }
-            }
-            #parallax__dot {
-                position: fixed;
-                right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                z-index: 10000;
-                background: rgba(0, 0, 0, 0.4);
-                padding: 20px 10px;
-                border-radius: 30px;
-            }
-            #parallax__dot li {
-                position: relative;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                margin: 12px 8px;
-                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-                transition: box-shadow 0.2s ease;
-            }
-            #parallax__dot li a {
-                background: #fff;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border-radius: 50%;
-                transition: transform 0.2s ease;
-            }
-            #parallax__dot li span {
-                display: none;
-            }
-            #parallax__dot li.active {
-                box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
-            }
-            #parallax__dot li.active a {
-                transform: scale(0.4);
             }
         </style>
     </head>
     <body>
-        <!-- header start -->
         <header id="header">
-            <!-- title -->
-            <h1><a href="../effect/parallaxEffect.html">Javascript Parallax Effect02</a></h1>
-
-            <!-- sub title -->
-            <p>패럴랙스 이펙트 - 사이드 메뉴</p>
-
-            <!-- html menu -->
+            <h1><a href="../effect/parallaxEffect.html">Javascript Parallax Effect05</a></h1>
+            <p>패럴랙스 이펙트 - 이질감 효과</p>
             <ul>
                 <li><a href="parallaxEffect01.html">1</a></li>
-                <li class="active"><a href="parallaxEffect02.html">2</a></li>
+                <li><a href="parallaxEffect02.html">2</a></li>
                 <li><a href="parallaxEffect03.html">3</a></li>
-                <li><a href="parallaxEffect04.html">4</a></li>
+                <li class="active"><a href="parallaxEffect04.html">4</a></li>
                 <li><a href="parallaxEffect05.html">5</a></li>
                 <li><a href="parallaxEffect06.html">6</a></li>
                 <li><a href="parallaxEffect07.html">7</a></li>
             </ul>
         </header>
-        <!-- header end -->
+        <!-- //header -->
 
-        <!-- nav start -->
-        <nav id="parallax__dot">
-            <!-- menu -->
+        <nav id="parallax__nav">
             <ul>
-                <li class="active">
-                    <a href="#section1"><span>메뉴1</span></a>
-                </li>
-                <li>
-                    <a href="#section2"><span>메뉴2</span></a>
-                </li>
-                <li>
-                    <a href="#section3"><span>메뉴3</span></a>
-                </li>
-                <li>
-                    <a href="#section4"><span>메뉴4</span></a>
-                </li>
-                <li>
-                    <a href="#section5"><span>메뉴5</span></a>
-                </li>
-                <li>
-                    <a href="#section6"><span>메뉴6</span></a>
-                </li>
-                <li>
-                    <a href="#section7"><span>메뉴7</span></a>
-                </li>
-                <li>
-                    <a href="#section8"><span>메뉴8</span></a>
-                </li>
-                <li>
-                    <a href="#section9"><span>메뉴9</span></a>
-                </li>
+                <li class="active"><a href="#section1">메뉴1</a></li>
+                <li><a href="#section2">메뉴2</a></li>
+                <li><a href="#section3">메뉴3</a></li>
+                <li><a href="#section4">메뉴4</a></li>
+                <li><a href="#section5">메뉴5</a></li>
+                <li><a href="#section6">메뉴6</a></li>
+                <li><a href="#section7">메뉴7</a></li>
+                <li><a href="#section8">메뉴8</a></li>
+                <li><a href="#section9">메뉴9</a></li>
             </ul>
         </nav>
-        <!-- nav end -->
+        <!-- //parallax__nav -->
 
-        <!-- main start -->
         <main id="parallax__cont">
             <div id="contents">
-                <!-- section1 start -->
                 <section id="section1" class="content__item">
-                    <!-- section number -->
                     <span class="content__item__num">01</span>
-                    <!-- section title -->
                     <h2 class="content__item__title">section1</h2>
                     <figure class="content__item__imgWrap">
-                        <!-- section  image -->
                         <div class="content__item__img"></div>
                     </figure>
-                    <!-- section desc -->
-                    <p class="content__item__desc">지혜는 듣는 데서 오고 후회는 말하는 데서 온다.</p>
+                    <p class="content__item__desc">신은 용기있는자를 결코 버리지 않는다.</p>
                 </section>
-                <!-- section1 -->
+                <!-- //section1 -->
 
                 <section id="section2" class="content__item">
                     <span class="content__item__num">02</span>
@@ -308,9 +221,9 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">탐욕은 일체를 얻고자 욕심내어서 도리어 모든 것을 잃어버린다.</p>
+                    <p class="content__item__desc">용기는 역경에 있어서의 빛이다.</p>
                 </section>
-                <!-- section2 -->
+                <!-- //section2 -->
 
                 <section id="section3" class="content__item">
                     <span class="content__item__num">03</span>
@@ -318,9 +231,9 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">힘으로 사람을 복종시키려 말고 덕으로써 사람을 복종시켜라.</p>
+                    <p class="content__item__desc">용기가 있는 곳에 희망이 있다.</p>
                 </section>
-                <!-- section3 -->
+                <!-- //section3 -->
 
                 <section id="section4" class="content__item">
                     <span class="content__item__num">04</span>
@@ -328,7 +241,7 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">타인에 대한 존경은 처세법의 제일 조건이다.</p>
+                    <p class="content__item__desc">준비된 자만이 기회를 얻는다.</p>
                 </section>
                 <!-- //section4 -->
 
@@ -338,7 +251,7 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">오늘 할 수 있는 일에 전력을 다하라, 그러면 내일에는 한 걸음 더 진보한다.</p>
+                    <p class="content__item__desc">속도가 느릴 수 있다. 그러나 노력하지 않는 것은 방법이 없다.</p>
                 </section>
                 <!-- //section5 -->
 
@@ -348,7 +261,7 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">기다림만으로 사는 사람은 굶어서 죽는다.</p>
+                    <p class="content__item__desc">우리가 두려워해야 할 것은 느린 것이 아니라, '멈춤'이다.</p>
                 </section>
                 <!-- //section6 -->
 
@@ -358,7 +271,7 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">끝을 맺기를 처음과 같이 하면 실패가 없다.</p>
+                    <p class="content__item__desc">잘 살아라 그게 최고의 복수다.</p>
                 </section>
                 <!-- //section7 -->
 
@@ -368,7 +281,7 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">열의 없이 성취 된 위업이란 아직 하나도 없다.</p>
+                    <p class="content__item__desc">걱정은 인생의 적이다.</p>
                 </section>
                 <!-- //section8 -->
 
@@ -378,18 +291,12 @@
                     <figure class="content__item__imgWrap">
                         <div class="content__item__img"></div>
                     </figure>
-                    <p class="content__item__desc">절제는 모든 진주 고리를 이어주는 비단의 실이다.</p>
+                    <p class="content__item__desc">일 분 전만큼 먼 시간은 없다.</p>
                 </section>
                 <!-- //section9 -->
             </div>
         </main>
         <!-- //main -->
-
-        <aside id="parallax__info">
-            <div class="scroll">scrollTop : <span>0</span>px</div> <!-- 스크롤 값 정보 -->
-        </aside>
-
-        <!-- //parallax__info -->
 
         <footer id="footer">
             <div class="modal__wrap">
@@ -459,119 +366,69 @@
                         </div>
                         <div class="cont">
                             <div class="active">
-                                <pre><code class="language-js">document.querySelectorAll("#parallax__dot a").forEach((el) => { // #parallax__dot a의 element를 선택
-    el.addEventListener("click", (e) => { // element에 클릭 이벤트 실행
-        e.preventDefault(); // 클릭 시 이동을 중지 합니다.
+                                <pre><code class="language-js">// window.addEventListener("scroll", scrollprogress); 실시간 스크롤 값을 계속 구하기 때문에 페이지 렉이 심할 수 있다.
 
-        document.querySelector(el.getAttribute("href")).scrollIntoView({ behavior: "smooth" }); // 선택한 href 로 스크롤 부드럽게 이동
-    });
-});
+// 재귀 함수 (자기 자신을 다시 호출)
+function scroll() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenTop;
 
-window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실행
-    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-    // #parallax__info span에 scrollTop 값 대입
-    document.querySelector("#parallax__info span").innerText = Math.floor(scrollTop);
-
-    document.querySelectorAll(".content__item").forEach((e, i) => {
-        if (scrollTop >= e.offsetTop - window.innerHeight / 2) {
-            /*정확히 안맞을수도 있어서 오차가 있을수 있으므로 빼줍니다.*/
-            document.querySelectorAll("#parallax__dot li").forEach((li) => {
-                li.classList.remove("active");
-            });
-            // i 값은 index 이므로 0부터 시작하여 +1 을 더해 1부터 시작하게 해줍니다.
-            document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList.add("active");
+    document.querySelectorAll(".content__item").forEach((item) => {
+        if (scrollTop > item.offsetTop - window.innerHeight / 1.3) { // 좀 더 빨리 show를 붙이기 위해
+            item.classList.add("show");
         }
     });
-});
 
-// window.scroll(0, 1000);                 1000에 간다 (고정)
-// window.scroll({left: 0, top: 2000});    2000에 간다 (고정)
-// window.scroll({left: 0, top: 2000, behavior: "smooth"});  2000에 간다(스무스하게) 고정
+    requestAnimationFrame(scroll); // 브라우저에 최적화 되어 있어 움직임이 부드럽고 부담이 덜 하다. (1분에 60번)
+}
 
-// window.scrollTo(0, 1000);                 1000에 간다 (고정)
-// window.scrollTo({left: 0, top: 2000});    2000에 간다 (고정)
-// window.scrollTo({left: 0, top: 2000, behavior: "smooth"});  2000에 간다(스무스하게) 고정
-
-// window.scrollBy(0, 1000);                 1000에 간다 (고정)
-// window.scrollBy({left: 0, top: 2000});    2000에 간다 (고정)
-// window.scrollBy({left: 0, top: 2000, behavior: "smooth"});  2000에 간다(스무스하게) 고정
+scroll();
 </code></pre>
                             </div>
                             <div>
-                                <pre><code class="language-html">&lt;!-- header start -->
-&lt;header id="header">
-    &lt;!-- title -->
-    &lt;h1>Javascript Parallax Effect02&lt;/h1>
-
-    &lt;!-- sub title -->
-    &lt;p>패럴랙스 이펙트 - 사이드 메뉴&lt;/p>
-
-    &lt;!-- html menu -->
+                                <pre><code class="language-html">&lt;header id="header">
+    &lt;h1>Javascript Parallax Effect03&lt;/h1>
+    &lt;p>패럴랙스 이펙트 - 나타나기&lt;/p>
     &lt;ul>
         &lt;li>&lt;a href="parallaxEffect01.html">1&lt;/a>&lt;/li>
-        &lt;li class="active">&lt;a href="parallaxEffect02.html">2&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="parallaxEffect02.html">2&lt;/a>&lt;/li>
         &lt;li>&lt;a href="parallaxEffect03.html">3&lt;/a>&lt;/li>
-        &lt;li>&lt;a href="parallaxEffect04.html">4&lt;/a>&lt;/li>
+        &lt;li class="active">&lt;a href="parallaxEffect04.html">4&lt;/a>&lt;/li>
         &lt;li>&lt;a href="parallaxEffect05.html">5&lt;/a>&lt;/li>
         &lt;li>&lt;a href="parallaxEffect06.html">6&lt;/a>&lt;/li>
         &lt;li>&lt;a href="parallaxEffect07.html">7&lt;/a>&lt;/li>
     &lt;/ul>
 &lt;/header>
-&lt;!-- header end -->
+&lt;!-- //header -->
 
-&lt;!-- nav start -->
-&lt;nav id="parallax__dot">
-    &lt;!-- menu -->
+&lt;nav id="parallax__nav">
     &lt;ul>
-        &lt;li class="active">
-            &lt;a href="#section1">&lt;span>메뉴1&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section2">&lt;span>메뉴2&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section3">&lt;span>메뉴3&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section4">&lt;span>메뉴4&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section5">&lt;span>메뉴5&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section6">&lt;span>메뉴6&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section7">&lt;span>메뉴7&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section8">&lt;span>메뉴8&lt;/span>&lt;/a>
-        &lt;/li>
-        &lt;li>
-            &lt;a href="#section9">&lt;span>메뉴9&lt;/span>&lt;/a>
-        &lt;/li>
+        &lt;li class="active">&lt;a href="#section1">메뉴1&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section2">메뉴2&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section3">메뉴3&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section4">메뉴4&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section5">메뉴5&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section6">메뉴6&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section7">메뉴7&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section8">메뉴8&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#section9">메뉴9&lt;/a>&lt;/li>
     &lt;/ul>
 &lt;/nav>
-&lt;!-- nav end -->
+&lt;!-- //parallax__nav -->
 
-&lt;!-- main start -->
+&lt;div id="parallax__top">Top&lt;/div>
+&lt;!-- //parallax__top -->
+
 &lt;main id="parallax__cont">
     &lt;div id="contents">
-        &lt;!-- section1 start -->
         &lt;section id="section1" class="content__item">
-            &lt;!-- section number -->
             &lt;span class="content__item__num">01&lt;/span>
-            &lt;!-- section title -->
             &lt;h2 class="content__item__title">section1&lt;/h2>
             &lt;figure class="content__item__imgWrap">
-                &lt;!-- section  image -->
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;!-- section desc -->
-            &lt;p class="content__item__desc">지혜는 듣는 데서 오고 후회는 말하는 데서 온다.&lt;/p>
+            &lt;p class="content__item__desc">신은 용기있는자를 결코 버리지 않는다.&lt;/p>
         &lt;/section>
-        &lt;!-- section1 -->
+        &lt;!-- //section1 -->
 
         &lt;section id="section2" class="content__item">
             &lt;span class="content__item__num">02&lt;/span>
@@ -579,9 +436,9 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">탐욕은 일체를 얻고자 욕심내어서 도리어 모든 것을 잃어버린다.&lt;/p>
+            &lt;p class="content__item__desc">용기는 역경에 있어서의 빛이다.&lt;/p>
         &lt;/section>
-        &lt;!-- section2 -->
+        &lt;!-- //section2 -->
 
         &lt;section id="section3" class="content__item">
             &lt;span class="content__item__num">03&lt;/span>
@@ -589,9 +446,9 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">힘으로 사람을 복종시키려 말고 덕으로써 사람을 복종시켜라.&lt;/p>
+            &lt;p class="content__item__desc">용기가 있는 곳에 희망이 있다.&lt;/p>
         &lt;/section>
-        &lt;!-- section3 -->
+        &lt;!-- //section3 -->
 
         &lt;section id="section4" class="content__item">
             &lt;span class="content__item__num">04&lt;/span>
@@ -599,7 +456,7 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">타인에 대한 존경은 처세법의 제일 조건이다.&lt;/p>
+            &lt;p class="content__item__desc">준비된 자만이 기회를 얻는다.&lt;/p>
         &lt;/section>
         &lt;!-- //section4 -->
 
@@ -609,7 +466,7 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">오늘 할 수 있는 일에 전력을 다하라, 그러면 내일에는 한 걸음 더 진보한다.&lt;/p>
+            &lt;p class="content__item__desc">속도가 느릴 수 있다. 그러나 노력하지 않는 것은 방법이 없다.&lt;/p>
         &lt;/section>
         &lt;!-- //section5 -->
 
@@ -619,7 +476,7 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">기다림만으로 사는 사람은 굶어서 죽는다.&lt;/p>
+            &lt;p class="content__item__desc">우리가 두려워해야 할 것은 느린 것이 아니라, '멈춤'이다.&lt;/p>
         &lt;/section>
         &lt;!-- //section6 -->
 
@@ -629,7 +486,7 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">끝을 맺기를 처음과 같이 하면 실패가 없다.&lt;/p>
+            &lt;p class="content__item__desc">잘 살아라 그게 최고의 복수다.&lt;/p>
         &lt;/section>
         &lt;!-- //section7 -->
 
@@ -639,7 +496,7 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">열의 없이 성취 된 위업이란 아직 하나도 없다.&lt;/p>
+            &lt;p class="content__item__desc">걱정은 인생의 적이다.&lt;/p>
         &lt;/section>
         &lt;!-- //section8 -->
 
@@ -649,16 +506,12 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
             &lt;figure class="content__item__imgWrap">
                 &lt;div class="content__item__img">&lt;/div>
             &lt;/figure>
-            &lt;p class="content__item__desc">절제는 모든 진주 고리를 이어주는 비단의 실이다.&lt;/p>
+            &lt;p class="content__item__desc">일 분 전만큼 먼 시간은 없다.&lt;/p>
         &lt;/section>
         &lt;!-- //section9 -->
     &lt;/div>
 &lt;/main>
 &lt;!-- //main -->
-
-&lt;aside id="parallax__info">
-    &lt;div class="scroll">scrollTop : &lt;span>0&lt;/span>px&lt;/div> &lt;!-- 스크롤 값 정보 -->
-&lt;/aside>                
 </code></pre>
                             </div>
                             <div>
@@ -671,6 +524,10 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
     background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 30px;
     border-radius: 50px;
+    transition: top 0.4s ease;
+}
+#parallax__nav.show {
+    top: 20px;
 }
 #parallax__nav li {
     display: inline;
@@ -737,7 +594,7 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
 }
 .content__item__img {
     position: absolute;
-    background: url('../assets/img/pallacx_bg08.jpg');
+    background: url(../assets/img/effect_bg19@2x.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -748,8 +605,6 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
     filter: saturate(0%);
     transition: all 1s;
 }
-
-/* section image */
 .content__item:nth-child(1) .content__item__img {
     background-image: url("../assets/img/pallacx_bg01.jpg");
 }
@@ -777,7 +632,6 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
 .content__item:nth-child(9) .content__item__img {
     background-image: url("../assets/img/pallacx_bg09.jpg");
 }
-
 .content__item__desc {
     font-size: 4vw;
     line-height: 1.4;
@@ -788,20 +642,6 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
 .content__item:nth-child(even) .content__item__desc {
     margin-left: auto;
     margin-right: -4vw;
-}
-#parallax__info {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 2000;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-#parallax__info li,
-.scroll {
-    line-height: 1.4;
 }
 @media (max-width: 800px) {
     #parallax__cont {
@@ -830,48 +670,67 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
     #parallax__nav li.active a {
         border-radius: 5px;
     }
-    #parallax__info {
-        left: 10px;
-        bottom: 10px;
-    }
 }
-#parallax__dot {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10000;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 20px 10px;
-    border-radius: 30px;
+
+/* 한번에 나타나기
+#contents > section {
+    opacity: 0;
+    transition: all 1s;
 }
-#parallax__dot li {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 12px 8px;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-    transition: box-shadow 0.2s ease;
+#contents > section.show {
+    opacity: 1;
+} */
+
+/* 개별적으로 나타나기 */
+#contents > section .content__item__num {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.6s 0.1s ease-in-out;
 }
-#parallax__dot li a {
-    background: #fff;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    transition: transform 0.2s ease;
+#contents > section .content__item__title {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.6s 0.3s ease-in-out;
 }
-#parallax__dot li span {
-    display: none;
+#contents > section .content__item__imgWrap {
+    opacity: 0;
+    transform: translateY(200px) rotate(20deg) skew(10deg);
+    transition: all 0.6s 0.6s ease-in-out;
 }
-#parallax__dot li.active {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+#contents > section .content__item__desc {
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: all 0.6s 0.9s ease-in-out;
 }
-#parallax__dot li.active a {
-    transform: scale(0.4);
+
+#contents > section.show .content__item__num {
+    opacity: 0.07;
+    transform: translateY(0);
+}
+#contents > section.show .content__item__title {
+    opacity: 1;
+    transform: translateX(0);
+}
+#contents > section.show .content__item__imgWrap {
+    opacity: 1;
+    transform: translateY(0) rotate(0) skew(0);
+}
+#contents > section.show .content__item__desc {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#contents > section:nth-child(even) .content__item__title {
+    transform: translateX(100px);
+}
+#contents > section:nth-child(even).show .content__item__title {
+    transform: translateX(0);
+}
+#contents > section:nth-child(even) .content__item__desc {
+    transform: translateX(200px);
+}
+#contents > section:nth-child(even).show .content__item__desc {
+    transform: translateX(0);
 }
 </code></pre>
                             </div>
@@ -894,44 +753,7 @@ window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실�
         <script>
             hljs.highlightAll();
         </script>
-        <script>
-            document.querySelectorAll("#parallax__dot a").forEach((el) => { // #parallax__dot a의 element를 선택
-                el.addEventListener("click", (e) => { // element에 클릭 이벤트 실행
-                    e.preventDefault(); // 클릭 시 이동을 중지 합니다.
 
-                    document.querySelector(el.getAttribute("href")).scrollIntoView({ behavior: "smooth" }); // 선택한 href 로 스크롤 부드럽게 이동
-                });
-            });
-
-            window.addEventListener("scroll", () => { // 윈도우 스크롤 이벤트 실행
-                let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-                // #parallax__info span에 scrollTop 값 대입
-                document.querySelector("#parallax__info span").innerText = Math.floor(scrollTop);
-
-                document.querySelectorAll(".content__item").forEach((e, i) => {
-                    if (scrollTop >= e.offsetTop - window.innerHeight / 2) {
-                        /*정확히 안맞을수도 있어서 오차가 있을수 있으므로 빼줍니다.*/
-                        document.querySelectorAll("#parallax__dot li").forEach((li) => {
-                            li.classList.remove("active");
-                        });
-                        // i 값은 index 이므로 0부터 시작하여 +1 을 더해 1부터 시작하게 해줍니다.
-                        document.querySelector("#parallax__dot li:nth-child(" + (i + 1) + ")").classList.add("active");
-                    }
-                });
-            });
-
-            // window.scroll(0, 1000);                 1000에 간다 (고정)
-            // window.scroll({left: 0, top: 2000});    2000에 간다 (고정)
-            // window.scroll({left: 0, top: 2000, behavior: "smooth"});  2000에 간다(스무스하게) 고정
-
-            // window.scrollTo(0, 1000);                 1000에 간다 (고정)
-            // window.scrollTo({left: 0, top: 2000});    2000에 간다 (고정)
-            // window.scrollTo({left: 0, top: 2000, behavior: "smooth"});  2000에 간다(스무스하게) 고정
-
-            // window.scrollBy(0, 1000);                 1000에 간다 (고정)
-            // window.scrollBy({left: 0, top: 2000});    2000에 간다 (고정)
-            // window.scrollBy({left: 0, top: 2000, behavior: "smooth"});  2000에 간다(스무스하게) 고정
-        </script>
+        <script></script>
     </body>
 </html>
