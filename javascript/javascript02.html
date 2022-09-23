@@ -725,6 +725,10 @@ document.write(name3);
             </div>
         </main>
         <!-- //main and -->
+
+        <div id="javascript__top">👆🏻 맨 위로 올라가기</div>
+        <!-- ----------//parallax__top//---------- -->
+
         <footer id="footer">
             <a href="mailto:wjsqhdus971007@gmail.com">wjsqhdus971007@gmail.com</a>
         </footer>
@@ -994,6 +998,35 @@ document.write(name3);
             //     document.write(name2);
             //     document.write(name3);
             // }
+        </script>
+        <script>
+            window.addEventListener("scroll", () => {
+                let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+                const sample01 = document.querySelector("#sample01");
+
+                let sampleTop = sample01.offsetTop;
+
+                //01
+                // if(scrollTop > 0){
+                //     document.querySelector("#parallax__nav").classList.add("show");
+                // } else {
+                //     document.querySelector("#parallax__nav").classList.remove("show");
+                // }                                스크롤바 0보다 커지면 메뉴가 나온다.
+
+                // 02;
+                if (scrollTop > 870) {
+                    document.querySelector("#javascript__top").classList.add("show");
+                } else {
+                    document.querySelector("#javascript__top").classList.remove("show");
+                }
+                console.log();
+            });
+
+            // top 버튼
+            document.querySelector("#javascript__top").addEventListener("click", () => {
+                window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+            });
         </script>
     </body>
 </html>

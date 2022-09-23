@@ -73,7 +73,7 @@
                         <h3>01. 변수 : 데이터 저장</h3>
                         <p>변수는 데이터를 저장하는 저장소 입니다. 이 저장소에는 숫자, 문자, 함수, 객체 등을 저장할 수 있습니다.</p>
                         <div class="script">
-<pre><code class="language-js">var x = 100;    // x에 100을 저장함
+                            <pre><code class="language-js">var x = 100;    // x에 100을 저장함
 var y = 200;    // y에 200을 저장함
 var z = "javascript";    // z에 문자열 javascript를 저장함
 
@@ -523,6 +523,9 @@ document.write(obj.d);
 
         <!-- -----------//main and//----------- -->
 
+        <div id="javascript__top">👆🏻 맨 위로 올라가기</div>
+        <!-- ----------//parallax__top//---------- -->
+
         <!-- -----------//footer//----------- -->
         <footer id="footer">
             <a href="mailto:wjsqhdus971007@gmail.com">wjsqhdus971007@gmail.com</a>
@@ -757,8 +760,7 @@ document.write(obj.d);
                 //document.write(obj.c.y);
                 //ocument.write(obj.d);
 
-                document.querySelector(".sample15_result").innerHTML =
-                    obj.a + "<br>" + obj.b + "<br>" + obj.b[0] + "<br>" + obj.c.x + obj.c.y + "<br>" + obj.c.y + "<br>" + obj.d;
+                document.querySelector(".sample15_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.b[0] + "<br>" + obj.c.x + obj.c.y + "<br>" + obj.c.y + "<br>" + obj.d;
             }
 
             // //16번 문제 답 : 객체 속에 변수가 들어간다. React에서 많이 사용한다.
@@ -806,9 +808,37 @@ document.write(obj.d);
                 // obj.f();
                 // obj.g();
 
-                document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" +
-                obj.c.x + "<br>" + obj.c.y + "<br>" + obj.c + "<br>" + obj.d + "<br>" //함수 출력 못하는 중 :(
+                document.querySelector(".sample17_result").innerHTML = obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.b + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.c + "<br>" + obj.d + "<br>"; //함수 출력 못하는 중 :(
             }
+        </script>
+        <script>
+            window.addEventListener("scroll", () => {
+                let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+                const sample01 = document.querySelector("#sample01");
+
+                let sampleTop = sample01.offsetTop
+
+                //01
+                // if(scrollTop > 0){
+                //     document.querySelector("#parallax__nav").classList.add("show");
+                // } else {
+                //     document.querySelector("#parallax__nav").classList.remove("show");
+                // }                                스크롤바 0보다 커지면 메뉴가 나온다.
+
+                // 02;
+                if (scrollTop > 870) {
+                    document.querySelector("#javascript__top").classList.add("show");
+                } else {
+                    document.querySelector("#javascript__top").classList.remove("show");
+                }
+                console.log();
+            });
+
+            // top 버튼
+            document.querySelector("#javascript__top").addEventListener("click", () => {
+                window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+            });
         </script>
     </body>
 </html>
