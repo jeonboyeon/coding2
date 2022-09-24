@@ -1,0 +1,23 @@
+/* footer */
+#footer {}
+#footer .footer_inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* footer_info */
+.footer_info {
+    width: 30%;
+}
+.footer_info h3 {}
+.footer_info p {}
+.footer_info .footer_sns {}
+.footer_info .footer_sns img {}
+/* footer_list */
+.footer_list {
+    width: 70%;
+}
+.footer_list .list {}
+.footer_list .list h3 {}
+.footer_list .list h3 ul {}
+.footer_list .list h3 ul li {}
+.footer_list .list h3 ul li a {}
