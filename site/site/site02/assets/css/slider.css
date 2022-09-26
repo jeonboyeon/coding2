@@ -125,11 +125,17 @@
         width: 96%;
         text-align: center;
     }
+    .footer__first figure a {
+        margin-left: 0 !important;
+    }
 }
 @media (max-width: 960px) {
     .swiper-slide .desc {
         width: 96%;
         text-align: center;
+    }
+    .footer__first figure {
+        justify-content: space-evenly !important;
     }
     .swiper-slide .desc h3 {
         font-size: 70px;

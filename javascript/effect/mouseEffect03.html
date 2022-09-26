@@ -379,6 +379,15 @@ window.addEventListener("mousemove", (e) => {
                 // 배열로 구했던 whidth와 height 값을 불러와 pageX 와 pageY에 나눠준다.
                 gsap.to(cursor, { duration: 0.5, left: e.pageX - circle.width / 2, top: e.pageY - circle.height / 2 });
             });
+
+            const gnbOver = document.querySelectorAll("#gnb ul li a");
+
+            gnbOver.addEventListener("mouseover", () => {
+                cursor.classList.add("gnb_over");
+            });
+            gnbOver.addEventListener("mouseleave", () => {
+                cursor.classList.remove("gnb_over");
+            });
         </script>
     </body>
 </html>

@@ -55,11 +55,10 @@
                         <li><a href="#textType">푸터 영역</a></li>
                     </ul>
                 </nav>
-                <div class="ham_menu">
-                    <input type="checkbox" />
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="icon nav-icon-5">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </header>
@@ -457,11 +456,11 @@
                             webstoryboy@naver.com
                         </p>
                         <figure>
-                            <a href="#"><img src="assets/img/footer_icon01.png" alt=""></a>
-                            <a href="#"><img src="assets/img/footer_icon02.png" alt=""></a>
-                            <a href="#"><img src="assets/img/footer_icon03.png" alt=""></a>
-                            <a href="#"><img src="assets/img/footer_icon04.png" alt=""></a>
-                            <a href="#"><img src="assets/img/footer_icon05.png" alt=""></a>
+                            <a href="#"><img src="assets/img/footer_icon01.png" alt="" /></a>
+                            <a href="#"><img src="assets/img/footer_icon02.png" alt="" /></a>
+                            <a href="#"><img src="assets/img/footer_icon03.png" alt="" /></a>
+                            <a href="#"><img src="assets/img/footer_icon04.png" alt="" /></a>
+                            <a href="#"><img src="assets/img/footer_icon05.png" alt="" /></a>
                         </figure>
                     </div>
                     <div class="footer__right">
@@ -530,12 +529,12 @@
         });
     </script>
     <script>
-        const btnHam = document.querySelector(".ham_menu");
+        const btnHam = document.querySelector(".nav-icon-5");
         const btnMenu = document.querySelector(".header__menu");
         const btnMenuList = btnMenu.querySelectorAll("ul li a");
 
         btnHam.addEventListener("click", () => {
-            btnHam.classList.toggle("active");
+            btnHam.classList.toggle("open");
             btnMenu.classList.toggle("active");
         });
     </script>
