@@ -13,63 +13,68 @@
         <style>
             /* mouse Type */
             .mouse__wrap {
-                text-align: center;
-                width: 100%;
-                height: 100vh;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
                 color: #fff;
+                width: 100%;
+                height: 100vh;
                 overflow: hidden;
-            }
-
-            .mouse__wrap figure {
-                width: 50vw;
-                height: 50vh;
-                position: relative;
-                overflow: hidden;
-                transition: transform 500ms ease;
                 cursor: none;
             }
-
-            .mouse__wrap figure:hover {
-                transform: scale(1.025);
+            /* 마우스 이미지 */
+            .mouse__img {
+                transform: perspective(1500px) rotatex(0deg) rotateY(50deg);
+                transform-style: preserve-3d;
+                will-change: transform;
+                transition: all 0.3s;
+            }
+            .mouse__wrap figure {
+                width: 50vw;
             }
 
-            .mouse__wrap figure img {
+            .mouse__wrap figure::before {
+                content: "";
                 position: absolute;
-                left: -5%;
-                top: -5%;
-                width: 110%;
-                height: 110%;
-                object-fit: cover; /* 일반 이미지에 속성값을 줄 수 있다. */
+                left: 5%;
+                bottom: -30px;
+                width: 90%;
+                height: 40px;
+                background-image: url("../assets/img/sliderEffect01_bg15@2x-min.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 40px;
+                filter: blur(15px) grayscale(50%);
+                z-index: -1;
+                opacity: 0.7;
             }
 
-            .mouse__wrap figure figcaption {
+            .mouse__wrap figcaption {
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                font-size: 16px;
+                font-size: 1vw;
+                line-height: 1.6;
+                padding: 1vw;
+                transform: translate3d(-50%, -50%, 100px);
                 white-space: nowrap;
-                line-height: 1.4;
-                font-weight: 300;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.4);
             }
 
-            /* 마우스 커서 */
             .mouse__cursor {
                 position: absolute;
                 left: 0;
                 top: 0;
-                width: 20px;
-                height: 20px;
-                background-color: #fff;
+                width: 100px;
+                height: 100px;
                 border-radius: 50%;
+                background-color: #fff;
                 z-index: 1000;
-                user-select: none;
                 pointer-events: none;
+                user-select: none;
+                mix-blend-mode: difference;
             }
 
             /* 마우스 좌표값 */
@@ -84,17 +89,17 @@
         </style>
     </head>
 
-    <body class="img07">
+    <body class="img08">
         <!-- header start -->
         <header id="header" class="header">
-            <h1><a href="../effect/mouseEffect.html">JAVASCRIPT Mouse Effect No. 04</a></h1>
-            <p>마우스 이펙트 | 이미지 효과</p>
+            <h1><a href="../effect/mouseEffect.html">JAVASCRIPT Mouse Effect No. 05</a></h1>
+            <p>마우스 이펙트 | 기울기 / 글씨 반전 효과</p>
             <ul>
                 <li><a href="mouseEffect01.html">1</a></li>
                 <li><a href="mouseEffect02.html">2</a></li>
                 <li><a href="mouseEffect03.html">3</a></li>
-                <li class="active"><a href="mouseEffect04.html">4</a></li>
-                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li class="active"><a href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
                 <li><a href="mouseEffect07.html">7</a></li>
             </ul>
@@ -106,13 +111,15 @@
             <section id="mouseType01">
                 <div class="mouse__cursor"></div>
                 <div class="mouse__wrap">
-                    <figure>
-                        <img src="../assets/img/sliderEffect01_bg11@2x-min.jpg" alt="이미지" />
+                    <div class="mouse__img">
+                        <figure>
+                            <img src="../assets/img/sliderEffect01_bg15@2x-min.jpg" alt="이미지" />
+                        </figure>
                         <figcaption>
-                            <p>Don't dream, Be it</p>
-                            <p>꿈만 꾸지말고 되어라</p>
+                            <p>Life is all about timing</p>
+                            <p>인생은 타이밍이다</p>
                         </figcaption>
-                    </figure>
+                    </div>
                 </div>
             </section>
 
@@ -123,6 +130,10 @@
                     <li>mousePageY : <span class="mousePageY">0</span>px</li>
                     <li>centerPageX : <span class="centerPageX">0</span>px</li>
                     <li>centerPageY : <span class="centerPageY">0</span>px</li>
+                    <li>maxPageX : <span class="maxPageX">0</span>px</li>
+                    <li>maxPageY : <span class="maxPageY">0</span>px</li>
+                    <li>anglePageX : <span class="anglePageX">0</span>px</li>
+                    <li>anglePageY : <span class="anglePageY">0</span>px</li>
                 </ul>
             </div>
             <!-- mouse_info end -->
@@ -376,41 +387,51 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
         </script>
 
         <script>
-            const cursor = document.querySelector(".mouse__cursor");
-            const cursorRect = cursor.getBoundingClientRect();
-            document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) => {
-                //커서
-                gsap.to(cursor, {
-                    duration: 0.2,
-                    left: e.pageX - cursorRect.width / 2,
-                    top: e.pageY - cursorRect.height / 2,
-                });
-                //마우스 좌표 값
+            const mouseMove = (e) => {
+                // 마우스 좌표 값
                 let mousePageX = e.pageX;
                 let mousePageY = e.pageY;
-                //전체 가로
-                //window.innerWidth //1920 : 브라우저 크기
-                //window.outerWidth //1920 : 브라우저 크기 (스크롤바 포함)
-                //window.screen.width //1920 : 화면 크기
-                //마우스 좌표 값 가운데로 초기화
-                // 전체 길이 /2 - mouse 좌표값 == 0
+
+                // 마우스 좌표 기준점 가운데로 변경
                 let centerPageX = window.innerWidth / 2 - mousePageX;
                 let centerPageY = window.innerHeight / 2 - mousePageY;
-                //이미지 움직이기
-                const imgMove = document.querySelector(".mouse__wrap figure img");
-                imgMove.style.transform = "translate(" + centerPageX + "px," + centerPageY + "px)";
 
-                gsap.to(imgMove, {
-                    duration: 0.3,
-                    x: centerPageX / 20,
-                    y: centerPageY / 20,
-                });
-                //출력
+                // 이미지 움직이기
+                const imgMove = document.querySelector(".mouse__img");
+
+                // 최소값 -100, 최대값 100 설정
+                let maxPageX = Math.max(-200, Math.min(200, centerPageX));
+                let maxPageY = Math.max(-200, Math.min(200, centerPageY));
+
+                // 각도 줄이는 방법
+                let anglePageX = maxPageX * 0.1;
+                let anglePageY = maxPageY * 0.1;
+
+                // 부드럽게 설정
+                let softPageX = 0,
+                    softPageY = 0;
+
+                softPageX += (anglePageX - softPageX) * 0.5;
+                softPageY += (anglePageY - softPageY) * 0.5;
+
+                imgMove.style.transform = "perspective(1500px) rotatex(" + softPageY + "deg) rotateY(" + -softPageX + "deg)";
+
+                // mouse__cursor 움직임
+                gsap.to(".mouse__cursor", { duration: 0.3, left: mousePageX - 50, top: mousePageY - 50 });
+
+                // 마우스 info에 각 마우스 X, Y 좌표 값 출력
                 document.querySelector(".mousePageX").textContent = mousePageX;
                 document.querySelector(".mousePageY").textContent = mousePageY;
                 document.querySelector(".centerPageX").textContent = centerPageX;
                 document.querySelector(".centerPageY").textContent = centerPageY;
-            });
+                document.querySelector(".maxPageX").textContent = maxPageX;
+                document.querySelector(".maxPageY").textContent = maxPageY;
+                document.querySelector(".anglePageX").textContent = Math.round(anglePageX);
+                document.querySelector(".anglePageY").textContent = Math.round(anglePageY);
+            };
+
+            window.addEventListener("mousemove", mouseMove);
+            // document.addEventListener("mousemove", mouseMove); 위와 똑같다
         </script>
     </body>
 </html>
