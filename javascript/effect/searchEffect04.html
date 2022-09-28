@@ -1211,26 +1211,16 @@ li {
                 findProperty(searchWord); // searchWord 를 매개 변수로 만들어준다.
             });
 
-
-            // 속성 클릭 하기 (미션)
-            searchList.addEventListener("click", () => {
-                const searchWord = searchBox.value;
-                console.log(searchWord);
-                // findProperty(searchWord);
-            });
-
-
-
             // 속성 찾기
-            function findProperty(searchData) {
-                const targetData = cssProperty.find((data) => data.name === searchData);
+            function findProperty(searchWord) {
+                const targetData = cssProperty.find((data) => data.name === searchWord);
 
                 if (targetData == null) {
                     searchDesc.textContent = "해당 속성은 존재하지 않아유~ 다시 검색해보슈~";
                     return;
                 }
                 searchDesc.textContent = targetData.desc;
-            }
+            };
         </script>
     </body>
 </html>
