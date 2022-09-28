@@ -376,9 +376,9 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
         </script>
 
         <script>
-            const cursor = document.querySelector(".mouse__cursor");
+            const cursor = document.querySelector('.mouse__cursor');
             const cursorRect = cursor.getBoundingClientRect();
-            document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) => {
+            document.querySelector('.mouse__wrap figure').addEventListener('mousemove', (e) => {
                 //커서
                 gsap.to(cursor, {
                     duration: 0.2,
@@ -397,8 +397,8 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
                 let centerPageX = window.innerWidth / 2 - mousePageX;
                 let centerPageY = window.innerHeight / 2 - mousePageY;
                 //이미지 움직이기
-                const imgMove = document.querySelector(".mouse__wrap figure img");
-                imgMove.style.transform = "translate(" + centerPageX + "px," + centerPageY + "px)";
+                const imgMove = document.querySelector('.mouse__wrap figure img');
+                imgMove.style.transform = 'translate(' + centerPageX + 'px,' + centerPageY + 'px)';
 
                 gsap.to(imgMove, {
                     duration: 0.3,
@@ -406,10 +406,10 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
                     y: centerPageY / 20,
                 });
                 //출력
-                document.querySelector(".mousePageX").textContent = mousePageX;
-                document.querySelector(".mousePageY").textContent = mousePageY;
-                document.querySelector(".centerPageX").textContent = centerPageX;
-                document.querySelector(".centerPageY").textContent = centerPageY;
+                document.querySelector('.mousePageX').textContent = mousePageX;
+                document.querySelector('.mousePageY').textContent = mousePageY;
+                document.querySelector('.centerPageX').textContent = centerPageX;
+                document.querySelector('.centerPageY').textContent = centerPageY;
             });
         </script>
     </body>

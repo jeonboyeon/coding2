@@ -72,7 +72,7 @@
                 z-index: -1;
                 border-radius: 50%;
                 background-color: #fff;
-                background-image: url("../assets/img/sliderEffect01_bg14@2x-min.jpg");
+                background-image: url('../assets/img/sliderEffect01_bg14@2x-min.jpg');
                 background-size: cover;
                 background-position: center;
                 background-attachment: fixed;
@@ -355,7 +355,7 @@ window.addEventListener("mousemove", (e) => {
         </script>
 
         <script>
-            const cursor = document.querySelector(".mouse__cursor"); // 커서
+            const cursor = document.querySelector('.mouse__cursor'); // 커서
             // const circleW = cursor.offsetWidth; // 너비 200 | border 값 포함 ↓
             // const circleH = cursor.offsetHeight; ↓
             const circle = cursor.getBoundingClientRect(); // ↓
@@ -374,19 +374,19 @@ window.addEventListener("mousemove", (e) => {
 
             // const circle2 = cursor.clientWidth; // 너비 190 | border 값 미포함
 
-            window.addEventListener("mousemove", (e) => {
+            window.addEventListener('mousemove', (e) => {
                 // 마우스를 움직일 때
                 // 배열로 구했던 whidth와 height 값을 불러와 pageX 와 pageY에 나눠준다.
                 gsap.to(cursor, { duration: 0.5, left: e.pageX - circle.width / 2, top: e.pageY - circle.height / 2 });
             });
 
-            const gnbOver = document.querySelectorAll("#gnb ul li a");
+            const gnbOver = document.querySelectorAll('#gnb ul li a');
 
-            gnbOver.addEventListener("mouseover", () => {
-                cursor.classList.add("gnb_over");
+            gnbOver.addEventListener('mouseover', () => {
+                cursor.classList.add('gnb_over');
             });
-            gnbOver.addEventListener("mouseleave", () => {
-                cursor.classList.remove("gnb_over");
+            gnbOver.addEventListener('mouseleave', () => {
+                cursor.classList.remove('gnb_over');
             });
         </script>
     </body>

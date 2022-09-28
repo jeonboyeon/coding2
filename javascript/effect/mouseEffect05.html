@@ -35,13 +35,13 @@
             }
 
             .mouse__wrap figure::before {
-                content: "";
+                content: '';
                 position: absolute;
                 left: 5%;
                 bottom: -30px;
                 width: 90%;
                 height: 40px;
-                background-image: url("../assets/img/sliderEffect01_bg15@2x-min.jpg");
+                background-image: url('../assets/img/sliderEffect01_bg15@2x-min.jpg');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 100% 40px;
@@ -397,7 +397,7 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
                 let centerPageY = window.innerHeight / 2 - mousePageY;
 
                 // 이미지 움직이기
-                const imgMove = document.querySelector(".mouse__img");
+                const imgMove = document.querySelector('.mouse__img');
 
                 // 최소값 -100, 최대값 100 설정
                 let maxPageX = Math.max(-200, Math.min(200, centerPageX));
@@ -414,23 +414,23 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
                 softPageX += (anglePageX - softPageX) * 0.5;
                 softPageY += (anglePageY - softPageY) * 0.5;
 
-                imgMove.style.transform = "perspective(1500px) rotatex(" + softPageY + "deg) rotateY(" + -softPageX + "deg)";
+                imgMove.style.transform = 'perspective(1500px) rotatex(' + softPageY + 'deg) rotateY(' + -softPageX + 'deg)';
 
                 // mouse__cursor 움직임
-                gsap.to(".mouse__cursor", { duration: 0.3, left: mousePageX - 50, top: mousePageY - 50 });
+                gsap.to('.mouse__cursor', { duration: 0.3, left: mousePageX - 50, top: mousePageY - 50 });
 
                 // 마우스 info에 각 마우스 X, Y 좌표 값 출력
-                document.querySelector(".mousePageX").textContent = mousePageX;
-                document.querySelector(".mousePageY").textContent = mousePageY;
-                document.querySelector(".centerPageX").textContent = centerPageX;
-                document.querySelector(".centerPageY").textContent = centerPageY;
-                document.querySelector(".maxPageX").textContent = maxPageX;
-                document.querySelector(".maxPageY").textContent = maxPageY;
-                document.querySelector(".anglePageX").textContent = Math.round(anglePageX);
-                document.querySelector(".anglePageY").textContent = Math.round(anglePageY);
+                document.querySelector('.mousePageX').textContent = mousePageX;
+                document.querySelector('.mousePageY').textContent = mousePageY;
+                document.querySelector('.centerPageX').textContent = centerPageX;
+                document.querySelector('.centerPageY').textContent = centerPageY;
+                document.querySelector('.maxPageX').textContent = maxPageX;
+                document.querySelector('.maxPageY').textContent = maxPageY;
+                document.querySelector('.anglePageX').textContent = Math.round(anglePageX);
+                document.querySelector('.anglePageY').textContent = Math.round(anglePageY);
             };
 
-            window.addEventListener("mousemove", mouseMove);
+            window.addEventListener('mousemove', mouseMove);
             // document.addEventListener("mousemove", mouseMove); 위와 똑같다
         </script>
     </body>

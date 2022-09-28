@@ -489,25 +489,25 @@ document.querySelectorAll(".mouse__wrap span").forEach((span) => {
 
         <script>
             // 마우스 위치 값 구하기
-            window.addEventListener("mousemove", (event) => {
-                document.querySelector(".clientX").innerHTML = event.clientX;
-                document.querySelector(".clientY").innerHTML = event.clientY;
-                document.querySelector(".offsetX").innerHTML = event.offsetX;
-                document.querySelector(".offsetY").innerHTML = event.offsetY;
-                document.querySelector(".pageX").innerHTML = event.pageX;
-                document.querySelector(".pageY").innerHTML = event.pageY;
-                document.querySelector(".screenX").innerHTML = event.screenX;
-                document.querySelector(".screenY").innerHTML = event.screenY;
+            window.addEventListener('mousemove', (event) => {
+                document.querySelector('.clientX').innerHTML = event.clientX;
+                document.querySelector('.clientY').innerHTML = event.clientY;
+                document.querySelector('.offsetX').innerHTML = event.offsetX;
+                document.querySelector('.offsetY').innerHTML = event.offsetY;
+                document.querySelector('.pageX').innerHTML = event.pageX;
+                document.querySelector('.pageY').innerHTML = event.pageY;
+                document.querySelector('.screenX').innerHTML = event.screenX;
+                document.querySelector('.screenY').innerHTML = event.screenY;
             });
 
-            const cursor = document.querySelector(".mouse__cursor");
+            const cursor = document.querySelector('.mouse__cursor');
 
             // 마우스 커서 스타일 : 마우스를 따라다니게 위치값 지정
-            window.addEventListener("mousemove", (e) => {
+            window.addEventListener('mousemove', (e) => {
                 // e = event
 
-                cursor.style.left = e.clientX - 25 + "px";
-                cursor.style.top = e.clientY - 25 + "px";
+                cursor.style.left = e.clientX - 25 + 'px';
+                cursor.style.top = e.clientY - 25 + 'px';
             });
 
             // .style 태그로 이동 시 마우스 효과
@@ -581,13 +581,13 @@ document.querySelectorAll(".mouse__wrap span").forEach((span) => {
             // });
 
             //getAttribute | 속성 가져오기
-            document.querySelectorAll(".mouse__wrap span").forEach((span) => {
-                let attr = span.getAttribute("class");
+            document.querySelectorAll('.mouse__wrap span').forEach((span) => {
+                let attr = span.getAttribute('class');
                 // el = span
-                span.addEventListener("mouseover", () => {
+                span.addEventListener('mouseover', () => {
                     cursor.classList.add(attr);
                 });
-                span.addEventListener("mouseout", () => {
+                span.addEventListener('mouseout', () => {
                     cursor.classList.remove(attr);
                 });
             });

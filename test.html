@@ -1,30 +1,68 @@
-<script>
-    // 미션 01
-    {
-        // const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-        // const result1 = number.slice(3, 5);
-        // console.log(result1);
-        // const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-        // const result2 = number2.splice(3, 2);
-        // console.log(result2);
-        // const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-        // const result3 = number3.filter((el) => el >= 400 && el <= 500);
-        // console.log(result3);
-        // const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-        // const result4 = number4[3] + " " + number4[4];
-        // console.log(result4);
-        // const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-        // for (let i = 0; i < number5.length; i++) {
-        //     if (number5[i] > 300 && number5[i] < 600) console.log(number5[i]);
-        // }
-    }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 미션 01
+            {
+                // const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result1 = number.slice(3, 5);
+                // console.log(result1);
+                // const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result2 = number2.splice(3, 2);
+                // console.log(result2);
+                // const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result3 = number3.filter((el) => el >= 400 && el <= 500);
+                // console.log(result3);
+                // const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // const result4 = number4[3] + " " + number4[4];
+                // console.log(result4);
+                // const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                // for (let i = 0; i < number5.length; i++) {
+                //     if (number5[i] > 300 && number5[i] < 600) console.log(number5[i]);
+                // }
+            }
 
-    // 미션 02
-    {
-        const number = [a, b, c, d, e, f, g, h, i, k];
+            //b d f h k (짝수 출력)
+            {
+                const num = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'];
 
-        //b, d, f, h, k  출력 (4개의 방법)
+                for (i = 1; i < num.length; i += 2) {
+                    document.write(num[i]);
+                }
+            }
 
-        
-    }
-</script>
+            document.write('<br>');
+
+            {
+                const num = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'];
+                const result = num.filter((e) => (e == 'b') | (e == 'd') | (e == 'f') | (e == 'h') | (e == 'k'));
+                document.write(result);
+            }
+
+            document.write('<br>');
+
+            {
+                const num = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'];
+                for (i = 1; i < num.length; i += 2) {
+                    const result = num.slice(i, i + 1);
+                    document.write(result);
+                }
+            }
+            document.write('<br>');
+
+            {
+                const number = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'];
+
+                const result = number.join('').match(/[b & d & f & h & k]/g);
+
+                document.write(result);
+            }
+        </script>
+    </body>
+</html>

@@ -499,13 +499,13 @@ document.querySelectorAll(".mouse__wrap span").forEach((span) => {
         </script>
 
         <script>
-            const cursor = document.querySelector(".mouse__cursor");
-            const cursor2 = document.querySelector(".mouse__cursor2");
-            const span = document.querySelectorAll(".mouse__wrap span");
-            const menu = document.querySelectorAll("#header ul li a");
-            const modal = document.querySelector(".modal__btn");
+            const cursor = document.querySelector('.mouse__cursor');
+            const cursor2 = document.querySelector('.mouse__cursor2');
+            const span = document.querySelectorAll('.mouse__wrap span');
+            const menu = document.querySelectorAll('#header ul li a');
+            const modal = document.querySelector('.modal__btn');
 
-            window.addEventListener("mousemove", (e) => {
+            window.addEventListener('mousemove', (e) => {
                 // 커서 좌표값 할당
                 // cursor.style.left = e.pageX - 5 + "px";
                 // cursor.style.top = e.pageY - 5 + "px";
@@ -520,40 +520,40 @@ document.querySelectorAll(".mouse__wrap span").forEach((span) => {
                 // mouseenter(이벤트 버블링 효과가 없다.) / mouseover(이벤트 버블링 효과가 있다.)
                 span.forEach((span) => {
                     // mouseenter 시 span 효과 설정 (화살표 함수에서는 this가 안먹힌다.)
-                    span.addEventListener("mouseenter", () => {
-                        cursor.classList.add("active");
-                        cursor2.classList.add("active");
+                    span.addEventListener('mouseenter', () => {
+                        cursor.classList.add('active');
+                        cursor2.classList.add('active');
                     });
-                    span.addEventListener("mouseleave", () => {
-                        cursor.classList.remove("active");
-                        cursor2.classList.remove("active");
+                    span.addEventListener('mouseleave', () => {
+                        cursor.classList.remove('active');
+                        cursor2.classList.remove('active');
                     });
                 });
                 menu.forEach((menu) => {
                     // mouseenter 시 span 효과 설정 (화살표 함수에서는 this가 안먹힌다.)
-                    menu.addEventListener("mouseenter", () => {
-                        cursor.classList.add("active2");
-                        cursor2.classList.add("active2");
+                    menu.addEventListener('mouseenter', () => {
+                        cursor.classList.add('active2');
+                        cursor2.classList.add('active2');
                     });
-                    menu.addEventListener("mouseleave", () => {
-                        cursor.classList.remove("active2");
-                        cursor2.classList.remove("active2");
-                    });
-                });
-
-                    modal.addEventListener("mouseenter", () => {
-                        cursor.classList.add("active3");
-                        cursor2.classList.add("active3");
-                    });
-                    modal.addEventListener("mouseleave", () => {
-                        cursor.classList.remove("active3");
-                        cursor2.classList.remove("active3");
+                    menu.addEventListener('mouseleave', () => {
+                        cursor.classList.remove('active2');
+                        cursor2.classList.remove('active2');
                     });
                 });
 
-            modal.classList.remove("active2");
+                modal.addEventListener('mouseenter', () => {
+                    cursor.classList.add('active3');
+                    cursor2.classList.add('active3');
+                });
+                modal.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('active3');
+                    cursor2.classList.remove('active3');
+                });
+            });
 
-            modal.classList.add("active2");
+            modal.classList.remove('active2');
+
+            modal.classList.add('active2');
         </script>
     </body>
 </html>
