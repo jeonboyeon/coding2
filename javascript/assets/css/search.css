@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "TmoneyRoundWind";
+    font-family: 'TmoneyRoundWind';
     /* color: #223547; */
 }
 
@@ -41,6 +41,27 @@ li {
     position: relative;
 }
 
+.search__list .line {
+    margin-top: 50px;
+}
+
+.search__list .line li {
+    cursor: pointer;
+    background-color: #fff;
+    margin-bottom: 7px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.search__list .line li:hover {
+    background-color: #e9eef4;
+}
+
+.search__list em {
+    float: right;
+    font-style: normal;
+}
+
 .search__list span {
     display: inline-block;
     padding: 10px 20px;
@@ -48,13 +69,34 @@ li {
     border-radius: 50px;
     margin: 5px;
     cursor: pointer;
-
 }
 
 .search__list span:hover {
     background-color: var(--htmlColor);
     color: #fff;
     transition: background-color 0.3s;
+}
+.search__click {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.search__click li {
+    display: inline;
+}
+
+.search__click li a {
+    display: inline-block;
+    border: 1px solid var(--htmlColor);
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: var(--htmlColor);
+    border-radius: 50px;
+}
+
+.search__click li a:hover {
+    background-color: var(--htmlColor);
+    color: #fff;
 }
 
 #header nav ul li a {
@@ -65,7 +107,7 @@ li {
     display: inline-block;
     text-align: center;
     line-height: 29px;
-    font-family: "TmoneyRoundWind";
+    font-family: 'TmoneyRoundWind';
 }
 
 #header nav ul li.active a {
@@ -153,7 +195,7 @@ li {
 .search__wrap > h1 {
     font-size: 5vw;
     color: var(--htmlColor);
-    font-family: "Tmon";
+    font-family: 'Tmon';
     margin-bottom: 10px;
 }
 
@@ -236,7 +278,7 @@ li {
 }
 
 #footer a {
-    font-family: "TmoneyRoundWind";
+    font-family: 'TmoneyRoundWind';
     color: #000;
     padding-bottom: 50px;
 }
@@ -345,7 +387,7 @@ li {
 }
 
 .modal__box .title .dot::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 25px;
     top: 0;
@@ -364,7 +406,7 @@ li {
 }
 
 .modal__box .title .dot::after {
-    content: "";
+    content: '';
     position: absolute;
     right: 25px;
     top: 0;
@@ -429,7 +471,7 @@ li {
     height: 100%;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
     display: none;
 }
 

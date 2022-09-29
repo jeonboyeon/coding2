@@ -63,6 +63,35 @@
 
                 document.write(result);
             }
+
+            document.write('<br>');
+
+            // e, f 출력
+            {
+                const number = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'];
+
+                const result = number.join('').match(/[e & f]/g);
+
+                document.write(result);
+            }
+
+            document.write('<br>');
+
+            {
+                const num = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'];
+                const result = num.filter((e) => (e == 'e') | (e == 'f'));
+                document.write(result);
+            }
+
+            document.write('<br>');
+
+            {
+                const number = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k'];
+
+                const result = number.join('')
+
+                document.write(result);
+            }
         </script>
     </body>
 </html>
