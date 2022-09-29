@@ -41,6 +41,12 @@
                         <li data-star="4"><a href="#">★★★★☆</a></li>
                         <li data-star="5"><a href="#">★★★★★</a></li>
                     </ul>
+                    <ul>
+                        <li data-num="1"><a href="#">1개 이상</a></li>
+                        <li data-num="2"><a href="#">2개 이상</a></li>
+                        <li data-num="3"><a href="#">3개 이상</a></li>
+                        <li data-num="4"><a href="#">4개 이상</a></li>
+                    </ul>
                 </div>
 
                 <div class="search__desc">CSS 속성을 검색 해봐유~</div>
@@ -1098,7 +1104,7 @@ input[type="checkbox"] {
         </div>
 
         <footer id="footer">
-            <a href="mailto:leesh3432@naver.com">jeon.boyeon@kakao.com</a>
+            <a href="mailto:jeon.boyeon@kakao.com">jeon.boyeon@kakao.com</a>
         </footer>
 
         <script src="../assets/js/highlight.min.js"></script>
@@ -1518,39 +1524,47 @@ input[type="checkbox"] {
             ];
 
             const searchList = document.querySelector('.search__list ul');
+            const searchList2 = document.querySelector('.search__list ul');
             const searchClick = document.querySelectorAll('.search__click ul li');
-            const filterList = cssProperty.filter((el) => el.star);
+            const filterList = cssProperty.filter((el) => el);
+            const star = document.querySelectorAll('.search__click ul li a');
+            const searchInfo = document.querySelector('.search__info .num');
+
+            let count = 0;
+
             // 출력
             function updateList(list) {
                 listCSS = '';
 
                 for (const data of list) {
-                    listCSS += `<li><strong>${data.name}</strong> : ${data.desc} <em>${data.star}</em></li>`;
+                    count++; // 전체 갯수 증가
+                    listCSS += `<li>${data.name} : ${data.desc}<em>${star[data.star].innerText}</em></li>`; // data 대입
                 }
+                searchInfo.textContent = count; // 전체 갯수
+                count = 0; // 전체 갯수 초기화
 
-                searchList.innerHTML = listCSS;
+                searchList.innerHTML = listCSS; // listCSS 구한 값 searchList에 대입
             }
             updateList(cssProperty);
 
             // 클릭
             searchClick.forEach((star) => {
-                star.addEventListener('click', () => {
+                star.addEventListener('click', (el, i) => {
                     const target = star.dataset.star; // html 데이터 가져오기
-                    const filterList = cssProperty.filter((data) => data.star == target);
+                    const targetNum = star.dataset.num; // html 데이터 가져오기
+
+                    const filterList = cssProperty.filter((data) => data.star == target || data.star >= targetNum);
+
                     updateList(filterList);
                 });
             });
 
-            // 숙제 (숫자를 별로 치환)
-            const star = document.querySelectorAll('.search__click ul li a');
-
-            filterList.forEach((el, i) => {
-         
-                console.log(el);
-            });
+            // 숙제 (숫자를 별로 치환)/javascript/effect/searchEffect05.html
 
             //  dataset 안쓰고 가져오는 방법(고민만 해보슈)
+
             //  조건문 들어간 거 완료하기
+
             // 전체 속성 갯수 표시
         </script>
     </body>
