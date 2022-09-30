@@ -16,6 +16,7 @@
                 width: 100%;
                 height: 100vh;
                 color: #fff;
+                cursor: none;
             }
             /* mouse__img */
             .mouse__img {
@@ -74,6 +75,12 @@
                 background-color: rgba(255, 255, 255, 0.9);
                 user-select: none;
                 pointer-events: none;
+                transition: transform 0.5s;
+
+            }
+            .mouse__cursor.show {
+                transform: scale(7);
+                mix-blend-mode: difference;
             }
         </style>
     </head>
@@ -408,8 +415,9 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
 
         <script>
             const mouseMove = (e) => {
-                let positionSlow = (e.pageX - (window.innerWidth / 2)) * 0.1;
-                let positionFast = (e.pageX - (window.innerWidth / 2)) * 0.2;
+                // console.log(mouseMove); 마우스 움직임 값
+                let positionSlow = (e.pageX - window.innerWidth / 2) * 0.1;
+                let positionFast = (e.pageX - window.innerWidth / 2) * 0.2;
                 gsap.to('.spanSlow', { duration: 0.4, x: positionSlow });
                 gsap.to('.spanFast', { duration: 0.4, x: -positionFast });
                 gsap.to('.mouse__cursor', { duration: 0.3, left: e.pageX - 5, top: e.pageY - 5 });
@@ -417,6 +425,23 @@ document.querySelector(".mouse__wrap figure").addEventListener("mousemove", (e) 
             window.addEventListener('mousemove', mouseMove);
 
             //  마우스 커서가 글씨 위에 올라가면 크기는 5배 정도 크게, 글씨 반전효과 까지 추가
+            // const mouseText = document.querySelectorAll('.mouse__text .line div');
+            // console.log(mouseText); // 마우스 line 모든 요소
+            const mouseCursor = document.querySelector('.mouse__cursor');
+            // console.log(mouseCursor);
+
+            document.querySelectorAll('.mouse__text .line div > div > div').forEach((div) => {
+                let attr = div.getAttribute('class');
+
+                // console.log(attr);
+
+                div.addEventListener('mouseenter', () => {
+                    mouseCursor.classList.add('show');
+                });
+                div.addEventListener('mouseleave', () => {
+                    mouseCursor.classList.remove('show');
+                });
+            });
         </script>
     </body>
 </html>
