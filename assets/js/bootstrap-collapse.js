@@ -1,3 +1,19 @@
+/* eslint-disable eol-last */
+/* eslint-disable no-var */
+/* eslint-disable spaced-comment */
+/* eslint-disable no-mixed-operators */
+/* eslint-disable one-var */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-unexpected-multiline */
+/* eslint-disable indent */
+/* eslint-disable quotes */
+/* eslint-disable semi */
+/* eslint-disable padded-blocks */
+/* eslint-disable wrap-iife */
+/* eslint-disable comma-style */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-unused-expressions */
 /* =============================================================
  * bootstrap-collapse.js v2.3.2
  * http://twitter.github.com/bootstrap/javascript.html#collapse

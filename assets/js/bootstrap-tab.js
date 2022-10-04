@@ -1,3 +1,28 @@
+/* eslint-disable spaced-comment */
+/* eslint-disable quotes */
+/* eslint-disable array-callback-return */
+/* eslint-disable no-sparse-arrays */
+/* eslint-disable prefer-regex-literals */
+/* eslint-disable new-cap */
+/* eslint-disable no-undef */
+/* eslint-disable no-redeclare */
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable yoda */
+/* eslint-disable no-void */
+/* eslint-disable no-unmodified-loop-condition */
+/* eslint-disable space-before-function-paren */
+/* eslint-disable space-in-parens */
+/* eslint-disable curly */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-sequences */
+/* eslint-disable comma-dangle */
+/* eslint-disable no-useless-escape */
+/* eslint-disable semi */
+/* eslint-disable indent */
+/* eslint-disable wrap-iife */
+/* eslint-disable no-var */
+/* eslint-disable one-var */
+/* eslint-disable no-unused-expressions */
 /* ========================================================
  * bootstrap-tab.js v2.3.2
  * http://twitter.github.com/bootstrap/javascript.html#tabs
@@ -17,128 +42,113 @@
  * limitations under the License.
  * ======================================================== */
 
+!(function ($) {
+    'use strict'; // jshint ;_;
 
-!function ($) {
+    /* TAB CLASS DEFINITION
+     * ==================== */
 
-  "use strict"; // jshint ;_;
+    var Tab = function (element) {
+        this.element = $(element);
+    };
 
+    Tab.prototype = {
+        constructor: Tab,
 
- /* TAB CLASS DEFINITION
-  * ==================== */
+        show: function () {
+            var $this = this.element,
+                $ul = $this.closest('ul:not(.dropdown-menu)'),
+                selector = $this.attr('data-target'),
+                previous,
+                $target,
+                e;
 
-  var Tab = function (element) {
-    this.element = $(element)
-  }
+            if (!selector) {
+                selector = $this.attr('href');
+                selector = selector && selector.replace(/.*(?=#[^\s]*$)/, ''); //strip for ie7
+            }
 
-  Tab.prototype = {
+            if ($this.parent('li').hasClass('active')) return;
 
-    constructor: Tab
+            previous = $ul.find('.active:last a')[0];
 
-  , show: function () {
-      var $this = this.element
-        , $ul = $this.closest('ul:not(.dropdown-menu)')
-        , selector = $this.attr('data-target')
-        , previous
-        , $target
-        , e
+            e = $.Event('show', {
+                relatedTarget: previous,
+            });
 
-      if (!selector) {
-        selector = $this.attr('href')
-        selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
-      }
+            $this.trigger(e);
 
-      if ( $this.parent('li').hasClass('active') ) return
+            if (e.isDefaultPrevented()) return;
 
-      previous = $ul.find('.active:last a')[0]
+            $target = $(selector);
 
-      e = $.Event('show', {
-        relatedTarget: previous
-      })
+            this.activate($this.parent('li'), $ul);
+            this.activate($target, $target.parent(), function () {
+                $this.trigger({
+                    type: 'shown',
+                    relatedTarget: previous,
+                });
+            });
+        },
 
-      $this.trigger(e)
+        activate: function (element, container, callback) {
+            var $active = container.find('> .active'),
+                transition = callback && $.support.transition && $active.hasClass('fade');
 
-      if (e.isDefaultPrevented()) return
+            function next() {
+                $active.removeClass('active').find('> .dropdown-menu > .active').removeClass('active');
 
-      $target = $(selector)
+                element.addClass('active');
 
-      this.activate($this.parent('li'), $ul)
-      this.activate($target, $target.parent(), function () {
-        $this.trigger({
-          type: 'shown'
-        , relatedTarget: previous
-        })
-      })
-    }
+                if (transition) {
+                    element[0].offsetWidth; // reflow for transition
+                    element.addClass('in');
+                } else {
+                    element.removeClass('fade');
+                }
 
-  , activate: function ( element, container, callback) {
-      var $active = container.find('> .active')
-        , transition = callback
-            && $.support.transition
-            && $active.hasClass('fade')
+                if (element.parent('.dropdown-menu')) {
+                    element.closest('li.dropdown').addClass('active');
+                }
 
-      function next() {
-        $active
-          .removeClass('active')
-          .find('> .dropdown-menu > .active')
-          .removeClass('active')
+                callback && callback();
+            }
 
-        element.addClass('active')
+            transition ? $active.one($.support.transition.end, next) : next();
 
-        if (transition) {
-          element[0].offsetWidth // reflow for transition
-          element.addClass('in')
-        } else {
-          element.removeClass('fade')
-        }
+            $active.removeClass('in');
+        },
+    };
 
-        if ( element.parent('.dropdown-menu') ) {
-          element.closest('li.dropdown').addClass('active')
-        }
+    /* TAB PLUGIN DEFINITION
+     * ===================== */
 
-        callback && callback()
-      }
+    var old = $.fn.tab;
 
-      transition ?
-        $active.one($.support.transition.end, next) :
-        next()
+    $.fn.tab = function (option) {
+        return this.each(function () {
+            var $this = $(this),
+                data = $this.data('tab');
+            if (!data) $this.data('tab', (data = new Tab(this)));
+            if (typeof option == 'string') data[option]();
+        });
+    };
 
-      $active.removeClass('in')
-    }
-  }
+    $.fn.tab.Constructor = Tab;
 
+    /* TAB NO CONFLICT
+     * =============== */
 
- /* TAB PLUGIN DEFINITION
-  * ===================== */
+    $.fn.tab.noConflict = function () {
+        $.fn.tab = old;
+        return this;
+    };
 
-  var old = $.fn.tab
+    /* TAB DATA-API
+     * ============ */
 
-  $.fn.tab = function ( option ) {
-    return this.each(function () {
-      var $this = $(this)
-        , data = $this.data('tab')
-      if (!data) $this.data('tab', (data = new Tab(this)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  $.fn.tab.Constructor = Tab
-
-
- /* TAB NO CONFLICT
-  * =============== */
-
-  $.fn.tab.noConflict = function () {
-    $.fn.tab = old
-    return this
-  }
-
-
- /* TAB DATA-API
-  * ============ */
-
-  $(document).on('click.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
-
-}(window.jQuery);
+    $(document).on('click.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+})(window.jQuery);
