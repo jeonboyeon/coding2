@@ -501,6 +501,45 @@
                             </a>
                         </section>
                         <!-- //box -->
+
+                        <section class="color-shape script">
+                            <a href="http://wjsqhdus971007.dothome.co.kr/" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut">PROJECT</span>
+                                        <span class="overlay-text-thumb-donut">PROJECT</span>
+                                        <span class="overlay-text-thumb1-donut">PROJECT</span>
+                                        <span class="overlay-text-thumb2-donut">PROJECT</span>
+                                    </div>
+                                    <img src="assets/img/svg-pizza.svg" alt="portfolio" />
+                                    <div class="img-text donutImg">
+                                        <h5>PROJECT</h5>
+                                        <p>PROJECT</p>
+                                        <span>PROJECT</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
+                        <section class="color-shape script">
+                            <a href="https://github.com/jeonboyeon/project" target="_blank">
+                                <div class="image-wrap">
+                                    <div class="hover-wrap">
+                                        <span class="overlay-img-donut">PROJECT GITHUB</span>
+                                        <span class="overlay-text-thumb-donut">PROJECT GITHUB</span>
+                                        <span class="overlay-text-thumb1-donut">PROJECT GITHUB</span>
+                                        <span class="overlay-text-thumb2-donut">PROJECT GITHUB</span>
+                                    </div>
+                                    <img src="assets/img/svg-pizza.svg" alt="portfolio" />
+                                    <div class="img-text donutImg">
+                                        <h5>PROJECT GITHUB</h5>
+                                        <p>PROJECT GITHUB</p>
+                                        <span>PROJECT GITHUB</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </section>
+                        <!-- //box -->
                     </div>
                     <!-- //container-->
                 </div>
@@ -536,59 +575,59 @@
             let os = navigator.userAgent.toLowerCase();
             let sw = screen.width;
             let sh = screen.height;
-            let infor = document.getElementById("infor");
+            let infor = document.getElementById('infor');
 
-            if (os.indexOf("windows") >= 0) {
-                infor.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다.";
-            } else if (os.indexOf("macintosh") >= 0) {
-                infor.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다.";
-            } else if (os.indexOf("iphone") >= 0) {
-                infor.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다.";
-            } else if (os.indexOf("android") >= 0) {
-                infor.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다.";
+            if (os.indexOf('windows') >= 0) {
+                infor.innerHTML = '현재 윈도우를 사용하고 있으며, 화면 크기는 ' + sw + 'x' + sh + ' 입니다.';
+            } else if (os.indexOf('macintosh') >= 0) {
+                infor.innerHTML = '현재 맥을 사용하고 있으며, 화면 크기는 ' + sw + 'x' + sh + ' 입니다.';
+            } else if (os.indexOf('iphone') >= 0) {
+                infor.innerHTML = '현재 아이폰을 사용하고 있으며, 화면 크기는 ' + sw + 'x' + sh + ' 입니다.';
+            } else if (os.indexOf('android') >= 0) {
+                infor.innerHTML = '현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 ' + sw + 'x' + sh + ' 입니다.';
             }
 
             //시간 표현
-            let clock = document.getElementById("clock");
+            let clock = document.getElementById('clock');
 
             setInterval(function () {
                 clock.innerHTML = new Date().toLocaleTimeString();
             }, 1000);
 
             $(function () {
-                var $container = $("#container"),
+                var $container = $('#container'),
                     filters = {};
 
                 $container.isotope({
-                    itemSelector: ".color-shape",
+                    itemSelector: '.color-shape',
                     masonry: {
                         columnWidth: 57,
                     },
                 });
 
                 // filter buttons
-                $(".filter a").click(function () {
+                $('.filter a').click(function () {
                     var $this = $(this);
                     // don't proceed if already selected
-                    if ($this.hasClass("selected")) {
+                    if ($this.hasClass('selected')) {
                         return;
                     }
 
-                    var $optionSet = $this.parents(".option-set");
+                    var $optionSet = $this.parents('.option-set');
                     // change selected class
-                    $optionSet.find(".selected").removeClass("selected");
-                    $this.addClass("selected");
+                    $optionSet.find('.selected').removeClass('selected');
+                    $this.addClass('selected');
 
                     // store filter value in object
                     // i.e. filters.color = 'red'
-                    var group = $optionSet.attr("data-filter-group");
-                    filters[group] = $this.attr("data-filter-value");
+                    var group = $optionSet.attr('data-filter-group');
+                    filters[group] = $this.attr('data-filter-value');
                     // convert object into array
                     var isoFilters = [];
                     for (var prop in filters) {
                         isoFilters.push(filters[prop]);
                     }
-                    var selector = isoFilters.join("");
+                    var selector = isoFilters.join('');
                     $container.isotope({
                         filter: selector,
                     });
@@ -596,13 +635,13 @@
                     return false;
                 });
 
-                $(".tit_btn").on("click", function (e) {
+                $('.tit_btn').on('click', function (e) {
                     e.preventDefault();
-                    $(".nav_container").toggleClass("on");
+                    $('.nav_container').toggleClass('on');
                 });
 
-                $(".click").click(function () {
-                    $(".view").fadeToggle();
+                $('.click').click(function () {
+                    $('.view').fadeToggle();
                 });
             });
         </script>
