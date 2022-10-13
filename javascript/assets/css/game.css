@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'HBIOS-SYS';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mouse__cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 18px;
+    background: url('../img/cursor.cluster.png') no-repeat;
+    z-index: 555;
+}
+
+/* * {
+    cursor: url('../img/cursor.cluster.png'), auto;
+} */
+
+/* 여백 초기화 */
+* {
+    /* cursor: none; */
+    margin: 0;
+    padding: 0;
+    font-family: 'HBIOS-SYS';
+}
+/* a 태그 링크 초기화 */
+a {
+    text-decoration: none;
+    color: #444;
+}
+/* 목록 초기화 */
+li {
+    list-style: none;
+}
+/* 제목 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+body {
+    overflow: hidden;
+}
+
+#header {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(52, 31, 102);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99999;
+}
+
+#header h1 {
+    font-size: 20px;
+    color: #fff;
+}
+#header .time {
+    color: #fff;
+}
+
+#footer {
+    box-sizing: border-box;
+    text-align: center;
+    position: fixed;
+    padding: 5px 10px;
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(52, 31, 102);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    /* user-select: none; */
+    /* pointer-events: none; */
+}
+
+.icon1 {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 50px;
+}
+.icon1 img {
+    width: 100%;
+}
+
+.icon1 span {
+    width: 100%;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+    white-space: nowrap;
+}
+.icon1 {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    width: 50px;
+}
+/* //1번 아이콘 */
+.icon2 {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    width: 50px;
+}
+.icon2 img {
+    width: 100%;
+}
+.icon2 img {
+    width: 100%;
+}
+
+.icon2 span {
+    width: 100%;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+    white-space: nowrap;
+}
+/* //2번 아이콘 */
+
+.icon3 {
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    width: 50px;
+}
+.icon3 img {
+    width: 100%;
+}
+.icon3 img {
+    width: 100%;
+}
+
+.icon3 span {
+    width: 100%;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+    white-space: nowrap;
+}
+/* //3번 아이콘 */
+
+.icon4 {
+    position: absolute;
+    left: 50px;
+    top: 400px;
+    width: 50px;
+}
+.icon4 img {
+    width: 100%;
+}
+.icon4 img {
+    width: 100%;
+}
+
+.icon4 span {
+    width: 100%;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+    white-space: nowrap;
+}
+/* //3번 아이콘 */
+#footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 8888;
+}
+#footer .agent {
+}
+/* 윈도우 푸터 */
+.window #footer {
+}
+/* 맥 푸터 */
+.macintosh #footer {
+}

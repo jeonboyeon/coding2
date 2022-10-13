@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data Effect</title>
+
+        <link rel="stylesheet" href="../assets/css/bg.css" />
+        <link rel="stylesheet" href="../assets/css/music.css" />
+        <link rel="stylesheet" href="../assets/css/game.css" />
+    </head>
+
+    <body>
+        <header id="header">
+            <h1>IT.D BOSS</h1>
+            <div class="time"></div>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <!-- <div class="mouse__cursor"></div> -->
+            <div class="icon_box">
+                <div class="icon icon1">
+                    <img src="../assets/img/folder.block.png" alt="" />
+                    <span>뮤직 듣기</span>
+                </div>
+                <div class="icon icon2">
+                    <img src="../assets/img/folder02.png" alt="" />
+                    <span>뮤직 듣기</span>
+                </div>
+                <div class="icon icon3">
+                    <img src="../assets/img/folder03.png" alt="" />
+                    <span>뮤직 듣기</span>
+                </div>
+                <div class="icon icon4">
+                    <img src="../assets/img/folder04.png" alt="" />
+                    <span>뮤직 듣기</span>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <div class="agent"></div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- 뮤직 플레이 -->
+        <div>
+            <div class="music__wrap">
+                <div class="music__inner">
+                    <div class="music__header">
+                        <div>👾👾</div>
+                        <h2>Music Player</h2>
+                        <div>👾👾</div>
+                    </div>
+                    <div class="music__contents">
+                        <div class="music__view">
+                            <div class="img">
+                                <img src="../assets/img/gameEffect_view01.png" alt="" />
+                            </div>
+                            <div style="width: 85%">
+                                <div class="title">
+                                    <h3>CHENDA - For You</h3>
+                                    <p>NCS Release</p>
+                                </div>
+                                <div class="music__control">
+                                    <div class="progress">
+                                        <div class="bar">
+                                            <audio id="main-audio" src="../assets/audio/music_audio01.mp3"></audio>
+                                        </div>
+                                        <div class="timer">
+                                            <span class="current">0:00</span>
+                                            <span class="duration">4:00</span>
+                                        </div>
+                                    </div>
+                                    <div class="control">
+                                        <i title="전체 반복" class="repeat" id="control-repeat"></i>
+                                        <!-- <i title="한곡 반복" class="repeat_one"></i>
+                                        <i title="랜덤 재생" class="shuffle"></i> -->
+                                        <i title="이전곡 재생" class="prev" id="control-prev"></i>
+                                        <div>
+                                            <i title="재생" class="play" id="control-play"></i>
+                                            <!-- <i title="정지" class="stop"></i> -->
+                                        </div>
+                                        <i title="다음곡 재생" class="next" id="control-next"></i>
+                                        <i title="재생 목록" class="list" id="control-list"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music__footer">
+                        <div class="music__list">
+                            <h3><span class="list"></span>뮤직 리스트 <a class="close" href="#"></a></h3>
+
+                            <ul>
+                                <!-- <li>
+                                    <strong>제목</strong>
+                                    <em>아티스트</em>
+                                    <span>재생시간</span>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //뮤직 플레이 -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script src="../assets/js/music.js"></script>
+        <script>
+            $('.icon1').draggable({
+                drag: function () {
+                    $('.cursor img').attr('src', '../img/cursor.cluster01.png');
+                },
+            });
+            $('.icon2').draggable({
+                drag: function () {
+                    $('.cursor img').attr('src', '../img/cursor.cluster02.png');
+                },
+            });
+            $('.icon3').draggable({
+                drag: function () {
+                    $('.cursor img').attr('src', '../img/cursor.cluster03.png');
+                },
+            });
+            $('.icon4').draggable({
+                drag: function () {
+                    $('.cursor img').attr('src', '../img/cursor.cluster04.png');
+                },
+            });
+            $('.icon5').draggable({
+                drag: function () {
+                    $('.cursor img').attr('src', '../img/cursor.cluster05.png');
+                },
+            });
+            $('.music__wrap').draggable();
+
+            function printTime() {
+                const clock = document.querySelector('.time');
+                const now = new Date();
+                const hours = ('0' + now.getHours()).slice(-2);
+                const minutes = ('0' + now.getMinutes()).slice(-2);
+                const seconds = ('0' + now.getSeconds()).slice(-2);
+
+                // console.log(seconds);
+                // getFullYear | 년도만 가져온다.
+                const nowTime = now.getFullYear() + '. ' + (now.getMonth() + 1) + '. ' + (now.getDate() + 1) + ' | clock ' + hours + ' : ' + minutes + ' : ' + seconds;
+
+                clock.innerText = nowTime;
+                setTimeout('printTime()', 1000);
+            }
+            // window.onload = function () {
+            //     printTime();
+            // };
+
+            // if (currentSec < 10) currentSec = `0${currentSec}`;
+
+            function printAgent() {
+                const agent = document.querySelector('.agent');
+                const os = navigator.userAgent.toLocaleLowerCase();
+
+                agent.innerText = os;
+
+                if (os.indexOf('window') >= 0) {
+                    agent.innerText = '현재 윈도우를 사용하고 있습니다. 삐리삐리뽀 👾 | 화면 크기는 ' + screen.width + ' * ' + screen.height + ' 입니다.';
+                    document.querySelector('body').classList.add('window');
+                } else if (os.indexOf('macintosh') >= 0) {
+                    agent.innerText = '현재 맥을 사용하고 있습니다. 삐리삐리뽀 👾 | 화면 크기는' + screen.width + ' * ' + screen.height + ' 입니다.';
+                    document.querySelector('body').classList.add('macintosh');
+                } else if (os.indexOf('iphone') >= 0) {
+                    agent.innerText = '현재 아이폰을 사용하고 있습니다. 삐리삐리뽀 👾 | 화면 크기는 ' + screen.width + ' * ' + screen.height + ' 입니다.';
+                    document.querySelector('body').classList.add('iphone');
+                } else if (os.indexOf('android') >= 0) {
+                    agent.innerText = '현재 안드로이드를 사용하고 있습니다. 삐리삐리뽀 👾 | 화면 크기는 ' + screen.width + ' * ' + screen.height + ' 입니다.';
+                    document.querySelector('body').classList.add('android');
+                }
+            }
+            window.onload = function () {
+                printTime();
+                printAgent();
+            };
+
+            // const cursor = document.querySelector('.mouse__cursor');
+
+            // // 마우스 커서 스타일 : 마우스를 따라다니게 위치값 지정
+            // window.addEventListener('mousemove', (e) => {
+            //     // e = event
+
+            //     cursor.style.left = e.clientX - 0 + 'px';
+            //     cursor.style.top = e.clientY - 0 + 'px';
+            // });
+
+            const musicListShow = document.querySelector('.music__footer .music__list.show');
+            const musicListClose = document.querySelector('.music__list .close');
+            console.log(musicListClose);
+
+            musicListBtn.addEventListener('click', () => {
+                musicList.classList.add('show');
+            });
+
+            musicListClose.addEventListener('click', () => {
+                musicList.classList.remove('show');
+            });
+        </script>
+    </body>
+</html>
