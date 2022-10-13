@@ -18,15 +18,15 @@ const allMusic = [
         audio: 'music_audio03',
     },
     {
-        name: 'Unforgivable',
-        artist: 'Jim Yosef & Shiah Maisel',
-        img: 'gameEffect_view01',
+        name: 'Electric (feat. Robbie Rosen)',
+        artist: 'VAANCE & Deerock',
+        img: 'gameEffect_view04',
         audio: 'music_audio04',
     },
     {
-        name: 'Unforgivable',
-        artist: 'Jim Yosef & Shiah Maisel',
-        img: 'gameEffect_view02',
+        name: "Can't You Feel It",
+        artist: 'MIDNIGHT CVLT & Wiguez',
+        img: 'gameEffect_view05',
         audio: 'music_audio05',
     },
 ];

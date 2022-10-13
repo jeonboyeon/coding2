@@ -27,7 +27,7 @@
                 </div>
                 <div class="icon icon2">
                     <img src="../assets/img/folder02.png" alt="" />
-                    <span>뮤직 듣기</span>
+                    <span>소스 보기</span>
                 </div>
                 <div class="icon icon3">
                     <img src="../assets/img/folder03.png" alt="" />
@@ -53,14 +53,14 @@
                     <div class="music__header">
                         <div>👾👾</div>
                         <h2>Music Player</h2>
-                        <div>👾👾</div>
+                        <div class="musicWrap__close">Xㅤ</div>
                     </div>
                     <div class="music__contents">
                         <div class="music__view">
                             <div class="img">
                                 <img src="../assets/img/gameEffect_view01.png" alt="" />
                             </div>
-                            <div style="width: 85%">
+                            <div style="width: 58%">
                                 <div class="title">
                                     <h3>CHENDA - For You</h3>
                                     <p>NCS Release</p>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="music__footer">
                         <div class="music__list">
-                            <h3><span class="list"></span>뮤직 리스트 <a class="close" href="#"></a></h3>
+                            <h3><span class="list"></span>뮤직 리스트 <a title="뮤직 리스트 닫기" class="close" href="#"></a></h3>
 
                             <ul>
                                 <!-- <li>
@@ -195,9 +195,12 @@
             //     cursor.style.top = e.clientY - 0 + 'px';
             // });
 
+            const musicWrapClose = document.querySelector('.musicWrap__close')
             const musicListShow = document.querySelector('.music__footer .music__list.show');
             const musicListClose = document.querySelector('.music__list .close');
-            console.log(musicListClose);
+            const musicIco = document.querySelector('.icon1');
+            
+            console.log(musicIco);
 
             musicListBtn.addEventListener('click', () => {
                 musicList.classList.add('show');
@@ -205,6 +208,14 @@
 
             musicListClose.addEventListener('click', () => {
                 musicList.classList.remove('show');
+            });
+
+            musicIco.addEventListener('click', () => {
+                musicWrap.classList.add('show');
+            });
+
+            musicWrapClose.addEventListener('click', () => {
+                musicWrap.classList.remove('show');
             });
         </script>
     </body>
