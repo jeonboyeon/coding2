@@ -1,5 +1,5 @@
 .music__wrap {
-    display: none;
+    /* display: none; */
 }
 .music__wrap.show {
     display: block;
@@ -63,9 +63,11 @@
 .music__footer .music__list.show {
     display: block;
 }
-.music__control {
+#volume_control {
+    display: inline-block;
+    margin-top: 5px;
+    width: 115px;
 }
-
 .music__control .progress {
     width: 100%;
     height: 10px;
@@ -85,6 +87,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+    align-items: center;
 }
 .music__control .control i {
     cursor: pointer;
@@ -144,6 +147,12 @@
     height: 25px;
     background: url('../img/music_icon.svg') no-repeat;
     background-position: -98px;
+}
+.music__control .volume {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-image: url('../img/sound.ico.svg');
 }
 
 .music__footer {

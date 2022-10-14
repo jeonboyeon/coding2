@@ -47,7 +47,12 @@ const musicRepeat = musicWrap.querySelector('#control-repeat'); // 뮤직 전체
 const musicListBtn = musicWrap.querySelector('#control-list'); // 뮤직 리스트
 const musicList = musicWrap.querySelector('.music__list'); // 뮤직 리스트
 const musicListUl = musicWrap.querySelector('.music__list ul'); // 뮤직 리스트
-// console.log(musicAudio);
+const volumeBar = document.getElementById('volume_control');
+
+volumeBar.addEventListener('change', function () {
+    musicAudio.volume = volumeBar.value / 100;
+});
+
 let musicIndex = 1; // 현재 노래 인덱스 값
 // 음악 재생
 function loadMusic(num) {
@@ -86,6 +91,8 @@ function nextMusic() {
     playMusic();
     playListMusic();
 }
+
+// 볼륨 조절 버튼
 
 // 뮤직 진행바
 musicAudio.addEventListener('timeupdate', (e) => {

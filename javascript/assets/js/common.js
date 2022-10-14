@@ -1,9 +1,3 @@
-/* eslint-disable eol-last */
-/* eslint-disable indent */
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable semi */
-/* eslint-disable quotes */
-/* eslint-disable spaced-comment */
 //탭 메뉴
 const tabBtn = document.querySelectorAll(".modal__box .tabs > div");
 const tabCont = document.querySelectorAll(".modal__box .cont > div");
@@ -36,6 +30,7 @@ tabBtn.forEach((element, index) => {
 
 // 모달
 const modalBtn = document.querySelector(".modal__btn");
+console.log(modalBtn);
 const modalClose = document.querySelector(".modal__close");
 const modalCont = document.querySelector(".modal__cont");
 

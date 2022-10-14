@@ -28,6 +28,16 @@
                 <div class="icon icon2">
                     <img src="../assets/img/folder02.png" alt="" />
                     <span>소스 보기</span>
+
+                    <!-- <div class="icon2_sub">
+                        <div><img src="../assets/img/folder02.png" alt="" /> <span>소스 보기</span></div>
+                    </div>
+                    <div class="icon2_sub">
+                        <div><img src="../assets/img/folder02.png" alt="" /> <span>소스 보기</span></div>
+                    </div>
+                    <div class="icon2_sub">
+                        <div><img src="../assets/img/folder02.png" alt="" /> <span>소스 보기</span></div>
+                    </div> -->
                 </div>
                 <div class="icon icon3">
                     <img src="../assets/img/folder03.png" alt="" />
@@ -86,6 +96,10 @@
                                         </div>
                                         <i title="다음곡 재생" class="next" id="control-next"></i>
                                         <i title="재생 목록" class="list" id="control-list"></i>
+                                        <div class="music__volume">
+                                            <audio id="volume" src="../assets/audio/music_audio01.mp3"></audio>
+                                            <input type="range" id="volume_control" min="0" max="100" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -195,11 +209,11 @@
             //     cursor.style.top = e.clientY - 0 + 'px';
             // });
 
-            const musicWrapClose = document.querySelector('.musicWrap__close')
+            const musicWrapClose = document.querySelector('.musicWrap__close');
             const musicListShow = document.querySelector('.music__footer .music__list.show');
             const musicListClose = document.querySelector('.music__list .close');
             const musicIco = document.querySelector('.icon1');
-            
+
             console.log(musicIco);
 
             musicListBtn.addEventListener('click', () => {
