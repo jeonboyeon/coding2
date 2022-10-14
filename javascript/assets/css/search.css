@@ -46,6 +46,7 @@ li {
 }
 
 .search__list .line li {
+    font-size: 14px;
     cursor: pointer;
     background-color: #fff;
     margin-bottom: 7px;

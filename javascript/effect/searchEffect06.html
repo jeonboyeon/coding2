@@ -1556,18 +1556,21 @@ input[type="checkbox"] {
             }
 
             // 숙제 입니다~~~~~~~~~~~~~~~
-            // 알파벳 (a ~ z) 정렬
             function sortAlphabet() {
-                cssProperty.sort((a, b) => {
-                    return a.num - b.num;
+                cssProperty.sort((prev, cur) => {
+                    const [upperPrev, upperCur] = [prev.name.toUpperCase(), cur.name.toUpperCase()];
+                    if (upperPrev > upperCur) return 1;
+                    if (upperPrev < upperCur) return -1;
+                    // if (upperPrev === upperCur) return 0;
                 });
                 updateList();
             }
-
-            // 알파벳 (z ~ a) 정렬
             function sortAscendingZ() {
-                cssProperty.sort((a, b) => {
-                    return a.num - b.num;
+                cssProperty.sort((prev, cur) => {
+                    const [upperPrev, upperCur] = [prev.name.toUpperCase(), cur.name.toUpperCase()];
+                    if (upperPrev < upperCur) return 1;
+                    if (upperPrev > upperCur) return -1;
+                    // if (upperPrev === upperCur) return 0;
                 });
                 updateList();
             }
