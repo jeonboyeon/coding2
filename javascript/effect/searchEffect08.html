@@ -877,7 +877,7 @@
             const searchResult = document.querySelector('.search__result .result');
             const searchRestart = document.querySelector('.search__result .restart');
 
-            let timeReamining = 5, // 남은시간
+            let timeReamining = 120, // 남은시간
                 score = 0, // 점수
                 count = 0, // 정답 갯수
                 answers = {}; // 새로운 정답
@@ -1028,7 +1028,7 @@
                 searchAnswers.innerHTML = '';
 
                 startQuiz();
-                timeReamining = 5;
+                timeReamining = 120;
                 count = 0;
                 searchCount.innerText = '0';
             }
